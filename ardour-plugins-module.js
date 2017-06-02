@@ -8,7 +8,8 @@
     var plugins = [],
         sends = [],
         nPlugins = 0,
-        ssid = 0
+        select = 0,
+        expand = 0
 
     // Shorthand for osc sending to ardour
     var [host, port] = settings.read('syncTargets')[0].split(':')
@@ -34,6 +35,10 @@
             }
         }
         receiveOsc({address:address, args:args, host:host, port:port})
+    }
+
+    getCurrentStrip = ()=>{
+        return expand || select
     }
 
     createPluginsGui = ()=>{
@@ -70,18 +75,20 @@
         }))
     }
 
-    createSendsGui = ()=>{
+    createSendsReceivesGui = (dir)=>{
         var widgets = []
+
         for (var i in sends) {
 
-            var strip = {type:'strip', label:'Send ' + i, widgets:[], height:'100%', width:'80rem', css:'> .panel {display:flex;flex-direction:row};'}
+
+            var strip = {type:'strip', label:`${dir} ${i+1}`, widgets:[], height:'100%', width:'80rem', css:'> .panel {display:flex;flex-direction:row};'}
             strip.widgets.push({
                 type:'text',
                 id: 'send_name_' + sends[i].id + '_to_' + sends[i].targetId,
                 label: false,
                 height:40,
                 address: '/strip/send_name',
-                preArgs: [ssid, sends[i].id],
+                preArgs: [sends[i].targetId, sends[i].id],
                 value: sends[i].name
             })
             strip.widgets.push({
@@ -89,7 +96,7 @@
                 id: 'send_' + sends[i] + '_to_' + sends[i].targetId,
                 label: false,
                 address: '/strip/send/gain',
-                preArgs: [ssid, sends[i].id],
+                preArgs: [sends[i].targetId, sends[i].id],
                 range: {"min": {"inf": -193},"6%": -60,"12%": -50,"20%": -40,"30%": -30,"42%": -20,"60%": -10,"80%": 0,"max": 6},
                 unit: 'dB',
                 value: sends[i].gain
@@ -99,7 +106,7 @@
                 id: 'send_toggle_' + sends[i].id + '_to_' + sends[i].targetId,
                 label: 'Enable',
                 address: '/strip/send/enable',
-                preArgs: [ssid, sends[i].id],
+                preArgs: [sends[i].targetId, sends[i].id],
                 height:40,
                 off:0,
                 on:1,
@@ -110,7 +117,7 @@
 
         }
 
-        receive('/EDIT', 'sends_panel', JSON.stringify({
+        receive('/EDIT', dir.toLowerCase() + 's_panel', JSON.stringify({
             widgets: widgets.length ?
             widgets : [
                 {type:'text',label:false, width:'100%', height:'100%',value:NO_SEND_TEXT}
@@ -131,7 +138,7 @@
             label: params.name,
             type: type,
             address: '/strip/plugin/parameter',
-            preArgs: [ssid, ppid, params.id],
+            preArgs: [getCurrentStrip(), ppid, params.id],
             precision: 2 & params.flags ? 0 : 2,
             logScale: 4 & params.flags ? true : false,
             unit: unit,
@@ -182,20 +189,42 @@
             var {address, args, host, port} = data
 
 
-            if (address == '/strip/select' && args.length == 2 && args[1].value == 1) {
+            if ((address == '/strip/select' || address == '/strip/expand') && args.length == 2 && args[1].value == 1) {
+                if (address == '/strip/select') select = args[0].value
+                if (address == '/strip/expand') expand = args[0].value
+
                 send(
                     '/strip/plugin/list',
-                    {type:'i', value:args[0].value}
+                    {type:'i', value:getCurrentStrip()}
                 )
                 send(
                     '/strip/sends',
-                    {type:'i', value:args[0].value}
+                    {type:'i', value:getCurrentStrip()}
+                )
+                send(
+                    '/strip/receives',
+                    {type:'i', value:getCurrentStrip()}
+                )
+            }
+
+            if (address == '/select/expand' && args[0].value == 0) {
+                expand = 0
+                send(
+                    '/strip/plugin/list',
+                    {type:'i', value:getCurrentStrip()}
+                )
+                send(
+                    '/strip/sends',
+                    {type:'i', value:getCurrentStrip()}
+                )
+                send(
+                    '/strip/receives',
+                    {type:'i', value:getCurrentStrip()}
                 )
             }
 
             if (address == '/strip/sends') {
                 sends = []
-                ssid = args[0].value
 
                 if (args.length > 1) {
                     for (var i=1; i<args.length; i+=5) {
@@ -208,7 +237,24 @@
                         }
                     }
                 }
-                createSendsGui()
+                createSendsReceivesGui('Send')
+            }
+
+            if (address == '/strip/receives') {
+                sends = []
+
+                if (args.length > 1) {
+                    for (var i=0; i<args.length; i+=5) {
+                        sends[i] = {
+                            tagetId: args[i].value,
+                            name: args[i+1].value,
+                            id: args[i+2].value,
+                            gain: args[i+3].value,
+                            enabled: args[i+4].value
+                        }
+                    }
+                }
+                createSendsReceivesGui('Receive')
             }
 
             if (address == '/strip/plugin/list') {
@@ -229,7 +275,6 @@
             }
 
             if (address == '/strip/plugin/descriptor' && args.length > 1) {
-                ssid = args[0].value
                 var plugin = {
                     id: args[1].value,
                     name: args[2].value,
