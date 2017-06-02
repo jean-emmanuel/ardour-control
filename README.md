@@ -7,14 +7,14 @@ OSC Control Surface for Ardour. Based on Len Ovens' control surface.
 - Ardour 5.9
 - [Open Stage Control](https://github.com/jean-emmanuel/open-stage-control) (build from master source, release soon)
 
-## Features
+## Features
 
 - all tracks (using banking)
 - transport
 - plugins (ladspa-like generic ui)
 - sends/receives
 
-## Getting started
+## Getting started
 
 - Enable OSC in ardour
 - launch Open Stage Control :
