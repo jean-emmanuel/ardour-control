@@ -2893,7 +2893,7 @@
                                         "width": "100%",
                                         "height": "100%",
                                         "value": "No plugin found",
-                                        "id": "text_11",
+                                        "id": "text_7",
                                         "left": "auto",
                                         "top": "auto",
                                         "vertical": false,
@@ -2901,7 +2901,7 @@
                                         "css": "",
                                         "widgetId": "",
                                         "preArgs": [],
-                                        "address": "/text_11"
+                                        "address": "/text_7"
                                     }
                                 ],
                                 "tabs": [],
@@ -3064,11 +3064,7 @@
                                                         "color": "red",
                                                         "value": "",
                                                         "address": "/select/recenable",
-                                                        "preArgs": [],
-                                                        "left": "auto",
-                                                        "top": "auto",
-                                                        "width": "auto",
-                                                        "height": "auto"
+                                                        "preArgs": []
                                                     },
                                                     {
                                                         "type": "toggle",
@@ -3083,11 +3079,7 @@
                                                         "color": "lime",
                                                         "value": "",
                                                         "address": "/select/record_safe",
-                                                        "preArgs": [],
-                                                        "left": "auto",
-                                                        "top": "auto",
-                                                        "width": "auto",
-                                                        "height": "auto"
+                                                        "preArgs": []
                                                     },
                                                     {
                                                         "type": "toggle",
@@ -3102,11 +3094,7 @@
                                                         "on": 1,
                                                         "value": "",
                                                         "address": "/select/monitor_input",
-                                                        "preArgs": [],
-                                                        "left": "auto",
-                                                        "top": "auto",
-                                                        "width": "auto",
-                                                        "height": "auto"
+                                                        "preArgs": []
                                                     },
                                                     {
                                                         "type": "toggle",
@@ -3121,11 +3109,7 @@
                                                         "color": "orange",
                                                         "value": "",
                                                         "address": "/select/monitor_disk",
-                                                        "preArgs": [],
-                                                        "left": "auto",
-                                                        "top": "auto",
-                                                        "width": "auto",
-                                                        "height": "auto"
+                                                        "preArgs": []
                                                     },
                                                     {
                                                         "type": "toggle",
@@ -3140,11 +3124,7 @@
                                                         "color": "lime",
                                                         "value": "",
                                                         "address": "/select/solo",
-                                                        "preArgs": [],
-                                                        "left": "auto",
-                                                        "top": "auto",
-                                                        "width": "auto",
-                                                        "height": "auto"
+                                                        "preArgs": []
                                                     },
                                                     {
                                                         "type": "toggle",
@@ -3159,11 +3139,7 @@
                                                         "color": "yellow",
                                                         "value": "",
                                                         "address": "/select/mute",
-                                                        "preArgs": [],
-                                                        "left": "auto",
-                                                        "top": "auto",
-                                                        "width": "auto",
-                                                        "height": "auto"
+                                                        "preArgs": []
                                                     },
                                                     {
                                                         "type": "toggle",
@@ -3178,11 +3154,7 @@
                                                         "color": "pink",
                                                         "value": "",
                                                         "address": "/select/expand",
-                                                        "preArgs": [],
-                                                        "left": "auto",
-                                                        "top": "auto",
-                                                        "width": "auto",
-                                                        "height": "auto"
+                                                        "preArgs": []
                                                     }
                                                 ],
                                                 "tabs": [],
@@ -3466,7 +3438,7 @@
                                                 "width": "100%",
                                                 "height": "100%",
                                                 "value": "No send found",
-                                                "id": "text_12",
+                                                "id": "text_8",
                                                 "left": "auto",
                                                 "top": "auto",
                                                 "vertical": false,
@@ -3474,7 +3446,7 @@
                                                 "css": "",
                                                 "widgetId": "",
                                                 "preArgs": [],
-                                                "address": "/text_12"
+                                                "address": "/text_8"
                                             }
                                         ],
                                         "tabs": [],
@@ -3494,7 +3466,24 @@
                                         "css": "",
                                         "layout": "",
                                         "spacing": 0,
-                                        "widgets": [],
+                                        "widgets": [
+                                            {
+                                                "type": "text",
+                                                "label": false,
+                                                "width": "100%",
+                                                "height": "100%",
+                                                "value": "No receive found",
+                                                "id": "text_9",
+                                                "left": "auto",
+                                                "top": "auto",
+                                                "vertical": false,
+                                                "color": "auto",
+                                                "css": "",
+                                                "widgetId": "",
+                                                "preArgs": [],
+                                                "address": "/text_9"
+                                            }
+                                        ],
                                         "tabs": [],
                                         "popupWidth": "100%",
                                         "popupHeight": "100%",

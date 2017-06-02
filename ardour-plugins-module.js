@@ -2,6 +2,7 @@
 
     NO_PLUGIN_TEXT = 'No plugin found'
     NO_SEND_TEXT = 'No send found'
+    NO_RECEIVE_TEXT = 'No receive found'
 
     // Do whatever you want, initialize some variables, declare some functions, ...
 
@@ -120,7 +121,7 @@
         receive('/EDIT', dir.toLowerCase() + 's_panel', JSON.stringify({
             widgets: widgets.length ?
             widgets : [
-                {type:'text',label:false, width:'100%', height:'100%',value:NO_SEND_TEXT}
+                {type:'text',label:false, width:'100%', height:'100%',value: dir == 'Send' ? NO_SEND_TEXT : NO_RECEIVE_TEXT}
             ]
         }))
     }
