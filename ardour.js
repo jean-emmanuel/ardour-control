@@ -3446,12 +3446,12 @@
                                                 "css": "",
                                                 "widgetId": "",
                                                 "preArgs": [],
-                                                "address": "/text_8"
+                                                "address": "/text_35"
                                             }
                                         ],
                                         "tabs": [],
-                                        "popupWidth": "100%",
-                                        "popupHeight": "100%",
+                                        "popupWidth": "75%",
+                                        "popupHeight": "75%",
                                         "address": "/sends_panel"
                                     },
                                     {
@@ -3481,12 +3481,12 @@
                                                 "css": "",
                                                 "widgetId": "",
                                                 "preArgs": [],
-                                                "address": "/text_9"
+                                                "address": "/text_36"
                                             }
                                         ],
                                         "tabs": [],
-                                        "popupWidth": "100%",
-                                        "popupHeight": "100%",
+                                        "popupWidth": "75%",
+                                        "popupHeight": "75%",
                                         "address": "/receives_panel"
                                     }
                                 ],
