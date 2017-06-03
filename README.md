@@ -29,3 +29,8 @@ open-stage-control -- -l path/to/ardour.js -c path/to/ardour-plugins-module.js -
 # Where 127.0.0.1:3819 is ardour's listening 'ip address:osc port'
 
 ```
+# Screenshots
+
+![a](https://cloud.githubusercontent.com/assets/5261671/26752006/6bbade10-4846-11e7-8199-ae89209f6502.png)
+
+![b](https://cloud.githubusercontent.com/assets/5261671/26752005/6ba0480c-4846-11e7-933b-7fc7715a807e.png)
