@@ -194,7 +194,6 @@
                             {
                                 "type": "push",
                                 "id": "connect",
-                                "linkId": "connect",
                                 "label": "^plug",
                                 "width": 50,
                                 "css": "",
@@ -212,7 +211,8 @@
                                 "address": "/set_surface",
                                 "left": "auto",
                                 "top": "auto",
-                                "height": "auto"
+                                "height": "auto",
+                                "linkId": ""
                             },
                             {
                                 "type": "push",
@@ -3679,7 +3679,6 @@
                             {
                                 "type": "push",
                                 "id": "connect",
-                                "linkId": "connect",
                                 "label": "^plug",
                                 "width": 50,
                                 "css": "",
@@ -3697,7 +3696,8 @@
                                 "address": "/set_surface",
                                 "left": "auto",
                                 "top": "auto",
-                                "height": "auto"
+                                "height": "auto",
+                                "linkId": ""
                             },
                             {
                                 "type": "push",
