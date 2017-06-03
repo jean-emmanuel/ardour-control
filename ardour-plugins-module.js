@@ -131,9 +131,9 @@
         var type = ! (128 & params.flags) ? 'meter' :
                     64 & params.flags ? 'toggle' : 'fader',
             unit = !params.unit.length ? '' :
-                    params.unit.indexOf(' ') != -1 ?
-                        params.unit.split(' ').pop() :
-                        params.unit.split('').pop()
+                    params.unit.replace(/\%\.?[0-9]*[a-z]{1}/,'')
+                               .replace('%%','%').trim()
+
         var widget = {
             id: 'plugin_' + ppid + '_param_' + params.id,
             label: params.name,
@@ -276,6 +276,9 @@
             }
 
             if (address == '/strip/plugin/descriptor' && args.length > 1) {
+
+                if (args[0].value != getCurrentStrip()) return
+
                 var plugin = {
                     id: args[1].value,
                     name: args[2].value,
