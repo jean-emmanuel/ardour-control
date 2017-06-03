@@ -239,6 +239,7 @@
                     }
                 }
                 createSendsReceivesGui('Send')
+                return
             }
 
             if (address == '/strip/receives') {
@@ -256,6 +257,7 @@
                     }
                 }
                 createSendsReceivesGui('Receive')
+                return
             }
 
             if (address == '/strip/plugin/list') {
@@ -273,6 +275,7 @@
                     nPlugins = 0
                     createPluginsGui()
                 }
+                return
             }
 
             if (address == '/strip/plugin/descriptor' && args.length > 1) {
@@ -324,7 +327,7 @@
                 if (plugins.length == nPlugins) {
                     createPluginsGui()
                 }
-
+                return
             }
 
 
