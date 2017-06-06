@@ -2231,18 +2231,17 @@
                             }
                         ],
                         "tabs": [],
-                        "width": "100%",
-                        "height": "100%",
                         "left": 0,
                         "top": 100,
-                        "css": "width:calc(100% - 120rem); height:calc(100% - 100rem);"
+                        "css": "width:calc(100% - 120rem); height:calc(100% - 100rem);",
+                        "height": "auto",
+                        "width": "auto"
                     },
                     {
                         "type": "panel",
                         "id": "ch_master",
                         "label": false,
                         "width": 120,
-                        "height": "100%",
                         "css": "right:0;  height:calc(100% - 100rem);",
                         "widgets": [
                             {
@@ -2533,7 +2532,8 @@
                         },
                         "layout": "",
                         "top": 100,
-                        "left": "auto"
+                        "left": "auto",
+                        "height": "auto"
                     }
                 ],
                 "tabs": []
@@ -2565,7 +2565,6 @@
                         "id": "ch_master",
                         "label": false,
                         "width": 120,
-                        "height": "100%",
                         "css": "right:0;  height:calc(100% - 100rem);",
                         "widgets": [
                             {
@@ -2856,7 +2855,8 @@
                         },
                         "layout": "",
                         "top": 100,
-                        "left": "auto"
+                        "left": "auto",
+                        "height": "auto"
                     },
                     {
                         "type": "panel",
@@ -2864,8 +2864,6 @@
                         "left": 0,
                         "id": "selected_panel",
                         "label": false,
-                        "width": "100%",
-                        "height": "100%",
                         "scroll": true,
                         "color": "auto",
                         "css": "width:calc(100% - 120rem); height:calc(100% - 100rem);",
@@ -2879,7 +2877,6 @@
                                 "left": 240,
                                 "id": "plugins_panel",
                                 "label": false,
-                                "width": "100%",
                                 "scroll": true,
                                 "color": "auto",
                                 "css": "width:calc(100% - 240rem); height: calc(100% - 10rem)",
@@ -2894,8 +2891,8 @@
                                         "height": "100%",
                                         "value": "No plugin found",
                                         "id": "text_7",
-                                        "left": "auto",
-                                        "top": "auto",
+                                        "left": 0,
+                                        "top": 0,
                                         "vertical": false,
                                         "color": "auto",
                                         "css": "",
@@ -2905,14 +2902,14 @@
                                     }
                                 ],
                                 "tabs": [],
-                                "height": "auto"
+                                "height": "auto",
+                                "width": "auto"
                             },
                             {
                                 "type": "panel",
                                 "id": "chsel",
                                 "label": false,
                                 "width": 240,
-                                "height": "100%",
                                 "css": "",
                                 "widgets": [
                                     {
@@ -3452,7 +3449,8 @@
                                         "tabs": [],
                                         "popupWidth": "75%",
                                         "popupHeight": "75%",
-                                        "address": "/sends_panel"
+                                        "address": "/sends_panel",
+                                        "variables": {}
                                     },
                                     {
                                         "type": "modal",
@@ -3487,7 +3485,8 @@
                                         "tabs": [],
                                         "popupWidth": "75%",
                                         "popupHeight": "75%",
-                                        "address": "/receives_panel"
+                                        "address": "/receives_panel",
+                                        "variables": {}
                                     }
                                 ],
                                 "tabs": [],
@@ -3497,10 +3496,13 @@
                                 "layout": "",
                                 "left": 0,
                                 "top": 0,
-                                "variables": {}
+                                "variables": {},
+                                "height": "100%"
                             }
                         ],
-                        "tabs": []
+                        "tabs": [],
+                        "height": "auto",
+                        "width": "auto"
                     },
                     {
                         "type": "panel",
@@ -3968,7 +3970,10 @@
                         "height": "auto"
                     }
                 ],
-                "horizontal": false
+                "horizontal": false,
+                "stretch": false,
+                "spacing": 0,
+                "variables": {}
             }
         ]
     }
