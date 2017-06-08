@@ -50,10 +50,10 @@
                 id: 'plugin_' + plugins[i].id,
                 widgets: []
             }
-            var panel = {type:'panel', label:false, widgets:[], height:'100%', width:'100%', css:'> .panel {display:flex;flex-direction:row};'},
-                toggles = {type:'panel', label: '^toggle-on', widgets:[], height:'100%', width:'160rem', css:'> .panel {display:flex;flex-direction:column;flex-wrap: nowrap;};.widget {flex-shrink:0}'},
-                faders = {type:'panel', label: '^sliders', widgets:[], height:'100%', width: '100%', css:' > .panel {display:flex;flex-direction:column;flex-wrap: nowrap;};.widget {flex-shrink:0}'}
-                meters = {type:'panel', label: '^tachometer', widgets:[], height:'100%', width: '60%', css:' > .panel {display:flex;flex-direction:column;flex-wrap: nowrap;};.widget {flex-shrink:0}'}
+            var panel = {type:'strip', label:false, widgets:[], height:'100%', width:'100%', horizontal:true},
+                toggles = {type:'strip', label: '^toggle-on', widgets:[], height:'100%', width:100},
+                faders = {type:'strip', label: '^sliders', widgets:[], height:'100%', css:'flex:3'},
+                meters = {type:'strip', label: '^tachometer', widgets:[], height:'100%', css:'flex:1'}
 
             for (var j in plugins[i].parameters) {
                 let w = paramsToWidget(plugins[i].parameters[j], plugins[i].id)
@@ -82,7 +82,7 @@
         for (var i in sends) {
 
 
-            var strip = {type:'strip', label:`${dir} ${i+1}`, widgets:[], height:'100%', width:'80rem', css:'> .panel {display:flex;flex-direction:row};'}
+            var strip = {type:'strip', label:`${dir} ${i+1}`, widgets:[], height:'100%', width:'80rem'}
             strip.widgets.push({
                 type:'text',
                 id: 'send_name_' + sends[i].id + '_to_' + sends[i].targetId,
@@ -100,7 +100,8 @@
                 preArgs: [sends[i].targetId, sends[i].id],
                 range: {"min": {"inf": -193},"6%": -60,"12%": -50,"20%": -40,"30%": -30,"42%": -20,"60%": -10,"80%": 0,"max": 6},
                 unit: 'dB',
-                value: sends[i].gain
+                value: sends[i].gain,
+                css:'flex:1'
             })
             strip.widgets.push({
                 type:'toggle',
