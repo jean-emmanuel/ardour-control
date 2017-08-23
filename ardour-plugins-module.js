@@ -45,7 +45,8 @@
     createPluginsGui = ()=>{
         var tabs = []
         for (var i in plugins) {
-            tabs[i] = {
+
+            let tab = {
                 label: plugins[i].name,
                 id: 'plugin_' + plugins[i].id,
                 widgets: []
@@ -65,7 +66,9 @@
             if (toggles.widgets.length) panel.widgets.push(toggles)
             if (faders.widgets.length) panel.widgets.push(faders)
             if (meters.widgets.length) panel.widgets.push(meters)
-            tabs[i].widgets.push(panel)
+
+            tab.widgets.push(panel)
+            tabs.push(tab)
 
         }
         receive('/EDIT', 'plugins_panel', JSON.stringify({
@@ -157,6 +160,7 @@
             widget.height = 60
             widget.compact = true
             widget.horizontal = true
+            widget.pips = false
             // if (params.pips.length) {
             //     var range = {}
             //     for (var n in params.pips) {
@@ -264,13 +268,24 @@
             if (address == '/strip/plugin/list') {
                 plugins = []
                 if (args.length > 1) {
-                    nPlugins = (args.length - 1) / 2
-                    for (var i=1; i<args.length; i+=2) {
+                    nPlugins = (args.length - 1) / 3
+                    for (var i=1; i<args.length; i+=3) {
+
                         send(
                             '/strip/plugin/descriptor',
                             args[0].value,
                             args[i].value
                         )
+
+                        let plugin = {
+                            id: args[i].value,
+                            name: args[i+1].value,
+                            active: args[i+2],
+                            parameters: []
+                        }
+
+                        plugins[args[i].value] = plugin
+
                     }
                 } else {
                     nPlugins = 0
@@ -283,51 +298,38 @@
 
                 if (args[0].value != getCurrentStrip()) return
 
-                var plugin = {
-                    id: args[1].value,
-                    name: args[2].value,
-                    parameters: []
+                var plugin = plugins[args[1].value]
+
+                // console.log(plugin)
+                if (!plugin) return
+
+                plugin.parameters[args[2].value] = {
+                    id: args[2].value,
+                    name: args[3].value,
+                    flags: args[4].value,
+                    dataType: args[5].value,
+                    min: args[6].value,
+                    max: args[7].value,
+                    unit: args[8].value,
+                    pips: []
                 }
 
-                var i = 3, n = 0
-                while (i < args.length) {
-
-                    plugin.parameters[n] = {
-                        id: args[i + 0].value,
-                        name: args[i + 1].value,
-                        flags: args[i + 2].value,
-                        dataType: args[i + 3].value,
-                        min: args[i + 4].value,
-                        max: args[i + 5].value,
-                        unit: args[i + 6].value,
-                        pips: []
-                    }
-
-                    // increment
-                    i += 7
-
-                    // skip scale infos
-                    var pips = args[i].value
-                    i += 1
-                    for (var p=0; p<pips; p += 1) {
-                        plugin.parameters[n].pips.push([args[i].value, args[i+1].value])
-                        i += 2
-                    }
-
-                    // get current value
-                    plugin.parameters[n].value = args[i].value
-
-                    // next param
-                    i += 1
-                    n += 1
-
+                // skip scale infos
+                var nPips = args[9].value
+                for (var p=0; p < nPips; p += 2) {
+                    plugin.parameters[args[2].value].pips.push([args[10 + p].value, args[10 + p + 1].value])
                 }
 
-                plugins.push(plugin)
+                // get current value
+                plugin.parameters[args[2].value].value = args[10 + nPips * 2].value
 
-                if (plugins.length == nPlugins) {
-                    createPluginsGui()
-                }
+                return
+            }
+
+            if (address == '/strip/plugin/descriptor_end' && args.length > 1) {
+                if (args[0].value != getCurrentStrip()) return
+                createPluginsGui()
+
                 return
             }
 
