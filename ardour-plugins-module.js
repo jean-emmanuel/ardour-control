@@ -57,6 +57,7 @@
                 meters = {type:'strip', label: '^tachometer', widgets:[], height:'100%', css:'flex:1'}
 
             for (var j in plugins[i].parameters) {
+                if (256 & plugins[i].parameters.flags) continue
                 let w = paramsToWidget(plugins[i].parameters[j], plugins[i].id)
                 if (w.type == 'meter') meters.widgets.push(w)
                 if (w.type == 'fader') faders.widgets.push(w)
