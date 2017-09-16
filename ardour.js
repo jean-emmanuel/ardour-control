@@ -810,7 +810,7 @@
                                             },
                                             "id": "channel_strip_2"
                                         },
-                                        "label": false,
+                                        "label": "",
                                         "variables": "@{parent.variables}"
                                     },
                                     {
@@ -828,7 +828,7 @@
                                         },
                                         "left": "auto",
                                         "top": "auto",
-                                        "label": false,
+                                        "label": "",
                                         "variables": "@{parent.variables}"
                                     },
                                     {
@@ -846,7 +846,7 @@
                                         },
                                         "left": "auto",
                                         "top": "auto",
-                                        "label": false,
+                                        "label": "",
                                         "variables": "@{parent.variables}"
                                     },
                                     {
@@ -864,7 +864,7 @@
                                         },
                                         "left": "auto",
                                         "top": "auto",
-                                        "label": false,
+                                        "label": "",
                                         "variables": "@{parent.variables}"
                                     },
                                     {
@@ -882,7 +882,7 @@
                                         },
                                         "left": "auto",
                                         "top": "auto",
-                                        "label": false,
+                                        "label": "",
                                         "variables": "@{parent.variables}"
                                     }
                                 ],
@@ -1694,7 +1694,8 @@
                                                                                 "split": [],
                                                                                 "preArgs": [],
                                                                                 "target": [],
-                                                                                "height": "auto"
+                                                                                "height": "auto",
+                                                                                "unit": ""
                                                                             }
                                                                         ],
                                                                         "horizontal": false,
@@ -1765,7 +1766,6 @@
                                                 "id": "bank_dn",
                                                 "linkId": "",
                                                 "label": "^angle-left",
-                                                "color": "green",
                                                 "on": 1,
                                                 "off": 0,
                                                 "precision": 2,
@@ -1773,15 +1773,15 @@
                                                 "target": [],
                                                 "norelease": false,
                                                 "address": "/bank_down",
-                                                "css": "",
-                                                "width": 50
+                                                "css": "&:not(.on) {opacity:0.75}",
+                                                "width": 50,
+                                                "color": "auto"
                                             },
                                             {
                                                 "type": "push",
                                                 "id": "bank_up",
                                                 "linkId": "",
                                                 "label": "^angle-right",
-                                                "color": "green",
                                                 "on": 1,
                                                 "off": 0,
                                                 "precision": 2,
@@ -1789,8 +1789,9 @@
                                                 "target": [],
                                                 "norelease": false,
                                                 "address": "/bank_up",
-                                                "css": "",
-                                                "width": 50
+                                                "css": "&:not(.on) {opacity:0.75}",
+                                                "width": 50,
+                                                "color": "auto"
                                             }
                                         ],
                                         "_style": "style",
@@ -2143,15 +2144,15 @@
                                                                 "width": "100%",
                                                                 "height": "100%",
                                                                 "value": "No receive found",
-                                                                "id": "text_9",
+                                                                "id": "text_4",
                                                                 "left": "auto",
                                                                 "top": "auto",
-                                                                "vertical": false,
                                                                 "color": "auto",
                                                                 "css": "",
                                                                 "widgetId": "",
+                                                                "vertical": false,
                                                                 "preArgs": [],
-                                                                "address": "/text_36"
+                                                                "address": "/text_4"
                                                             }
                                                         ],
                                                         "popupWidth": "75%",
@@ -2183,15 +2184,15 @@
                                                                 "width": "100%",
                                                                 "height": "100%",
                                                                 "value": "No send found",
-                                                                "id": "text_8",
+                                                                "id": "text_3",
                                                                 "left": "auto",
                                                                 "top": "auto",
-                                                                "vertical": false,
                                                                 "color": "auto",
                                                                 "css": "",
                                                                 "widgetId": "",
+                                                                "vertical": false,
                                                                 "preArgs": [],
-                                                                "address": "/text_35"
+                                                                "address": "/text_3"
                                                             }
                                                         ],
                                                         "popupWidth": "75%",
@@ -2532,15 +2533,15 @@
                                                 "width": "100%",
                                                 "height": "100%",
                                                 "value": "No plugin found",
-                                                "id": "text_7",
-                                                "left": 0,
-                                                "top": 0,
-                                                "vertical": false,
+                                                "id": "text_1",
+                                                "left": "auto",
+                                                "top": "auto",
                                                 "color": "auto",
                                                 "css": "",
                                                 "widgetId": "",
+                                                "vertical": false,
                                                 "preArgs": [],
-                                                "address": "/text_7"
+                                                "address": "/text_1"
                                             }
                                         ],
                                         "tabs": [],
@@ -2582,7 +2583,7 @@
                                 "top": 0,
                                 "widgetId": "sess_name",
                                 "props": {},
-                                "label": false,
+                                "label": "",
                                 "variables": "@{parent.variables}"
                             },
                             {
@@ -2597,7 +2598,7 @@
                                 "_geometry": "geometry",
                                 "widgetId": "transport",
                                 "props": {},
-                                "label": false,
+                                "label": "",
                                 "variables": "@{parent.variables}"
                             },
                             {
@@ -2612,7 +2613,7 @@
                                 "_geometry": "geometry",
                                 "widgetId": "ch_master",
                                 "props": {},
-                                "label": false,
+                                "label": "",
                                 "variables": "@{parent.variables}"
                             }
                         ],
