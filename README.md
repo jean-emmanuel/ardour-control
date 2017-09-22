@@ -5,7 +5,7 @@ OSC Control Surface for Ardour. Based on Len Ovens' control surface.
 ## Requirements
 
 - Ardour 5.11
-- [Open Stage Control](https://github.com/jean-emmanuel/open-stage-control) (>= v0.19.3)
+- [Open Stage Control](https://github.com/jean-emmanuel/open-stage-control) (>= v0.20.3)
 
 ## Features
 
