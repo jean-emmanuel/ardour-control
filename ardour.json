@@ -1166,15 +1166,15 @@
                                                 "origin": "auto",
                                                 "spring": false,
                                                 "value": "",
-                                                "address": "/strip/gain",
+                                                "address": "/master/gain",
                                                 "touchAddress": "",
-                                                "meterAddress": "/master/gain",
                                                 "pips": true,
                                                 "input": false,
                                                 "dashed": false,
                                                 "doubleTap": false,
                                                 "width": 80,
-                                                "preArgs": []
+                                                "preArgs": [],
+                                                "meterAddress": ""
                                             }
                                         ],
                                         "height": "auto",
