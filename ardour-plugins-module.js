@@ -13,7 +13,7 @@
         expand = 0
 
     // Shorthand for osc sending to ardour
-    var [host, port] = settings.read('syncTargets')[0].split(':')
+    var [host, port] = settings.read('targets')[0].split(':')
     send = (address, ...args)=>{
         for (var i in args) {
             if (args[i].type) {
