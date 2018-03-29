@@ -4,6 +4,24 @@
     NO_SEND_TEXT = 'No send found'
     NO_RECEIVE_TEXT = 'No receive found'
 
+    const dedupeTimeout = 250
+    const dedupeAddress = {
+        '/strip/expand': {default:0, timeout: []},
+        '/strip/name': {default:' ', timeout: []},
+        '/strip/mute': {default:0, timeout: []},
+        '/strip/solo': {default:0, timeout: []},
+        '/strip/recenable': {default:0, timeout: []},
+        '/strip/record_safe': {default:0, timeout: []},
+        '/strip/monitor_input': {default:0, timeout: []},
+        '/strip/monitor_disk': {default:0, timeout: []},
+        '/strip/gui_select': {default:0, timeout: []},
+        '/strip/select': {default:0, timeout: []},
+        '/strip/gain': {default:-193, timeout: []},
+        '/strip/trimdB': {default:0, timeout: []},
+        '/strip/pan_stereo_position': {default:0.5, timeout: []},
+        '/strip/meter': {default:-193, timeout: []}
+    }
+
     // Do whatever you want, initialize some variables, declare some functions, ...
 
     var plugins = [],
@@ -332,6 +350,24 @@
                 createPluginsGui()
 
                 return
+            }
+
+            if (dedupeAddress[address] && args.length === 2) {
+
+                var strip = args[0].value,
+                    value = args[1].value
+
+                dedupeAddress[address].timeout[strip] = clearTimeout(dedupeAddress[address].timeout[strip])
+
+                if (value === dedupeAddress[address].default) {
+
+                    dedupeAddress[address].timeout[strip] = setTimeout(()=>{
+                        receiveOsc({address, args, host, port})
+                    }, dedupeTimeout)
+                    return
+
+                }
+
             }
 
 
