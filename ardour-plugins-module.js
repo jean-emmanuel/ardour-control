@@ -4,22 +4,35 @@
     NO_SEND_TEXT = 'No send found'
     NO_RECEIVE_TEXT = 'No receive found'
 
-    const dedupeTimeout = 250
+    const dedupeWatch = {
+        duration: 1500,
+        active: false,
+        timeout: null,
+        activate: ()=>{
+            clearTimeout(dedupeWatch.timeout)
+            dedupeWatch.active = true
+            dedupeWatch.timeout = setTimeout(()=>{
+                dedupeWatch.active = false
+            }, dedupeWatch.duration)
+        }
+    }
+
+    const dedupeTimeoutDuration = 250
     const dedupeAddress = {
-        '/strip/expand': {default:0, timeout: []},
-        '/strip/name': {default:' ', timeout: []},
-        '/strip/mute': {default:0, timeout: []},
-        '/strip/solo': {default:0, timeout: []},
-        '/strip/recenable': {default:0, timeout: []},
-        '/strip/record_safe': {default:0, timeout: []},
-        '/strip/monitor_input': {default:0, timeout: []},
-        '/strip/monitor_disk': {default:0, timeout: []},
-        '/strip/gui_select': {default:0, timeout: []},
-        '/strip/select': {default:0, timeout: []},
-        '/strip/gain': {default:-193, timeout: []},
-        '/strip/trimdB': {default:0, timeout: []},
-        '/strip/pan_stereo_position': {default:0.5, timeout: []},
-        '/strip/meter': {default:-193, timeout: []}
+        '/strip/expand': {default:0, timeouts: []},
+        '/strip/name': {default:' ', timeouts: []},
+        '/strip/mute': {default:0, timeouts: []},
+        '/strip/solo': {default:0, timeouts: []},
+        '/strip/recenable': {default:0, timeouts: []},
+        '/strip/record_safe': {default:0, timeouts: []},
+        '/strip/monitor_input': {default:0, timeouts: []},
+        '/strip/monitor_disk': {default:0, timeouts: []},
+        '/strip/gui_select': {default:0, timeouts: []},
+        '/strip/select': {default:0, timeouts: []},
+        '/strip/gain': {default:-193, timeouts: []},
+        '/strip/trimdB': {default:0, timeouts: []},
+        '/strip/pan_stereo_position': {default:0.5, timeouts: []},
+        '/strip/meter': {default:-193, timeouts: []}
     }
 
     // Do whatever you want, initialize some variables, declare some functions, ...
@@ -352,18 +365,19 @@
                 return
             }
 
-            if (dedupeAddress[address] && args.length === 2) {
+            if (dedupeAddress[address] && args.length === 2 && dedupeWatch.active) {
 
                 var strip = args[0].value,
                     value = args[1].value
 
-                dedupeAddress[address].timeout[strip] = clearTimeout(dedupeAddress[address].timeout[strip])
+                clearTimeout(dedupeAddress[address].timeouts[strip])
 
                 if (value === dedupeAddress[address].default) {
 
-                    dedupeAddress[address].timeout[strip] = setTimeout(()=>{
+                    dedupeAddress[address].timeouts[strip] = setTimeout(()=>{
                         receiveOsc({address, args, host, port})
-                    }, dedupeTimeout)
+                    }, dedupeTimeoutDuration)
+
                     return
 
                 }
@@ -379,7 +393,9 @@
             // Filter outgoing osc messages
             var {address, args, host, port} = data
 
-            // same as oscInFilter
+            if (address === '/bank_up' || address === '/bank_down') {
+                dedupeWatch.activate()
+            }
 
             // return data if you want the message to be and sent
             return {address, args, host, port}
