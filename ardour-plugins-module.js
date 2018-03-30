@@ -17,7 +17,7 @@
         }
     }
 
-    const dedupeTimeoutDuration = 250
+    const dedupeTimeoutDuration = 500
     const dedupeAddress = {
         '/strip/expand': {default:0, timeouts: []},
         '/strip/name': {default:' ', timeouts: []},
