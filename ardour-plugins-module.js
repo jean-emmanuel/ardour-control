@@ -5,7 +5,8 @@
     NO_RECEIVE_TEXT = 'No receive found'
 
     const dedupeWatch = {
-        duration: 1500,
+        delay: 250,
+        minduration: 1500,
         active: false,
         timeout: null,
         activate: ()=>{
@@ -13,9 +14,15 @@
             dedupeWatch.active = true
             dedupeWatch.timeout = setTimeout(()=>{
                 dedupeWatch.active = false
-            }, dedupeWatch.duration)
+            }, Math.max(dedupeWatch.delay * 2.5, dedupeWatch.minDuration))
         }
     }
+    const dedupeWatchTriggers = [
+        '/sel',
+        '/bank_up',
+        '/bank_down',
+        '/set_surface'
+    ]
 
     const dedupeTimeoutDuration = 250
     const dedupeAddress = {
@@ -376,7 +383,7 @@
 
                     dedupeAddress[address].timeouts[strip] = setTimeout(()=>{
                         receiveOsc({address, args, host, port})
-                    }, dedupeTimeoutDuration)
+                    }, dedupeWatch.delay)
 
                     return
 
@@ -393,7 +400,7 @@
             // Filter outgoing osc messages
             var {address, args, host, port} = data
 
-            if (address === '/bank_up' || address === '/bank_down') {
+            if (dedupeWatchTriggers.contains(address)) {
                 dedupeWatch.activate()
             }
 
