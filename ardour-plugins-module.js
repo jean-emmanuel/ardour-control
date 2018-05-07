@@ -5,7 +5,7 @@
     NO_RECEIVE_TEXT = 'No receive found'
 
     const dedupeWatch = {
-        duration: 1500,
+        duration: 100,
         active: false,
         timeout: null,
         activate: ()=>{
@@ -17,7 +17,7 @@
         }
     }
 
-    const dedupeTimeoutDuration = 500
+    const dedupeTimeoutDuration = 200
     const dedupeAddress = {
         '/strip/expand': {default:0, timeouts: []},
         '/strip/name': {default:' ', timeouts: []},
@@ -393,7 +393,7 @@
             // Filter outgoing osc messages
             var {address, args, host, port} = data
 
-            if (address === '/bank_up' || address === '/bank_down') {
+            if (address === '/bank_up' || address === '/bank_down' || address === '/strip/select') {
                 dedupeWatch.activate()
             }
 
