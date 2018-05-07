@@ -24,7 +24,6 @@
         '/set_surface'
     ]
 
-    const dedupeTimeoutDuration = 250
     const dedupeAddress = {
         '/strip/expand': {default:0, timeouts: []},
         '/strip/name': {default:' ', timeouts: []},
