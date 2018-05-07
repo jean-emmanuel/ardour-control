@@ -18,7 +18,7 @@
         }
     }
     const dedupeWatchTriggers = [
-        '/sel',
+        '/strip/select',
         '/bank_up',
         '/bank_down',
         '/set_surface'
