@@ -400,7 +400,7 @@
             // Filter outgoing osc messages
             var {address, args, host, port} = data
 
-            if (dedupeWatchTriggers.contains(address)) {
+            if (dedupeWatchTriggers.includes(address)) {
                 dedupeWatch.activate()
             }
 
