@@ -61,7 +61,9 @@
                                         "unit": "",
                                         "width": 114,
                                         "css": "",
-                                        "linkId": ""
+                                        "linkId": "",
+                                        "default": "",
+                                        "bypass": false
                                     },
                                     {
                                         "type": "push",
@@ -77,7 +79,8 @@
                                         "color": "auto",
                                         "norelease": true,
                                         "address": "/goto_start",
-                                        "width": 55
+                                        "width": 55,
+                                        "bypass": false
                                     },
                                     {
                                         "type": "push",
@@ -93,7 +96,8 @@
                                         "color": "auto",
                                         "norelease": true,
                                         "address": "/goto_end",
-                                        "width": 55
+                                        "width": 55,
+                                        "bypass": false
                                     },
                                     {
                                         "type": "push",
@@ -109,7 +113,8 @@
                                         "target": [],
                                         "norelease": true,
                                         "address": "/transport_play",
-                                        "width": 55
+                                        "width": 55,
+                                        "bypass": false
                                     },
                                     {
                                         "type": "push",
@@ -125,7 +130,8 @@
                                         "target": [],
                                         "norelease": true,
                                         "address": "/transport_stop",
-                                        "width": 55
+                                        "width": 55,
+                                        "bypass": false
                                     },
                                     {
                                         "type": "push",
@@ -141,7 +147,8 @@
                                         "target": [],
                                         "norelease": true,
                                         "address": "/rec_enable_toggle",
-                                        "width": 55
+                                        "width": 55,
+                                        "bypass": false
                                     },
                                     {
                                         "type": "text",
@@ -155,7 +162,10 @@
                                         "widgetId": "",
                                         "width": 100,
                                         "color": "auto",
-                                        "linkId": ""
+                                        "linkId": "",
+                                        "wrap": false,
+                                        "align": "",
+                                        "default": ""
                                     },
                                     {
                                         "type": "push",
@@ -171,29 +181,32 @@
                                         "norelease": true,
                                         "address": "/cancel_all_solos",
                                         "css": "",
-                                        "width": 55
+                                        "width": 55,
+                                        "bypass": false
                                     },
                                     {
                                         "type": "push",
                                         "id": "connect",
                                         "label": "^plug",
                                         "css": "",
-                                        "on": 0,
-                                        "off": null,
+                                        "on": null,
+                                        "off": 0,
                                         "precision": 0,
                                         "target": [],
                                         "color": "auto",
                                         "preArgs": [
-                                            6,
+                                            8,
                                             159,
                                             8403,
                                             0,
-                                            3
+                                            0,
+                                            1
                                         ],
                                         "norelease": true,
                                         "address": "/set_surface",
                                         "linkId": "",
-                                        "width": 55
+                                        "width": 55,
+                                        "bypass": false
                                     }
                                 ],
                                 "variables": {},
@@ -216,7 +229,10 @@
                                 "target": [],
                                 "tabs": [],
                                 "linkId": "",
-                                "noSync": false
+                                "noSync": false,
+                                "_value": "value (tab selection)",
+                                "default": "",
+                                "bypass": false
                             },
                             {
                                 "type": "text",
@@ -233,7 +249,10 @@
                                 "address": "/session_name",
                                 "widgetId": "",
                                 "color": "auto",
-                                "linkId": ""
+                                "linkId": "",
+                                "wrap": false,
+                                "align": "",
+                                "default": ""
                             },
                             {
                                 "type": "panel",
@@ -265,7 +284,10 @@
                                                 "widgetId": "",
                                                 "value": "@{parent.variables.n}",
                                                 "color": "auto",
-                                                "linkId": ""
+                                                "linkId": "",
+                                                "wrap": false,
+                                                "align": "",
+                                                "default": ""
                                             },
                                             {
                                                 "type": "strip",
@@ -304,7 +326,10 @@
                                                                 "vertical": true,
                                                                 "width": "auto",
                                                                 "css": "line-height:12rem",
-                                                                "linkId": ""
+                                                                "linkId": "",
+                                                                "wrap": false,
+                                                                "align": "",
+                                                                "default": ""
                                                             },
                                                             {
                                                                 "type": "input",
@@ -322,7 +347,10 @@
                                                                 "address": "/trim_input_@{parent.variables.n}",
                                                                 "width": "auto",
                                                                 "css": "",
-                                                                "vertical": true
+                                                                "vertical": true,
+                                                                "align": "",
+                                                                "default": "",
+                                                                "bypass": false
                                                             }
                                                         ],
                                                         "_style": "style",
@@ -340,7 +368,10 @@
                                                         "target": [],
                                                         "tabs": [],
                                                         "linkId": "",
-                                                        "noSync": false
+                                                        "noSync": false,
+                                                        "_value": "value (tab selection)",
+                                                        "default": "",
+                                                        "bypass": false
                                                     },
                                                     {
                                                         "type": "knob",
@@ -371,7 +402,9 @@
                                                         "css": "",
                                                         "color": "auto",
                                                         "angle": 270,
-                                                        "width": "auto"
+                                                        "width": "auto",
+                                                        "default": "",
+                                                        "bypass": false
                                                     }
                                                 ],
                                                 "_style": "style",
@@ -388,7 +421,10 @@
                                                 "target": [],
                                                 "tabs": [],
                                                 "linkId": "",
-                                                "noSync": false
+                                                "noSync": false,
+                                                "_value": "value (tab selection)",
+                                                "default": "",
+                                                "bypass": false
                                             },
                                             {
                                                 "type": "strip",
@@ -421,7 +457,9 @@
                                                         "led": false,
                                                         "css": "",
                                                         "width": "auto",
-                                                        "doubleTap": false
+                                                        "doubleTap": false,
+                                                        "default": "",
+                                                        "bypass": false
                                                     },
                                                     {
                                                         "type": "toggle",
@@ -441,7 +479,9 @@
                                                         "led": false,
                                                         "css": "",
                                                         "width": "auto",
-                                                        "doubleTap": false
+                                                        "doubleTap": false,
+                                                        "default": "",
+                                                        "bypass": false
                                                     },
                                                     {
                                                         "type": "toggle",
@@ -461,7 +501,9 @@
                                                         "address": "/strip/monitor_disk",
                                                         "led": false,
                                                         "width": "auto",
-                                                        "doubleTap": false
+                                                        "doubleTap": false,
+                                                        "default": "",
+                                                        "bypass": false
                                                     }
                                                 ],
                                                 "_style": "style",
@@ -478,7 +520,10 @@
                                                 "target": [],
                                                 "tabs": [],
                                                 "linkId": "",
-                                                "noSync": false
+                                                "noSync": false,
+                                                "_value": "value (tab selection)",
+                                                "default": "",
+                                                "bypass": false
                                             },
                                             {
                                                 "type": "strip",
@@ -524,7 +569,9 @@
                                                         "width": 10,
                                                         "compact": true,
                                                         "input": false,
-                                                        "linkId": ""
+                                                        "linkId": "",
+                                                        "gradient": [],
+                                                        "default": ""
                                                     },
                                                     {
                                                         "type": "fader",
@@ -568,7 +615,9 @@
                                                         "input": false,
                                                         "dashed": false,
                                                         "doubleTap": false,
-                                                        "width": 80
+                                                        "width": 80,
+                                                        "default": "",
+                                                        "bypass": false
                                                     }
                                                 ],
                                                 "height": "auto",
@@ -589,7 +638,10 @@
                                                 "target": [],
                                                 "tabs": [],
                                                 "linkId": "",
-                                                "noSync": false
+                                                "noSync": false,
+                                                "_value": "value (tab selection)",
+                                                "default": "",
+                                                "bypass": false
                                             },
                                             {
                                                 "type": "input",
@@ -607,7 +659,10 @@
                                                 "preArgs": [],
                                                 "target": [],
                                                 "address": "/fader_input_@{parent.variables.n}",
-                                                "vertical": false
+                                                "vertical": false,
+                                                "align": "",
+                                                "default": "",
+                                                "bypass": false
                                             },
                                             {
                                                 "type": "fader",
@@ -642,7 +697,9 @@
                                                 "dashed": false,
                                                 "doubleTap": true,
                                                 "color": "auto",
-                                                "css": "margin:5rem"
+                                                "css": "margin:5rem",
+                                                "default": "",
+                                                "bypass": false
                                             },
                                             {
                                                 "type": "strip",
@@ -675,7 +732,9 @@
                                                         "address": "/strip/solo",
                                                         "led": false,
                                                         "width": "auto",
-                                                        "doubleTap": false
+                                                        "doubleTap": false,
+                                                        "default": "",
+                                                        "bypass": false
                                                     },
                                                     {
                                                         "type": "toggle",
@@ -695,7 +754,9 @@
                                                         "address": "/strip/mute",
                                                         "led": false,
                                                         "width": "auto",
-                                                        "doubleTap": false
+                                                        "doubleTap": false,
+                                                        "default": "",
+                                                        "bypass": false
                                                     }
                                                 ],
                                                 "_style": "style",
@@ -712,7 +773,10 @@
                                                 "target": [],
                                                 "tabs": [],
                                                 "linkId": "",
-                                                "noSync": false
+                                                "noSync": false,
+                                                "_value": "value (tab selection)",
+                                                "default": "",
+                                                "bypass": false
                                             },
                                             {
                                                 "type": "strip",
@@ -743,7 +807,8 @@
                                                         ],
                                                         "norelease": false,
                                                         "address": "/strip/select",
-                                                        "width": "auto"
+                                                        "width": "auto",
+                                                        "bypass": false
                                                     },
                                                     {
                                                         "type": "toggle",
@@ -763,7 +828,9 @@
                                                         "address": "/strip/expand",
                                                         "led": false,
                                                         "width": "auto",
-                                                        "doubleTap": false
+                                                        "doubleTap": false,
+                                                        "default": "",
+                                                        "bypass": false
                                                     }
                                                 ],
                                                 "_style": "style",
@@ -780,7 +847,10 @@
                                                 "target": [],
                                                 "tabs": [],
                                                 "linkId": "",
-                                                "noSync": false
+                                                "noSync": false,
+                                                "_value": "value (tab selection)",
+                                                "default": "",
+                                                "bypass": false
                                             }
                                         ],
                                         "color": "auto",
@@ -809,7 +879,10 @@
                                         "target": [],
                                         "tabs": [],
                                         "linkId": "",
-                                        "noSync": false
+                                        "noSync": false,
+                                        "_value": "value (tab selection)",
+                                        "default": "",
+                                        "bypass": false
                                     },
                                     {
                                         "type": "clone",
@@ -900,6 +973,42 @@
                                         "top": "auto",
                                         "label": "",
                                         "variables": "@{parent.variables}"
+                                    },
+                                    {
+                                        "type": "clone",
+                                        "id": "clone_7",
+                                        "width": 120,
+                                        "height": "100%",
+                                        "widgetId": "channel_strip",
+                                        "css": "",
+                                        "props": {
+                                            "variables": {
+                                                "n": 7
+                                            },
+                                            "id": "channel_strip_7"
+                                        },
+                                        "left": "auto",
+                                        "top": "auto",
+                                        "label": "",
+                                        "variables": "@{parent.variables}"
+                                    },
+                                    {
+                                        "type": "clone",
+                                        "id": "clone_8",
+                                        "width": 120,
+                                        "height": "100%",
+                                        "widgetId": "channel_strip",
+                                        "css": "",
+                                        "props": {
+                                            "variables": {
+                                                "n": 8
+                                            },
+                                            "id": "channel_strip_8"
+                                        },
+                                        "left": "auto",
+                                        "top": "auto",
+                                        "label": "",
+                                        "variables": "@{parent.variables}"
                                     }
                                 ],
                                 "left": 0,
@@ -920,7 +1029,9 @@
                                 "target": [],
                                 "tabs": [],
                                 "linkId": "",
-                                "noSync": false
+                                "noSync": false,
+                                "default": "",
+                                "bypass": false
                             },
                             {
                                 "type": "strip",
@@ -941,7 +1052,10 @@
                                         "color": "auto",
                                         "widgetId": "",
                                         "preArgs": [],
-                                        "linkId": ""
+                                        "linkId": "",
+                                        "wrap": false,
+                                        "align": "",
+                                        "default": ""
                                     },
                                     {
                                         "type": "strip",
@@ -980,7 +1094,10 @@
                                                         "address": "/mastertrim_label",
                                                         "vertical": true,
                                                         "width": "auto",
-                                                        "linkId": ""
+                                                        "linkId": "",
+                                                        "wrap": false,
+                                                        "align": "",
+                                                        "default": ""
                                                     },
                                                     {
                                                         "type": "input",
@@ -998,7 +1115,10 @@
                                                         "address": "/mastertrim_input",
                                                         "width": "auto",
                                                         "css": "",
-                                                        "vertical": true
+                                                        "vertical": true,
+                                                        "align": "",
+                                                        "default": "",
+                                                        "bypass": false
                                                     }
                                                 ],
                                                 "_style": "style",
@@ -1016,7 +1136,10 @@
                                                 "target": [],
                                                 "tabs": [],
                                                 "linkId": "",
-                                                "noSync": false
+                                                "noSync": false,
+                                                "_value": "value (tab selection)",
+                                                "default": "",
+                                                "bypass": false
                                             },
                                             {
                                                 "type": "knob",
@@ -1045,7 +1168,9 @@
                                                 "color": "auto",
                                                 "angle": 270,
                                                 "width": "auto",
-                                                "preArgs": []
+                                                "preArgs": [],
+                                                "default": "",
+                                                "bypass": false
                                             }
                                         ],
                                         "_style": "style",
@@ -1062,7 +1187,10 @@
                                         "target": [],
                                         "tabs": [],
                                         "linkId": "",
-                                        "noSync": false
+                                        "noSync": false,
+                                        "_value": "value (tab selection)",
+                                        "default": "",
+                                        "bypass": false
                                     },
                                     {
                                         "type": "strip",
@@ -1093,7 +1221,9 @@
                                                 "led": false,
                                                 "width": "auto",
                                                 "preArgs": [],
-                                                "doubleTap": false
+                                                "doubleTap": false,
+                                                "default": "",
+                                                "bypass": false
                                             }
                                         ],
                                         "_style": "style",
@@ -1110,7 +1240,10 @@
                                         "target": [],
                                         "tabs": [],
                                         "linkId": "",
-                                        "noSync": false
+                                        "noSync": false,
+                                        "_value": "value (tab selection)",
+                                        "default": "",
+                                        "bypass": false
                                     },
                                     {
                                         "type": "strip",
@@ -1154,7 +1287,9 @@
                                                 "widgetId": "",
                                                 "compact": true,
                                                 "input": false,
-                                                "linkId": ""
+                                                "linkId": "",
+                                                "gradient": [],
+                                                "default": ""
                                             },
                                             {
                                                 "type": "fader",
@@ -1196,7 +1331,9 @@
                                                 "doubleTap": false,
                                                 "width": 80,
                                                 "preArgs": [],
-                                                "meterAddress": ""
+                                                "meterAddress": "",
+                                                "default": "",
+                                                "bypass": false
                                             }
                                         ],
                                         "height": "auto",
@@ -1217,7 +1354,10 @@
                                         "target": [],
                                         "tabs": [],
                                         "linkId": "",
-                                        "noSync": false
+                                        "noSync": false,
+                                        "_value": "value (tab selection)",
+                                        "default": "",
+                                        "bypass": false
                                     },
                                     {
                                         "type": "input",
@@ -1235,7 +1375,10 @@
                                         "preArgs": [],
                                         "target": [],
                                         "address": "/master_input",
-                                        "vertical": false
+                                        "vertical": false,
+                                        "align": "",
+                                        "default": "",
+                                        "bypass": false
                                     },
                                     {
                                         "type": "fader",
@@ -1268,7 +1411,9 @@
                                         "doubleTap": true,
                                         "color": "auto",
                                         "css": "margin:5rem",
-                                        "preArgs": []
+                                        "preArgs": [],
+                                        "default": "",
+                                        "bypass": false
                                     },
                                     {
                                         "type": "strip",
@@ -1354,7 +1499,9 @@
                                                                 "input": true,
                                                                 "dashed": false,
                                                                 "doubleTap": false,
-                                                                "height": "auto"
+                                                                "height": "auto",
+                                                                "default": "",
+                                                                "bypass": false
                                                             },
                                                             {
                                                                 "type": "strip",
@@ -1383,7 +1530,9 @@
                                                                         "css": "",
                                                                         "width": "auto",
                                                                         "preArgs": [],
-                                                                        "doubleTap": false
+                                                                        "doubleTap": false,
+                                                                        "default": "",
+                                                                        "bypass": false
                                                                     },
                                                                     {
                                                                         "type": "toggle",
@@ -1401,7 +1550,9 @@
                                                                         "css": "",
                                                                         "width": "auto",
                                                                         "preArgs": [],
-                                                                        "doubleTap": false
+                                                                        "doubleTap": false,
+                                                                        "default": "",
+                                                                        "bypass": false
                                                                     },
                                                                     {
                                                                         "type": "toggle",
@@ -1419,7 +1570,9 @@
                                                                         "led": false,
                                                                         "preArgs": [],
                                                                         "width": "auto",
-                                                                        "doubleTap": false
+                                                                        "doubleTap": false,
+                                                                        "default": "",
+                                                                        "bypass": false
                                                                     }
                                                                 ],
                                                                 "_style": "style",
@@ -1438,7 +1591,10 @@
                                                                 "target": [],
                                                                 "tabs": [],
                                                                 "linkId": "",
-                                                                "noSync": false
+                                                                "noSync": false,
+                                                                "_value": "value (tab selection)",
+                                                                "default": "",
+                                                                "bypass": false
                                                             }
                                                         ],
                                                         "_style": "style",
@@ -1459,14 +1615,21 @@
                                                         "target": [],
                                                         "tabs": [],
                                                         "linkId": "",
-                                                        "noSync": false
+                                                        "noSync": false,
+                                                        "_value": "value (tab selection)",
+                                                        "default": "",
+                                                        "bypass": false
                                                     }
                                                 ],
                                                 "popupLabel": "Monitor",
                                                 "tabs": [],
                                                 "scroll": true,
                                                 "linkId": "",
-                                                "noSync": false
+                                                "noSync": false,
+                                                "popupLeft": "auto",
+                                                "popupTop": "auto",
+                                                "default": "",
+                                                "bypass": false
                                             },
                                             {
                                                 "type": "modal",
@@ -1546,7 +1709,9 @@
                                                                                 "address": "/null",
                                                                                 "height": "auto",
                                                                                 "led": false,
-                                                                                "doubleTap": false
+                                                                                "doubleTap": false,
+                                                                                "default": "",
+                                                                                "bypass": false
                                                                             },
                                                                             {
                                                                                 "type": "toggle",
@@ -1564,7 +1729,9 @@
                                                                                 "linkId": "",
                                                                                 "height": "auto",
                                                                                 "led": false,
-                                                                                "doubleTap": false
+                                                                                "doubleTap": false,
+                                                                                "default": "",
+                                                                                "bypass": false
                                                                             },
                                                                             {
                                                                                 "type": "toggle",
@@ -1582,7 +1749,9 @@
                                                                                 "linkId": "",
                                                                                 "height": "auto",
                                                                                 "led": false,
-                                                                                "doubleTap": false
+                                                                                "doubleTap": false,
+                                                                                "default": "",
+                                                                                "bypass": false
                                                                             },
                                                                             {
                                                                                 "type": "toggle",
@@ -1600,7 +1769,9 @@
                                                                                 "linkId": "",
                                                                                 "height": "auto",
                                                                                 "led": false,
-                                                                                "doubleTap": false
+                                                                                "doubleTap": false,
+                                                                                "default": "",
+                                                                                "bypass": false
                                                                             },
                                                                             {
                                                                                 "type": "toggle",
@@ -1618,7 +1789,9 @@
                                                                                 "linkId": "",
                                                                                 "height": "auto",
                                                                                 "led": false,
-                                                                                "doubleTap": false
+                                                                                "doubleTap": false,
+                                                                                "default": "",
+                                                                                "bypass": false
                                                                             },
                                                                             {
                                                                                 "type": "toggle",
@@ -1636,7 +1809,9 @@
                                                                                 "linkId": "",
                                                                                 "height": "auto",
                                                                                 "led": false,
-                                                                                "doubleTap": false
+                                                                                "doubleTap": false,
+                                                                                "default": "",
+                                                                                "bypass": false
                                                                             },
                                                                             {
                                                                                 "type": "toggle",
@@ -1654,7 +1829,9 @@
                                                                                 "linkId": "",
                                                                                 "height": "auto",
                                                                                 "led": false,
-                                                                                "doubleTap": false
+                                                                                "doubleTap": false,
+                                                                                "default": "",
+                                                                                "bypass": false
                                                                             },
                                                                             {
                                                                                 "type": "toggle",
@@ -1672,7 +1849,9 @@
                                                                                 "linkId": "",
                                                                                 "height": "auto",
                                                                                 "led": false,
-                                                                                "doubleTap": false
+                                                                                "doubleTap": false,
+                                                                                "default": "",
+                                                                                "bypass": false
                                                                             },
                                                                             {
                                                                                 "type": "toggle",
@@ -1690,7 +1869,9 @@
                                                                                 "css": "",
                                                                                 "height": "auto",
                                                                                 "led": false,
-                                                                                "doubleTap": false
+                                                                                "doubleTap": false,
+                                                                                "default": "",
+                                                                                "bypass": false
                                                                             },
                                                                             {
                                                                                 "type": "toggle",
@@ -1708,7 +1889,9 @@
                                                                                 "linkId": "",
                                                                                 "height": "auto",
                                                                                 "led": false,
-                                                                                "doubleTap": false
+                                                                                "doubleTap": false,
+                                                                                "default": "",
+                                                                                "bypass": false
                                                                             },
                                                                             {
                                                                                 "type": "input",
@@ -1728,7 +1911,10 @@
                                                                                 "formula": "",
                                                                                 "vertical": false,
                                                                                 "editable": false,
-                                                                                "value": "#{\n@{strip_type_1} + \n@{strip_type_2} + \n@{strip_type_3} + \n@{strip_type_4} + \n@{strip_type_5} + \n@{strip_type_6} + \n@{strip_type_7} + \n@{strip_type_8} + \n@{strip_type_9} + \n@{strip_type_10}\n}"
+                                                                                "value": "#{\n@{strip_type_1} + \n@{strip_type_2} + \n@{strip_type_3} + \n@{strip_type_4} + \n@{strip_type_5} + \n@{strip_type_6} + \n@{strip_type_7} + \n@{strip_type_8} + \n@{strip_type_9} + \n@{strip_type_10}\n}",
+                                                                                "align": "",
+                                                                                "default": "",
+                                                                                "bypass": false
                                                                             }
                                                                         ],
                                                                         "horizontal": false,
@@ -1750,19 +1936,26 @@
                                                                         "target": [],
                                                                         "tabs": [],
                                                                         "linkId": "",
-                                                                        "noSync": false
+                                                                        "noSync": false,
+                                                                        "_value": "value (tab selection)",
+                                                                        "default": "",
+                                                                        "bypass": false
                                                                     }
                                                                 ],
                                                                 "tabs": [],
                                                                 "scroll": true,
-                                                                "linkId": ""
+                                                                "linkId": "",
+                                                                "default": "",
+                                                                "bypass": false
                                                             }
                                                         ],
                                                         "top": 0,
                                                         "left": 0,
                                                         "width": "100%",
                                                         "linkId": "",
-                                                        "noSync": false
+                                                        "noSync": false,
+                                                        "default": "",
+                                                        "bypass": false
                                                     }
                                                 ],
                                                 "popupWidth": "80%",
@@ -1771,7 +1964,11 @@
                                                 "tabs": [],
                                                 "scroll": true,
                                                 "linkId": "",
-                                                "noSync": false
+                                                "noSync": false,
+                                                "popupLeft": "auto",
+                                                "popupTop": "auto",
+                                                "default": "",
+                                                "bypass": false
                                             }
                                         ],
                                         "_style": "style",
@@ -1788,7 +1985,10 @@
                                         "target": [],
                                         "tabs": [],
                                         "linkId": "",
-                                        "noSync": false
+                                        "noSync": false,
+                                        "_value": "value (tab selection)",
+                                        "default": "",
+                                        "bypass": false
                                     },
                                     {
                                         "type": "strip",
@@ -1817,7 +2017,8 @@
                                                 "address": "/bank_down",
                                                 "css": "&:not(.on) {opacity:0.75}",
                                                 "width": 50,
-                                                "color": "auto"
+                                                "color": "auto",
+                                                "bypass": false
                                             },
                                             {
                                                 "type": "push",
@@ -1833,7 +2034,8 @@
                                                 "address": "/bank_up",
                                                 "css": "&:not(.on) {opacity:0.75}",
                                                 "width": 50,
-                                                "color": "auto"
+                                                "color": "auto",
+                                                "bypass": false
                                             }
                                         ],
                                         "_style": "style",
@@ -1850,7 +2052,10 @@
                                         "target": [],
                                         "tabs": [],
                                         "linkId": "",
-                                        "noSync": false
+                                        "noSync": false,
+                                        "_value": "value (tab selection)",
+                                        "default": "",
+                                        "bypass": false
                                     }
                                 ],
                                 "spacing": 0,
@@ -1876,7 +2081,10 @@
                                 "target": [],
                                 "tabs": [],
                                 "linkId": "",
-                                "noSync": false
+                                "noSync": false,
+                                "_value": "value (tab selection)",
+                                "default": "",
+                                "bypass": false
                             }
                         ],
                         "tabs": [],
@@ -1887,7 +2095,9 @@
                         "target": [],
                         "border": true,
                         "linkId": "",
-                        "noSync": false
+                        "noSync": false,
+                        "default": "",
+                        "bypass": false
                     }
                 ],
                 "id": "mixer_tab",
@@ -1904,7 +2114,9 @@
                 "color": "auto",
                 "address": "/mixer_tab",
                 "scroll": true,
-                "linkId": ""
+                "linkId": "",
+                "default": "",
+                "bypass": false
             },
             {
                 "type": "tab",
@@ -1961,7 +2173,10 @@
                                                 "value": " sel",
                                                 "preArgs": [],
                                                 "color": "auto",
-                                                "linkId": ""
+                                                "linkId": "",
+                                                "wrap": false,
+                                                "align": "",
+                                                "default": ""
                                             },
                                             {
                                                 "type": "strip",
@@ -2000,7 +2215,10 @@
                                                                 "address": "/select_trim_label",
                                                                 "vertical": true,
                                                                 "width": "auto",
-                                                                "linkId": ""
+                                                                "linkId": "",
+                                                                "wrap": false,
+                                                                "align": "",
+                                                                "default": ""
                                                             },
                                                             {
                                                                 "type": "input",
@@ -2018,7 +2236,10 @@
                                                                 "address": "/select_trim_input",
                                                                 "value": "",
                                                                 "width": "auto",
-                                                                "vertical": true
+                                                                "vertical": true,
+                                                                "align": "",
+                                                                "default": "",
+                                                                "bypass": false
                                                             }
                                                         ],
                                                         "_style": "style",
@@ -2036,7 +2257,10 @@
                                                         "target": [],
                                                         "tabs": [],
                                                         "linkId": "",
-                                                        "noSync": false
+                                                        "noSync": false,
+                                                        "_value": "value (tab selection)",
+                                                        "default": "",
+                                                        "bypass": false
                                                     },
                                                     {
                                                         "type": "knob",
@@ -2065,7 +2289,9 @@
                                                         "color": "auto",
                                                         "angle": 270,
                                                         "width": "auto",
-                                                        "preArgs": []
+                                                        "preArgs": [],
+                                                        "default": "",
+                                                        "bypass": false
                                                     }
                                                 ],
                                                 "_style": "style",
@@ -2082,7 +2308,10 @@
                                                 "target": [],
                                                 "tabs": [],
                                                 "linkId": "",
-                                                "noSync": false
+                                                "noSync": false,
+                                                "_value": "value (tab selection)",
+                                                "default": "",
+                                                "bypass": false
                                             },
                                             {
                                                 "type": "strip",
@@ -2113,7 +2342,9 @@
                                                         "css": "",
                                                         "width": "auto",
                                                         "preArgs": [],
-                                                        "doubleTap": false
+                                                        "doubleTap": false,
+                                                        "default": "",
+                                                        "bypass": false
                                                     },
                                                     {
                                                         "type": "toggle",
@@ -2131,7 +2362,9 @@
                                                         "css": "",
                                                         "width": "auto",
                                                         "preArgs": [],
-                                                        "doubleTap": false
+                                                        "doubleTap": false,
+                                                        "default": "",
+                                                        "bypass": false
                                                     },
                                                     {
                                                         "type": "toggle",
@@ -2149,7 +2382,9 @@
                                                         "led": false,
                                                         "width": "auto",
                                                         "preArgs": [],
-                                                        "doubleTap": false
+                                                        "doubleTap": false,
+                                                        "default": "",
+                                                        "bypass": false
                                                     }
                                                 ],
                                                 "_style": "style",
@@ -2166,7 +2401,10 @@
                                                 "target": [],
                                                 "tabs": [],
                                                 "linkId": "",
-                                                "noSync": false
+                                                "noSync": false,
+                                                "_value": "value (tab selection)",
+                                                "default": "",
+                                                "bypass": false
                                             },
                                             {
                                                 "type": "strip",
@@ -2205,7 +2443,10 @@
                                                                 "vertical": false,
                                                                 "preArgs": [],
                                                                 "address": "/text_4",
-                                                                "linkId": ""
+                                                                "linkId": "",
+                                                                "wrap": false,
+                                                                "align": "",
+                                                                "default": ""
                                                             }
                                                         ],
                                                         "popupWidth": "75%",
@@ -2222,7 +2463,11 @@
                                                         "tabs": [],
                                                         "scroll": true,
                                                         "linkId": "",
-                                                        "noSync": false
+                                                        "noSync": false,
+                                                        "popupLeft": "auto",
+                                                        "popupTop": "auto",
+                                                        "default": "",
+                                                        "bypass": false
                                                     },
                                                     {
                                                         "type": "modal",
@@ -2248,7 +2493,10 @@
                                                                 "vertical": false,
                                                                 "preArgs": [],
                                                                 "address": "/text_3",
-                                                                "linkId": ""
+                                                                "linkId": "",
+                                                                "wrap": false,
+                                                                "align": "",
+                                                                "default": ""
                                                             }
                                                         ],
                                                         "popupWidth": "75%",
@@ -2265,7 +2513,11 @@
                                                         "tabs": [],
                                                         "scroll": true,
                                                         "linkId": "",
-                                                        "noSync": false
+                                                        "noSync": false,
+                                                        "popupLeft": "auto",
+                                                        "popupTop": "auto",
+                                                        "default": "",
+                                                        "bypass": false
                                                     }
                                                 ],
                                                 "_style": "style",
@@ -2282,7 +2534,10 @@
                                                 "target": [],
                                                 "tabs": [],
                                                 "linkId": "",
-                                                "noSync": false
+                                                "noSync": false,
+                                                "_value": "value (tab selection)",
+                                                "default": "",
+                                                "bypass": false
                                             },
                                             {
                                                 "type": "strip",
@@ -2326,7 +2581,9 @@
                                                         "widgetId": "",
                                                         "compact": true,
                                                         "input": false,
-                                                        "linkId": ""
+                                                        "linkId": "",
+                                                        "gradient": [],
+                                                        "default": ""
                                                     },
                                                     {
                                                         "type": "fader",
@@ -2368,7 +2625,9 @@
                                                         "doubleTap": false,
                                                         "width": 80,
                                                         "meterAddress": "",
-                                                        "preArgs": []
+                                                        "preArgs": [],
+                                                        "default": "",
+                                                        "bypass": false
                                                     }
                                                 ],
                                                 "height": "auto",
@@ -2389,7 +2648,10 @@
                                                 "target": [],
                                                 "tabs": [],
                                                 "linkId": "",
-                                                "noSync": false
+                                                "noSync": false,
+                                                "_value": "value (tab selection)",
+                                                "default": "",
+                                                "bypass": false
                                             },
                                             {
                                                 "type": "input",
@@ -2407,7 +2669,10 @@
                                                 "preArgs": [],
                                                 "target": [],
                                                 "address": "/fader_input_select",
-                                                "vertical": false
+                                                "vertical": false,
+                                                "align": "",
+                                                "default": "",
+                                                "bypass": false
                                             },
                                             {
                                                 "type": "fader",
@@ -2440,7 +2705,9 @@
                                                 "doubleTap": true,
                                                 "color": "auto",
                                                 "css": "margin:5rem",
-                                                "preArgs": []
+                                                "preArgs": [],
+                                                "default": "",
+                                                "bypass": false
                                             },
                                             {
                                                 "type": "strip",
@@ -2471,7 +2738,9 @@
                                                         "led": false,
                                                         "width": "auto",
                                                         "preArgs": [],
-                                                        "doubleTap": false
+                                                        "doubleTap": false,
+                                                        "default": "",
+                                                        "bypass": false
                                                     },
                                                     {
                                                         "type": "toggle",
@@ -2489,7 +2758,9 @@
                                                         "led": false,
                                                         "width": "auto",
                                                         "preArgs": [],
-                                                        "doubleTap": false
+                                                        "doubleTap": false,
+                                                        "default": "",
+                                                        "bypass": false
                                                     }
                                                 ],
                                                 "_style": "style",
@@ -2506,7 +2777,10 @@
                                                 "target": [],
                                                 "tabs": [],
                                                 "linkId": "",
-                                                "noSync": false
+                                                "noSync": false,
+                                                "_value": "value (tab selection)",
+                                                "default": "",
+                                                "bypass": false
                                             },
                                             {
                                                 "type": "strip",
@@ -2537,7 +2811,9 @@
                                                         "led": false,
                                                         "width": "auto",
                                                         "preArgs": [],
-                                                        "doubleTap": false
+                                                        "doubleTap": false,
+                                                        "default": "",
+                                                        "bypass": false
                                                     }
                                                 ],
                                                 "_style": "style",
@@ -2554,7 +2830,10 @@
                                                 "target": [],
                                                 "tabs": [],
                                                 "linkId": "",
-                                                "noSync": false
+                                                "noSync": false,
+                                                "_value": "value (tab selection)",
+                                                "default": "",
+                                                "bypass": false
                                             }
                                         ],
                                         "color": "auto",
@@ -2581,13 +2860,14 @@
                                         "target": [],
                                         "tabs": [],
                                         "linkId": "",
-                                        "noSync": false
+                                        "noSync": false,
+                                        "_value": "value (tab selection)",
+                                        "default": "",
+                                        "bypass": false
                                     },
                                     {
-                                        "type": "panel",
-                                        "top": 0,
-                                        "left": 120,
-                                        "id": "plugins_panel",
+                                        "type": "strip",
+                                        "id": "plugins_panel_wrapper",
                                         "label": false,
                                         "scroll": true,
                                         "color": "auto",
@@ -2599,24 +2879,53 @@
                                             {
                                                 "type": "text",
                                                 "label": false,
-                                                "width": "100%",
-                                                "height": "100%",
-                                                "value": "No plugin found",
+                                                "height": 40,
+                                                "value": "Plugins",
                                                 "id": "text_1",
-                                                "left": "auto",
-                                                "top": "auto",
                                                 "color": "auto",
                                                 "css": "",
                                                 "widgetId": "",
                                                 "vertical": false,
                                                 "preArgs": [],
                                                 "address": "/text_1",
-                                                "linkId": ""
+                                                "linkId": "",
+                                                "wrap": false,
+                                                "align": "",
+                                                "default": ""
+                                            },
+                                            {
+                                                "type": "strip",
+                                                "id": "plugins_panel",
+                                                "linkId": "",
+                                                "label": false,
+                                                "height": "auto",
+                                                "color": "auto",
+                                                "css": "flex:1",
+                                                "scroll": true,
+                                                "horizontal": false,
+                                                "stretch": false,
+                                                "border": true,
+                                                "spacing": 0,
+                                                "variables": "@{parent.variables}",
+                                                "widgets": [],
+                                                "_geometry": "geometry",
+                                                "_style": "style",
+                                                "_panel": "panel",
+                                                "layout": "",
+                                                "_value": "value (tab selection)",
+                                                "default": "",
+                                                "value": "",
+                                                "_osc": "osc (tab selection)",
+                                                "precision": 0,
+                                                "preArgs": [],
+                                                "target": [],
+                                                "bypass": false,
+                                                "_children": "children",
+                                                "tabs": []
                                             }
                                         ],
                                         "tabs": [],
                                         "height": "100%",
-                                        "width": "auto",
                                         "value": "",
                                         "precision": 0,
                                         "address": "/plugins_panel",
@@ -2624,7 +2933,20 @@
                                         "target": [],
                                         "border": true,
                                         "linkId": "",
-                                        "noSync": false
+                                        "noSync": false,
+                                        "default": "",
+                                        "bypass": false,
+                                        "horizontal": false,
+                                        "stretch": false,
+                                        "_geometry": "geometry",
+                                        "_style": "style",
+                                        "_panel": "panel",
+                                        "_value": "value (tab selection)",
+                                        "_osc": "osc (tab selection)",
+                                        "_children": "children",
+                                        "left": "auto",
+                                        "top": "auto",
+                                        "width": "auto"
                                     }
                                 ],
                                 "left": 0,
@@ -2645,7 +2967,9 @@
                                 "target": [],
                                 "tabs": [],
                                 "linkId": "",
-                                "noSync": false
+                                "noSync": false,
+                                "default": "",
+                                "bypass": false
                             },
                             {
                                 "type": "clone",
@@ -2699,13 +3023,17 @@
                         "target": [],
                         "border": true,
                         "linkId": "",
-                        "noSync": false
+                        "noSync": false,
+                        "default": "",
+                        "bypass": false
                     }
                 ],
                 "tabs": [],
                 "address": "/track_tab",
                 "scroll": true,
-                "linkId": ""
+                "linkId": "",
+                "default": "",
+                "bypass": false
             }
         ],
         "value": "",
@@ -2720,6 +3048,8 @@
         "scroll": true,
         "label": false,
         "linkId": "",
-        "noSync": false
+        "noSync": false,
+        "default": "",
+        "bypass": false
     }
 ]

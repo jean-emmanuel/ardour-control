@@ -6,7 +6,7 @@
 
     const dedupeWatch = {
         delay: 250,
-        minduration: 1500,
+        duration: 1000,
         active: false,
         timeout: null,
         activate: ()=>{
@@ -14,7 +14,7 @@
             dedupeWatch.active = true
             dedupeWatch.timeout = setTimeout(()=>{
                 dedupeWatch.active = false
-            }, Math.max(dedupeWatch.delay * 2.5, dedupeWatch.minDuration))
+            }, Math.max(dedupeWatch.delay * 2, dedupeWatch.duration))
         }
     }
     const dedupeWatchTriggers = [
@@ -45,7 +45,6 @@
 
     var plugins = [],
         sends = [],
-        nPlugins = 0,
         select = 0,
         expand = 0
 
@@ -79,41 +78,61 @@
         return expand || select
     }
 
-    createPluginsGui = ()=>{
-        var tabs = []
+    createPluginsList = ()=>{
+        var widgets = []
         for (var i in plugins) {
 
-            let tab = {
-                label: plugins[i].name,
-                id: 'plugin_' + plugins[i].id,
-                widgets: []
+            let hstrip = {
+                type:'strip',
+                widgets: [
+                    {type:'modal', id: 'plugin_' + plugins[i].id, label:plugins[i].name, address:'/strip/plugin/descriptor', preArgs: [getCurrentStrip(), plugins[i].id], css: 'flex:1'},
+                ]
             }
-            var panel = {type:'strip', label:false, widgets:[], height:'100%', width:'100%', horizontal:true},
-                toggles = {type:'strip', label: '^toggle-on', widgets:[], height:'100%', width:100},
-                faders = {type:'strip', label: '^sliders', widgets:[], height:'100%', css:'flex:3'},
-                meters = {type:'strip', label: '^tachometer', widgets:[], height:'100%', css:'flex:1'}
-
-            for (var j in plugins[i].parameters) {
-                if (256 & plugins[i].parameters.flags) continue
-                let w = paramsToWidget(plugins[i].parameters[j], plugins[i].id)
-                if (w.type == 'meter') meters.widgets.push(w)
-                if (w.type == 'fader') faders.widgets.push(w)
-                if (w.type == 'toggle') toggles.widgets.push(w)
-            }
-
-            if (toggles.widgets.length) panel.widgets.push(toggles)
-            if (faders.widgets.length) panel.widgets.push(faders)
-            if (meters.widgets.length) panel.widgets.push(meters)
-
-            tab.widgets.push(panel)
-            tabs.push(tab)
+            widgets.push(hstrip)
 
         }
         receive('/EDIT', 'plugins_panel', JSON.stringify({
-            tabs:tabs,
-            widgets: tabs.length ? [] : [
-                {type:'text',label:false, width:'100%', height:'100%',value:NO_PLUGIN_TEXT}
-            ]
+            widgets: widgets
+        }))
+    }
+
+    createPluginsGui = (id)=>{
+
+        var panel = {type:'strip', label:false, widgets:[], height:'100%', width:'100%', horizontal:true, spacing: 5},
+            toggles = {type:'strip', label: '^toggle-on', widgets:[], height:'100%', width:100},
+            faders = {type:'strip', label: '^sliders-h', widgets:[], height:'100%', css:'flex:3'},
+            meters = {type:'strip', label: '^tachometer-alt', widgets:[], height:'100%', css:'flex:1', horizontal:true}
+
+        for (var j in plugins[id].parameters) {
+            if (256 & plugins[id].parameters.flags) continue
+            let w = paramsToWidget(plugins[id].parameters[j], plugins[id].id)
+            if (w.type == 'meter') {
+                meters.widgets.push({
+                    type:'strip', label: false,
+                    widgets: [
+                        {type: 'text', value: plugins[id].parameters[j].name, label: false, vertical: true, height: 100},
+                        w
+                    ]
+                })
+            }
+            if (w.type == 'fader') {
+                faders.widgets.push({
+                    type:'strip', label: false, horizontal: true, height: 60,
+                    widgets: [
+                        {type: 'text', value: plugins[id].parameters[j].name, label: false},
+                        w
+                    ]
+                })
+            }
+            if (w.type == 'toggle') toggles.widgets.push(w)
+        }
+
+        if (toggles.widgets.length) panel.widgets.push(toggles)
+        if (faders.widgets.length) panel.widgets.push(faders)
+        if (meters.widgets.length) panel.widgets.push(meters)
+
+        receive('/EDIT', 'plugin_' + id, JSON.stringify({
+            widgets: [panel]
         }))
     }
 
@@ -194,11 +213,11 @@
             widget.width = '100%'
             widget.height = 50
         } else if (type == 'fader'){
-            widget.width = '100%'
-            widget.height = 60
             widget.compact = true
             widget.horizontal = true
             widget.pips = false
+            widget.label = false
+            widget.css = 'flex:1'
             // if (params.pips.length) {
             //     var range = {}
             //     for (var n in params.pips) {
@@ -213,9 +232,9 @@
                 widget.range = {min:params.min, max:params.max}
             // }
         } else if (type == 'meter'){
-            widget.width = "100%"
-            widget.height = 60
-            widget.horizontal = true
+            widget.label = false
+            widget.width = 30
+            widget.css = 'flex:1'
             widget.range = {min:params.min, max:params.max}
         }
 
@@ -232,39 +251,27 @@
 
             var {address, args, host, port} = data
 
-
             if ((address == '/strip/select' || address == '/strip/expand') && args.length == 2 && args[1].value == 1) {
+                var sel = getCurrentStrip()
                 if (address == '/strip/select') select = args[0].value
                 if (address == '/strip/expand') expand = args[0].value
-
-                send(
-                    '/strip/plugin/list',
-                    {type:'i', value:getCurrentStrip()}
-                )
-                send(
-                    '/strip/sends',
-                    {type:'i', value:getCurrentStrip()}
-                )
-                send(
-                    '/strip/receives',
-                    {type:'i', value:getCurrentStrip()}
-                )
+                if (sel !== getCurrentStrip()) {
+                    send(
+                        '/strip/plugin/list',
+                        {type:'i', value:getCurrentStrip()}
+                    )
+                }
             }
 
             if (address == '/select/expand' && args[0].value == 0) {
+                var sel = getCurrentStrip()
                 expand = 0
-                send(
-                    '/strip/plugin/list',
-                    {type:'i', value:getCurrentStrip()}
-                )
-                send(
-                    '/strip/sends',
-                    {type:'i', value:getCurrentStrip()}
-                )
-                send(
-                    '/strip/receives',
-                    {type:'i', value:getCurrentStrip()}
-                )
+                if (sel !== getCurrentStrip()) {
+                    send(
+                        '/strip/plugin/list',
+                        {type:'i', value:getCurrentStrip()}
+                    )
+                }
             }
 
             if (address == '/strip/sends') {
@@ -305,30 +312,19 @@
 
             if (address == '/strip/plugin/list') {
                 plugins = []
-                if (args.length > 1) {
-                    nPlugins = (args.length - 1) / 3
-                    for (var i=1; i<args.length; i+=3) {
+                for (var i=1; i<args.length; i+=3) {
 
-                        send(
-                            '/strip/plugin/descriptor',
-                            args[0].value,
-                            args[i].value
-                        )
-
-                        let plugin = {
-                            id: args[i].value,
-                            name: args[i+1].value,
-                            active: args[i+2],
-                            parameters: []
-                        }
-
-                        plugins[args[i].value] = plugin
-
+                    let plugin = {
+                        id: args[i].value,
+                        name: args[i+1].value,
+                        active: args[i+2],
+                        parameters: []
                     }
-                } else {
-                    nPlugins = 0
-                    createPluginsGui()
+
+                    plugins[args[i].value] = plugin
+
                 }
+                createPluginsList()
                 return
             }
 
@@ -366,7 +362,7 @@
 
             if (address == '/strip/plugin/descriptor_end' && args.length > 1) {
                 if (args[0].value != getCurrentStrip()) return
-                createPluginsGui()
+                createPluginsGui(args[1].value)
 
                 return
             }
@@ -401,6 +397,24 @@
 
             if (dedupeWatchTriggers.includes(address)) {
                 dedupeWatch.activate()
+            }
+
+            if (address === '/receives_panel' && args[0].value === 1) {
+                send(
+                    '/strip/receives',
+                    {type:'i', value:getCurrentStrip()}
+                )
+            }
+            if (address === '/sends_panel' && args[0].value === 1) {
+                send(
+                    '/strip/sends',
+                    {type:'i', value:getCurrentStrip()}
+                )
+            }
+            if (address === '/strip/plugin/descriptor') {
+                if (args[2].value === 1) {
+                    args.pop()
+                } else {return}
             }
 
             // return data if you want the message to be and sent
