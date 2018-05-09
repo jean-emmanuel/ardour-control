@@ -99,9 +99,9 @@
     createPluginsGui = (id)=>{
 
         var panel = {type:'strip', label:false, widgets:[], height:'100%', width:'100%', horizontal:true, spacing: 5},
-            toggles = {type:'strip', label: '^toggle-on', widgets:[], height:'100%', width:100},
-            faders = {type:'strip', label: '^sliders-h', widgets:[], height:'100%', css:'flex:3'},
-            meters = {type:'strip', label: '^tachometer-alt', widgets:[], height:'100%', css:'flex:1', horizontal:true}
+            toggles = {type:'strip', label: false, widgets:[], height:'100%', width:100},
+            faders = {type:'strip', label: false, widgets:[], height:'100%', css:'flex:1'},
+            meters = {type:'strip', label: false, widgets:[], height:'100%', css:'font-size:80%', horizontal:true}
 
         for (var j in plugins[id].parameters) {
             if (256 & plugins[id].parameters.flags) continue
@@ -114,12 +114,13 @@
                         w
                     ]
                 })
+                meters.width = meters.widgets.length * 25
             }
             if (w.type == 'fader') {
                 faders.widgets.push({
                     type:'strip', label: false, horizontal: true, height: 60,
                     widgets: [
-                        {type: 'text', value: plugins[id].parameters[j].name, label: false},
+                        {type: 'text', value: plugins[id].parameters[j].name, label: false, wrap: true},
                         w
                     ]
                 })
@@ -233,7 +234,6 @@
             // }
         } else if (type == 'meter'){
             widget.label = false
-            widget.width = 30
             widget.css = 'flex:1'
             widget.range = {min:params.min, max:params.max}
         }
