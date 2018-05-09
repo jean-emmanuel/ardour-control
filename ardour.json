@@ -3047,7 +3047,7 @@
                                                 "horizontal": false,
                                                 "stretch": false,
                                                 "border": true,
-                                                "spacing": 0,
+                                                "spacing": 4,
                                                 "variables": "@{parent.variables}",
                                                 "widgets": [],
                                                 "_geometry": "geometry",

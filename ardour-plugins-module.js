@@ -110,13 +110,12 @@
             let w = paramsToWidget(plugins[id].parameters[j], plugins[id].id)
             if (w.type == 'meter') {
                 meters.widgets.push({
-                    type:'strip', label: false,
+                    type:'strip', label: false, width:25,
                     widgets: [
                         {type: 'text', value: plugins[id].parameters[j].name, label: false, vertical: true, height: 100},
                         w
                     ]
                 })
-                meters.width = meters.widgets.length * 25
             }
             if (w.type == 'fader') {
                 faders.widgets.push({
@@ -129,6 +128,8 @@
             }
             if (w.type == 'toggle') toggles.widgets.push(w)
         }
+
+        meters.width = Math.min(meters.widgets.length * 25, 150)
 
         if (toggles.widgets.length) panel.widgets.push(toggles)
         if (faders.widgets.length) panel.widgets.push(faders)
