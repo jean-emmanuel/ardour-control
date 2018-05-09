@@ -1214,7 +1214,7 @@
                                                         "target": [],
                                                         "norelease": true,
                                                         "address": "/cancel_all_solos",
-                                                        "css": "",
+                                                        "css": ":host:not(.on) {\n  opacity:0.75;\n}",
                                                         "width": 55,
                                                         "bypass": false
                                                     }
@@ -2106,7 +2106,7 @@
                                                         "target": [],
                                                         "norelease": false,
                                                         "address": "/bank_down",
-                                                        "css": "&:not(.on) {opacity:0.75}",
+                                                        "css": ":host:not(.on) {opacity:0.75}",
                                                         "width": 50,
                                                         "color": "auto",
                                                         "bypass": false
@@ -2123,7 +2123,7 @@
                                                         "target": [],
                                                         "norelease": false,
                                                         "address": "/bank_up",
-                                                        "css": "&:not(.on) {opacity:0.75}",
+                                                        "css": ":host:not(.on) {opacity:0.75}",
                                                         "width": 50,
                                                         "color": "auto",
                                                         "bypass": false
@@ -2581,19 +2581,18 @@
                                                                 "width": "100%",
                                                                 "height": "100%",
                                                                 "value": "No receive found",
-                                                                "id": "text_4",
+                                                                "id": "text_2",
+                                                                "linkId": "",
                                                                 "left": "auto",
                                                                 "top": "auto",
                                                                 "color": "auto",
                                                                 "css": "",
-                                                                "widgetId": "",
                                                                 "vertical": false,
-                                                                "preArgs": [],
-                                                                "address": "/text_4",
-                                                                "linkId": "",
                                                                 "wrap": false,
                                                                 "align": "",
-                                                                "default": ""
+                                                                "default": "",
+                                                                "preArgs": [],
+                                                                "address": "/text_2"
                                                             }
                                                         ],
                                                         "popupWidth": "75%",
@@ -2632,18 +2631,17 @@
                                                                 "height": "100%",
                                                                 "value": "No send found",
                                                                 "id": "text_3",
+                                                                "linkId": "",
                                                                 "left": "auto",
                                                                 "top": "auto",
                                                                 "color": "auto",
                                                                 "css": "",
-                                                                "widgetId": "",
                                                                 "vertical": false,
-                                                                "preArgs": [],
-                                                                "address": "/text_3",
-                                                                "linkId": "",
                                                                 "wrap": false,
                                                                 "align": "",
-                                                                "default": ""
+                                                                "default": "",
+                                                                "preArgs": [],
+                                                                "address": "/text_3"
                                                             }
                                                         ],
                                                         "popupWidth": "75%",
