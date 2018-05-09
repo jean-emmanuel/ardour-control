@@ -84,6 +84,8 @@
 
             let hstrip = {
                 type:'strip',
+                label: false,
+                height: 60,
                 widgets: [
                     {type:'modal', id: 'plugin_' + plugins[i].id, label:plugins[i].name, address:'/strip/plugin/descriptor', preArgs: [getCurrentStrip(), plugins[i].id], css: 'flex:1'},
                 ]
@@ -133,7 +135,8 @@
         if (meters.widgets.length) panel.widgets.push(meters)
 
         receive('/EDIT', 'plugin_' + id, JSON.stringify({
-            widgets: [panel]
+            widgets: [panel],
+            bypass: true
         }))
     }
 
