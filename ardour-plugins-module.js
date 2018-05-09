@@ -108,6 +108,7 @@
         for (var j in plugins[id].parameters) {
             if (256 & plugins[id].parameters.flags) continue
             let w = paramsToWidget(plugins[id].parameters[j], plugins[id].id)
+            if (!w) continue
             if (w.type == 'meter') {
                 meters.widgets.push({
                     type:'strip', label: false, width:25,
@@ -117,7 +118,7 @@
                     ]
                 })
             }
-            if (w.type == 'fader') {
+            if (w.type == 'fader' || w.type == 'dropdown') {
                 faders.widgets.push({
                     type:'strip', label: false, horizontal: true, height: 60,
                     widgets: [
@@ -194,7 +195,8 @@
 
 
     paramsToWidget = (params, ppid)=>{
-        var type = ! (128 & params.flags) ? 'meter' :
+        var type =  ! (128 & params.flags) ? 'meter' :
+                    1 & params.flags ? 'dropdown' :
                     64 & params.flags ? 'toggle' : 'fader',
             unit = !params.unit.length ? '' :
                     params.unit.replace(/\%\.?[0-9]*[a-z]{1}/,'')
@@ -220,26 +222,42 @@
         } else if (type == 'fader'){
             widget.compact = true
             widget.horizontal = true
-            widget.pips = false
             widget.label = false
             widget.css = 'flex:1'
-            // if (params.pips.length) {
-            //     var range = {}
-            //     for (var n in params.pips) {
-            //         let val = params.pips[n][0],
-            //             percent = 100 * (params.pips[n][0] - params.min) / (params.max - params.min) + '%',
-            //             label = params.pips[n][1]
-            //         range[percent] = {}
-            //         range[percent][label] = val
-            //     }
-            //     widget.range = range
-            // } else {
+            if (params.pips.length) {
+                var range = {}
+                for (var n in params.pips) {
+                    let val = params.pips[n][0],
+                        percent = 100 * (params.pips[n][0] - params.min) / (params.max - params.min) + '%',
+                        label = params.pips[n][1]
+                    range[percent] = {}
+                    range[percent][label] = val
+                }
+                widget.range = range
+            } else {
+                widget.pips = false
                 widget.range = {min:params.min, max:params.max}
-            // }
+            }
         } else if (type == 'meter'){
             widget.label = false
             widget.css = 'flex:1'
             widget.range = {min:params.min, max:params.max}
+        } else if (type == 'dropdown'){
+
+            widget.label = false
+            widget.css = 'flex:1'
+            widget.horizontal = true
+            widget.values = {}
+            if (params.pips.length) {
+                for (var n in params.pips) {
+                    widget.values[params.pips[n][1]] = params.pips[n][0]
+                }
+            } else {
+                return
+            }
+
+        } else {
+            return
         }
 
 
@@ -338,7 +356,6 @@
 
                 var plugin = plugins[args[1].value]
 
-                // console.log(plugin)
                 if (!plugin) return
 
                 plugin.parameters[args[2].value] = {
@@ -354,7 +371,7 @@
 
                 // skip scale infos
                 var nPips = args[9].value
-                for (var p=0; p < nPips; p += 2) {
+                for (var p=0; p < nPips * 2; p += 2) {
                     plugin.parameters[args[2].value].pips.push([args[10 + p].value, args[10 + p + 1].value])
                 }
 
