@@ -144,8 +144,10 @@
                                         "value": 1,
                                         "precision": 2,
                                         "preArgs": [],
-                                        "target": [],
-                                        "address": "/null",
+                                        "target": [
+                                            null
+                                        ],
+                                        "address": "/strip_type_1",
                                         "led": false,
                                         "doubleTap": false,
                                         "default": "",
@@ -163,8 +165,10 @@
                                         "value": 2,
                                         "precision": 2,
                                         "preArgs": [],
-                                        "target": [],
-                                        "address": "/null",
+                                        "target": [
+                                            null
+                                        ],
+                                        "address": "/strip_type_2",
                                         "linkId": "",
                                         "led": false,
                                         "doubleTap": false,
@@ -183,8 +187,10 @@
                                         "value": 4,
                                         "precision": 2,
                                         "preArgs": [],
-                                        "target": [],
-                                        "address": "/null",
+                                        "target": [
+                                            null
+                                        ],
+                                        "address": "/strip_type_3",
                                         "linkId": "",
                                         "led": false,
                                         "doubleTap": false,
@@ -203,8 +209,10 @@
                                         "value": 8,
                                         "precision": 2,
                                         "preArgs": [],
-                                        "target": [],
-                                        "address": "/null",
+                                        "target": [
+                                            null
+                                        ],
+                                        "address": "/strip_type_4",
                                         "linkId": "",
                                         "led": false,
                                         "doubleTap": false,
@@ -223,8 +231,10 @@
                                         "value": 16,
                                         "precision": 2,
                                         "preArgs": [],
-                                        "target": [],
-                                        "address": "/null",
+                                        "target": [
+                                            null
+                                        ],
+                                        "address": "/strip_type_5",
                                         "linkId": "",
                                         "led": false,
                                         "doubleTap": false,
@@ -243,8 +253,10 @@
                                         "value": "",
                                         "precision": 2,
                                         "preArgs": [],
-                                        "target": [],
-                                        "address": "/null",
+                                        "target": [
+                                            null
+                                        ],
+                                        "address": "/strip_type_6",
                                         "linkId": "",
                                         "led": false,
                                         "doubleTap": false,
@@ -263,8 +275,10 @@
                                         "value": "",
                                         "precision": 2,
                                         "preArgs": [],
-                                        "target": [],
-                                        "address": "/null",
+                                        "target": [
+                                            null
+                                        ],
+                                        "address": "/strip_type_7",
                                         "linkId": "",
                                         "led": false,
                                         "doubleTap": false,
@@ -283,8 +297,10 @@
                                         "value": 128,
                                         "precision": 2,
                                         "preArgs": [],
-                                        "target": [],
-                                        "address": "/null",
+                                        "target": [
+                                            null
+                                        ],
+                                        "address": "/strip_type_8",
                                         "linkId": "",
                                         "led": false,
                                         "doubleTap": false,
@@ -302,8 +318,10 @@
                                         "value": "",
                                         "precision": 2,
                                         "preArgs": [],
-                                        "target": [],
-                                        "address": "/null",
+                                        "target": [
+                                            null
+                                        ],
+                                        "address": "/strip_type_9",
                                         "linkId": "",
                                         "css": "",
                                         "led": false,
@@ -323,8 +341,10 @@
                                         "value": "",
                                         "precision": 2,
                                         "preArgs": [],
-                                        "target": [],
-                                        "address": "/null",
+                                        "target": [
+                                            null
+                                        ],
+                                        "address": "/strip_type_10",
                                         "linkId": "",
                                         "led": false,
                                         "doubleTap": false,
@@ -1085,7 +1105,7 @@
                                                     },
                                                     {
                                                         "type": "strip",
-                                                        "id": "top_buttons_@{parent.variables.n}",
+                                                        "id": "rec_buttons_@{parent.variables.n}",
                                                         "label": false,
                                                         "height": 40,
                                                         "color": "auto",
@@ -1360,7 +1380,7 @@
                                                     },
                                                     {
                                                         "type": "strip",
-                                                        "id": "bottom_buttons_@{parent.variables.n}",
+                                                        "id": "mute_buttons_@{parent.variables.n}",
                                                         "label": false,
                                                         "height": 40,
                                                         "color": "auto",
@@ -1437,7 +1457,7 @@
                                                     },
                                                     {
                                                         "type": "strip",
-                                                        "id": "bottom_buttons_@{parent.variables.n}",
+                                                        "id": "sel_buttons_@{parent.variables.n}",
                                                         "label": false,
                                                         "height": 40,
                                                         "color": "auto",
@@ -1946,7 +1966,9 @@
                                                         "precision": 0,
                                                         "address": "/modal_1",
                                                         "preArgs": [],
-                                                        "target": [],
+                                                        "target": [
+                                                            null
+                                                        ],
                                                         "variables": "@{parent.variables}",
                                                         "widgets": [
                                                             {
@@ -2914,7 +2936,9 @@
                                                         "value": "",
                                                         "precision": 0,
                                                         "preArgs": [],
-                                                        "target": [],
+                                                        "target": [
+                                                            null
+                                                        ],
                                                         "doubleTap": false,
                                                         "height": "auto",
                                                         "popupLabel": "",
@@ -2963,7 +2987,9 @@
                                                         "value": "",
                                                         "precision": 0,
                                                         "preArgs": [],
-                                                        "target": [],
+                                                        "target": [
+                                                            null
+                                                        ],
                                                         "doubleTap": false,
                                                         "height": "auto",
                                                         "popupLabel": "",
