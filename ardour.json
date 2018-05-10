@@ -281,8 +281,8 @@
                     },
                     {
                         "type": "strip",
-                        "top": 80,
-                        "left": 0,
+                        "top": 160,
+                        "left": -10,
                         "id": "display_modules",
                         "linkId": "",
                         "width": "100%",
@@ -455,6 +455,47 @@
                         "_children": "children"
                     },
                     {
+                        "type": "switch",
+                        "top": 80,
+                        "left": 0,
+                        "id": "bank_size",
+                        "linkId": "",
+                        "label": "Bank size",
+                        "width": "100%",
+                        "height": 80,
+                        "color": "auto",
+                        "css": "",
+                        "scroll": false,
+                        "horizontal": true,
+                        "stretch": true,
+                        "border": true,
+                        "spacing": 0,
+                        "variables": "@{parent.variables}",
+                        "widgets": [],
+                        "address": "/strip_2",
+                        "_geometry": "geometry",
+                        "_style": "style",
+                        "_panel": "panel",
+                        "layout": "",
+                        "_value": "value (tab selection)",
+                        "default": 6,
+                        "value": "",
+                        "_osc": "osc (tab selection)",
+                        "precision": 0,
+                        "preArgs": [],
+                        "target": [],
+                        "bypass": false,
+                        "_children": "children",
+                        "tabs": [],
+                        "showValues": false,
+                        "values": [
+                            6,
+                            8,
+                            10,
+                            12
+                        ]
+                    },
+                    {
                         "type": "push",
                         "id": "connect",
                         "label": "Connect",
@@ -465,7 +506,7 @@
                         "target": [],
                         "color": "auto",
                         "preArgs": [
-                            8,
+                            "@{bank_size}",
                             "@{trip_type_bitsum}",
                             8403,
                             0,
@@ -969,8 +1010,8 @@
                                                         "id": "fader_strip_@{parent.variables.n}",
                                                         "label": false,
                                                         "color": "auto",
-                                                        "css": "flex:1",
-                                                        "spacing": 0,
+                                                        "css": "flex:1;",
+                                                        "spacing": 3,
                                                         "variables": "@{parent.variables}",
                                                         "widgets": [
                                                             {
@@ -1155,31 +1196,9 @@
                                                         "widgets": [
                                                             {
                                                                 "type": "toggle",
-                                                                "id": "solo_@{parent.variables.n}",
-                                                                "linkId": "",
-                                                                "label": "S",
-                                                                "css": "",
-                                                                "on": 1,
-                                                                "off": 0,
-                                                                "precision": 2,
-                                                                "target": [],
-                                                                "color": "lime",
-                                                                "preArgs": [
-                                                                    "@{parent.variables.n}"
-                                                                ],
-                                                                "value": "",
-                                                                "address": "/strip/solo",
-                                                                "led": false,
-                                                                "width": "auto",
-                                                                "doubleTap": false,
-                                                                "default": "",
-                                                                "bypass": false
-                                                            },
-                                                            {
-                                                                "type": "toggle",
                                                                 "id": "mute_@{parent.variables.n}",
                                                                 "linkId": "",
-                                                                "label": "M",
+                                                                "label": "Mute",
                                                                 "css": "",
                                                                 "on": 1,
                                                                 "off": 0,
@@ -1191,6 +1210,28 @@
                                                                 ],
                                                                 "value": "",
                                                                 "address": "/strip/mute",
+                                                                "led": false,
+                                                                "width": "auto",
+                                                                "doubleTap": false,
+                                                                "default": "",
+                                                                "bypass": false
+                                                            },
+                                                            {
+                                                                "type": "toggle",
+                                                                "id": "solo_@{parent.variables.n}",
+                                                                "linkId": "",
+                                                                "label": "Solo",
+                                                                "css": "",
+                                                                "on": 1,
+                                                                "off": 0,
+                                                                "precision": 2,
+                                                                "target": [],
+                                                                "color": "lime",
+                                                                "preArgs": [
+                                                                    "@{parent.variables.n}"
+                                                                ],
+                                                                "value": "",
+                                                                "address": "/strip/solo",
                                                                 "led": false,
                                                                 "width": "auto",
                                                                 "doubleTap": false,
@@ -1418,8 +1459,8 @@
                                                 "id": "clone_7",
                                                 "width": 120,
                                                 "height": "100%",
-                                                "widgetId": "channel_strip",
-                                                "css": "",
+                                                "widgetId": "#{\n@{bank_size}>6?\n\"channel_strip\" : \"\"\n}",
+                                                "css": "#{\n@{bank_size}<8?\n\"display:none\" : \"\"\n}",
                                                 "props": {
                                                     "variables": {
                                                         "n": 7
@@ -1436,13 +1477,85 @@
                                                 "id": "clone_8",
                                                 "width": 120,
                                                 "height": "100%",
-                                                "widgetId": "channel_strip",
-                                                "css": "",
+                                                "widgetId": "#{\n@{bank_size}>6?\n\"channel_strip\" : \"\"\n}",
+                                                "css": "#{\n@{bank_size}<8?\n\"display:none\" : \"\"\n}",
                                                 "props": {
                                                     "variables": {
                                                         "n": 8
                                                     },
                                                     "id": "channel_strip_8"
+                                                },
+                                                "left": "auto",
+                                                "top": "auto",
+                                                "label": "",
+                                                "variables": "@{parent.variables}"
+                                            },
+                                            {
+                                                "type": "clone",
+                                                "id": "clone_9",
+                                                "width": 120,
+                                                "height": "100%",
+                                                "widgetId": "#{\n@{bank_size}>8?\n\"channel_strip\" : \"\"\n}",
+                                                "css": "#{\n@{bank_size}<10?\n\"display:none\" : \"\"\n}",
+                                                "props": {
+                                                    "variables": {
+                                                        "n": 9
+                                                    },
+                                                    "id": "channel_strip_9"
+                                                },
+                                                "left": "auto",
+                                                "top": "auto",
+                                                "label": "",
+                                                "variables": "@{parent.variables}"
+                                            },
+                                            {
+                                                "type": "clone",
+                                                "id": "clone_10",
+                                                "width": 120,
+                                                "height": "100%",
+                                                "widgetId": "#{\n@{bank_size}>8?\n\"channel_strip\" : \"\"\n}",
+                                                "css": "#{\n@{bank_size}<10?\n\"display:none\" : \"\"\n}",
+                                                "props": {
+                                                    "variables": {
+                                                        "n": 10
+                                                    },
+                                                    "id": "channel_strip_10"
+                                                },
+                                                "left": "auto",
+                                                "top": "auto",
+                                                "label": "",
+                                                "variables": "@{parent.variables}"
+                                            },
+                                            {
+                                                "type": "clone",
+                                                "id": "clone_11",
+                                                "width": 120,
+                                                "height": "100%",
+                                                "widgetId": "#{\n@{bank_size}>10?\n\"channel_strip\" : \"\"\n}",
+                                                "css": "#{\n@{bank_size}<12?\n\"display:none\" : \"\"\n}",
+                                                "props": {
+                                                    "variables": {
+                                                        "n": 11
+                                                    },
+                                                    "id": "channel_strip_11"
+                                                },
+                                                "left": "auto",
+                                                "top": "auto",
+                                                "label": "",
+                                                "variables": "@{parent.variables}"
+                                            },
+                                            {
+                                                "type": "clone",
+                                                "id": "clone_12",
+                                                "width": 120,
+                                                "height": "100%",
+                                                "widgetId": "#{\n@{bank_size}>10?\n\"channel_strip\" : \"\"\n}",
+                                                "css": "#{\n@{bank_size}<12?\n\"display:none\" : \"\"\n}",
+                                                "props": {
+                                                    "variables": {
+                                                        "n": 12
+                                                    },
+                                                    "id": "channel_strip_12"
                                                 },
                                                 "left": "auto",
                                                 "top": "auto",
@@ -1869,7 +1982,7 @@
                                                 "label": false,
                                                 "color": "auto",
                                                 "css": "flex:1",
-                                                "spacing": 0,
+                                                "spacing": 3,
                                                 "variables": "@{parent.variables}",
                                                 "widgets": [
                                                     {
@@ -2712,7 +2825,7 @@
                                                 "label": false,
                                                 "color": "auto",
                                                 "css": "flex:1",
-                                                "spacing": 0,
+                                                "spacing": 3,
                                                 "variables": "@{parent.variables}",
                                                 "widgets": [
                                                     {
@@ -2891,17 +3004,17 @@
                                                 "widgets": [
                                                     {
                                                         "type": "toggle",
-                                                        "id": "solo_select",
+                                                        "id": "mute_select",
                                                         "linkId": "",
-                                                        "label": "S",
+                                                        "label": "Mute",
                                                         "css": "",
                                                         "on": 1,
                                                         "off": 0,
                                                         "precision": 2,
                                                         "target": [],
-                                                        "color": "lime",
+                                                        "color": "yellow",
                                                         "value": "",
-                                                        "address": "/select/solo",
+                                                        "address": "/select/mute",
                                                         "led": false,
                                                         "width": "auto",
                                                         "preArgs": [],
@@ -2911,17 +3024,17 @@
                                                     },
                                                     {
                                                         "type": "toggle",
-                                                        "id": "mute_select",
+                                                        "id": "solo_select",
                                                         "linkId": "",
-                                                        "label": "M",
+                                                        "label": "Solo",
                                                         "css": "",
                                                         "on": 1,
                                                         "off": 0,
                                                         "precision": 2,
                                                         "target": [],
-                                                        "color": "yellow",
+                                                        "color": "lime",
                                                         "value": "",
-                                                        "address": "/select/mute",
+                                                        "address": "/select/solo",
                                                         "led": false,
                                                         "width": "auto",
                                                         "preArgs": [],
