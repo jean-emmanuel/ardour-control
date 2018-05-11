@@ -359,7 +359,7 @@
                                         "condition": "",
                                         "label": "bits",
                                         "color": "auto",
-                                        "css": "",
+                                        "css": ".label{height:25rem}",
                                         "precision": 0,
                                         "address": "/set_surface/strip_types",
                                         "split": [],
@@ -504,9 +504,11 @@
                                         "default": 1,
                                         "value": "",
                                         "precision": 2,
-                                        "address": "/toggle_1",
+                                        "address": "/display_session_name",
                                         "preArgs": [],
-                                        "target": [],
+                                        "target": [
+                                            null
+                                        ],
                                         "bypass": false,
                                         "width": "auto"
                                     },
@@ -524,9 +526,33 @@
                                         "default": 1,
                                         "value": "",
                                         "precision": 2,
-                                        "address": "/toggle_3",
+                                        "address": "/display_transport",
                                         "preArgs": [],
-                                        "target": [],
+                                        "target": [
+                                            null
+                                        ],
+                                        "bypass": false,
+                                        "width": "auto"
+                                    },
+                                    {
+                                        "type": "toggle",
+                                        "id": "display_monitor",
+                                        "linkId": "",
+                                        "label": "Monitor",
+                                        "color": "auto",
+                                        "css": "",
+                                        "doubleTap": false,
+                                        "led": false,
+                                        "on": 1,
+                                        "off": 0,
+                                        "default": 1,
+                                        "value": "",
+                                        "precision": 2,
+                                        "address": "/display_monitor",
+                                        "preArgs": [],
+                                        "target": [
+                                            null
+                                        ],
                                         "bypass": false,
                                         "width": "auto"
                                     }
@@ -576,9 +602,11 @@
                                         "default": 1,
                                         "value": "",
                                         "precision": 2,
-                                        "address": "/toggle_6",
+                                        "address": "/display_trim",
                                         "preArgs": [],
-                                        "target": [],
+                                        "target": [
+                                            null
+                                        ],
                                         "bypass": false,
                                         "width": "auto"
                                     },
@@ -596,9 +624,11 @@
                                         "default": 1,
                                         "value": "",
                                         "precision": 2,
-                                        "address": "/toggle_6",
+                                        "address": "/display_recbar",
                                         "preArgs": [],
-                                        "target": [],
+                                        "target": [
+                                            null
+                                        ],
                                         "bypass": false,
                                         "width": "auto"
                                     },
@@ -616,9 +646,11 @@
                                         "default": 1,
                                         "value": "",
                                         "precision": 2,
-                                        "address": "/toggle_6",
+                                        "address": "/display_pan",
                                         "preArgs": [],
-                                        "target": [],
+                                        "target": [
+                                            null
+                                        ],
                                         "bypass": false,
                                         "width": "auto"
                                     },
@@ -636,29 +668,11 @@
                                         "default": 1,
                                         "value": "",
                                         "precision": 2,
-                                        "address": "/toggle_6",
+                                        "address": "/display_expand",
                                         "preArgs": [],
-                                        "target": [],
-                                        "bypass": false,
-                                        "width": "auto"
-                                    },
-                                    {
-                                        "type": "toggle",
-                                        "id": "display_monitor",
-                                        "linkId": "",
-                                        "label": "Monitor",
-                                        "color": "auto",
-                                        "css": "",
-                                        "doubleTap": false,
-                                        "led": false,
-                                        "on": 1,
-                                        "off": 0,
-                                        "default": 1,
-                                        "value": "",
-                                        "precision": 2,
-                                        "address": "/toggle_6",
-                                        "preArgs": [],
-                                        "target": [],
+                                        "target": [
+                                            null
+                                        ],
                                         "bypass": false,
                                         "width": "auto"
                                     },
@@ -676,9 +690,131 @@
                                         "default": "",
                                         "value": "",
                                         "precision": 2,
-                                        "address": "/toggle_10",
+                                        "address": "/display_compact_faders",
                                         "preArgs": [],
-                                        "target": [],
+                                        "target": [
+                                            null
+                                        ],
+                                        "bypass": false,
+                                        "width": "auto"
+                                    }
+                                ],
+                                "tabs": [],
+                                "horizontal": true,
+                                "stretch": true,
+                                "_geometry": "geometry",
+                                "_style": "style",
+                                "_panel": "panel",
+                                "_value": "value (tab selection)",
+                                "_osc": "osc (tab selection)",
+                                "_children": "children"
+                            },
+                            {
+                                "type": "strip",
+                                "id": "display_selected",
+                                "linkId": "",
+                                "height": 80,
+                                "label": "Select options",
+                                "color": "auto",
+                                "css": "",
+                                "scroll": true,
+                                "border": true,
+                                "layout": "",
+                                "spacing": 0,
+                                "default": "",
+                                "value": "",
+                                "precision": 0,
+                                "address": "/panel_13",
+                                "preArgs": [],
+                                "target": [],
+                                "bypass": false,
+                                "variables": "@{parent.variables}",
+                                "widgets": [
+                                    {
+                                        "type": "toggle",
+                                        "id": "display_polarity_sel",
+                                        "linkId": "",
+                                        "label": "Polarity",
+                                        "color": "auto",
+                                        "css": "",
+                                        "doubleTap": false,
+                                        "led": false,
+                                        "on": 1,
+                                        "off": 0,
+                                        "default": 1,
+                                        "value": "",
+                                        "precision": 2,
+                                        "address": "/display_polarity_sel",
+                                        "preArgs": [],
+                                        "target": [
+                                            null
+                                        ],
+                                        "bypass": false,
+                                        "width": "auto"
+                                    },
+                                    {
+                                        "type": "toggle",
+                                        "id": "display_trim_sel",
+                                        "linkId": "",
+                                        "label": "Trim",
+                                        "color": "auto",
+                                        "css": "",
+                                        "doubleTap": false,
+                                        "led": false,
+                                        "on": 1,
+                                        "off": 0,
+                                        "default": 1,
+                                        "value": "",
+                                        "precision": 2,
+                                        "address": "/display_trim_sel",
+                                        "preArgs": [],
+                                        "target": [
+                                            null
+                                        ],
+                                        "bypass": false,
+                                        "width": "auto"
+                                    },
+                                    {
+                                        "type": "toggle",
+                                        "id": "display_recbar_sel",
+                                        "linkId": "",
+                                        "label": "Rec / Mic / Disk",
+                                        "color": "auto",
+                                        "css": "",
+                                        "doubleTap": false,
+                                        "led": false,
+                                        "on": 1,
+                                        "off": 0,
+                                        "default": 1,
+                                        "value": "",
+                                        "precision": 2,
+                                        "address": "/display_recbar_sel",
+                                        "preArgs": [],
+                                        "target": [
+                                            null
+                                        ],
+                                        "bypass": false,
+                                        "width": "auto"
+                                    },
+                                    {
+                                        "type": "toggle",
+                                        "id": "display_pan_sel",
+                                        "linkId": "",
+                                        "label": "Pan",
+                                        "color": "auto",
+                                        "css": "",
+                                        "doubleTap": false,
+                                        "led": false,
+                                        "on": 1,
+                                        "off": 0,
+                                        "default": 1,
+                                        "value": "",
+                                        "precision": 2,
+                                        "address": "/display_pan_sel",
+                                        "preArgs": [],
+                                        "target": [
+                                            null
+                                        ],
                                         "bypass": false,
                                         "width": "auto"
                                     }
@@ -726,14 +862,7 @@
                                 "precision": 0,
                                 "target": [],
                                 "color": "auto",
-                                "preArgs": [
-                                    "@{bank_size}",
-                                    "@{trip_type_bitsum}",
-                                    8403,
-                                    0,
-                                    0,
-                                    1
-                                ],
+                                "preArgs": "#{\nf = 1 + 2 + 16 + 128 + 8192;\n@{display_transport}==1?f=f+64:\"\";\n}\n\n[\n  \"@{bank_size}\",\n  \"@{trip_type_bitsum}\",\n  #{f},\n  0,\n  0,\n  1\n]",
                                 "norelease": true,
                                 "address": "/set_surface",
                                 "linkId": "",
@@ -2717,7 +2846,7 @@
                                                 "label": false,
                                                 "height": 60,
                                                 "color": "auto",
-                                                "css": "#{\n@{display_trim}==0?\"display:none\":\"\"\n}",
+                                                "css": "#{\n@{display_trim_sel}==0?\"display:none\":\"\"\n}",
                                                 "horizontal": true,
                                                 "stretch": false,
                                                 "border": true,
@@ -2847,12 +2976,32 @@
                                                 "bypass": false
                                             },
                                             {
+                                                "type": "toggle",
+                                                "id": "polarity_select",
+                                                "linkId": "",
+                                                "height": 34,
+                                                "label": "∅",
+                                                "color": "auto",
+                                                "css": "margin:4rem;\nfont-weight:bold;\n#{\n@{display_polarity_sel}==0?\"display:none\":\"\"\n}",
+                                                "doubleTap": false,
+                                                "led": false,
+                                                "on": 1,
+                                                "off": 0,
+                                                "default": "",
+                                                "value": "",
+                                                "precision": 0,
+                                                "address": "/select/polarity",
+                                                "preArgs": [],
+                                                "target": [],
+                                                "bypass": false
+                                            },
+                                            {
                                                 "type": "strip",
                                                 "id": "top_buttons_select",
                                                 "label": false,
                                                 "height": 40,
                                                 "color": "auto",
-                                                "css": "#{\n@{display_recbar}==0?\"display:none\":\"\"\n}",
+                                                "css": "#{\n@{display_recbar_sel}==0?\"display:none\":\"\"\n}",
                                                 "horizontal": true,
                                                 "stretch": false,
                                                 "border": true,
@@ -3239,7 +3388,7 @@
                                                 "dashed": false,
                                                 "doubleTap": true,
                                                 "color": "auto",
-                                                "css": "margin:3rem;\n#{\n@{display_pan}==0?\"display:none\":\"\"\n}",
+                                                "css": "margin:3rem;\n#{\n@{display_pan_sel}==0?\"display:none\":\"\"\n}",
                                                 "preArgs": [],
                                                 "default": "",
                                                 "bypass": false
@@ -3439,7 +3588,25 @@
                                                 "border": true,
                                                 "spacing": 4,
                                                 "variables": "@{parent.variables}",
-                                                "widgets": [],
+                                                "widgets": [
+                                                    {
+                                                        "type": "push",
+                                                        "height": 60,
+                                                        "label": "^sync-alt",
+                                                        "address": "/refresh_plugin_list",
+                                                        "norelease": true,
+                                                        "id": "push_7",
+                                                        "linkId": "",
+                                                        "color": "auto",
+                                                        "css": "",
+                                                        "on": 1,
+                                                        "off": 0,
+                                                        "precision": 2,
+                                                        "preArgs": [],
+                                                        "target": [],
+                                                        "bypass": false
+                                                    }
+                                                ],
                                                 "_geometry": "geometry",
                                                 "_style": "style",
                                                 "_panel": "panel",
@@ -3548,7 +3715,9 @@
         "precision": 0,
         "address": "/root",
         "preArgs": [],
-        "target": [],
+        "target": [
+            null
+        ],
         "variables": {},
         "color": "auto",
         "css": "",

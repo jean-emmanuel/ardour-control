@@ -87,12 +87,20 @@
                 label: false,
                 height: 60,
                 widgets: [
-                    {type:'modal', id: 'plugin_' + plugins[i].id, label:plugins[i].name, address:'/strip/plugin/descriptor', preArgs: [getCurrentStrip(), plugins[i].id], css: 'flex:1'},
+                    {
+                        type:'modal', id: 'plugin_' + plugins[i].id, label:plugins[i].name, address:'/strip/plugin/descriptor', preArgs: [getCurrentStrip(), plugins[i].id], css: 'flex:1',
+                        widgets: [{
+                            type:'text', width:'100%', height:'100%', label:false, color:'transparent',
+                            css: '*{background:transparent}',
+                            value: '<div class="spinner"></div>'
+                        }]
+                    },
                 ]
             }
             widgets.push(hstrip)
 
         }
+        widgets.push({type:'push', height:60, label:'^sync-alt', address:'/refresh_plugin_list', norelease:true})
         receive('/EDIT', 'plugins_panel', JSON.stringify({
             widgets: widgets
         }))
@@ -239,6 +247,7 @@
                 widget.range = {min:params.min, max:params.max}
             }
         } else if (type == 'meter'){
+            return // Useless since ardour doesn't send plugin feedback
             widget.label = false
             widget.css = 'flex:1'
             widget.range = {min:params.min, max:params.max}
@@ -436,6 +445,14 @@
                 if (args[2].value === 1) {
                     args.pop()
                 } else {return}
+            }
+
+            if (address === '/refresh_plugin_list') {
+                send(
+                    '/strip/plugin/list',
+                    {type:'i', value:getCurrentStrip()}
+                )
+                return
             }
 
             // return data if you want the message to be and sent
