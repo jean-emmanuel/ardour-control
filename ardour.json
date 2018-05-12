@@ -862,7 +862,7 @@
                                 "precision": 0,
                                 "target": [],
                                 "color": "auto",
-                                "preArgs": "#{\nf = 1 + 2 + 16 + 128 + 8192;\n@{display_transport}==1?f=f+64:\"\";\n}\n\n[\n  \"@{bank_size}\",\n  \"@{trip_type_bitsum}\",\n  #{f},\n  0,\n  0,\n  1\n]",
+                                "preArgs": "#{\nf = 1 + 2 + 16 + 128 + 8192;\n@{display_transport}==1?f=f+64:\"\";\n}\n\n[\n  @{bank_size},\n  @{trip_type_bitsum},\n  #{f},\n  0,\n  0,\n  1\n]",
                                 "norelease": true,
                                 "address": "/set_surface",
                                 "linkId": "",
@@ -2979,7 +2979,7 @@
                                                 "type": "toggle",
                                                 "id": "polarity_select",
                                                 "linkId": "",
-                                                "height": 34,
+                                                "height": 32,
                                                 "label": "∅",
                                                 "color": "auto",
                                                 "css": "margin:4rem;\nfont-weight:bold;\n#{\n@{display_polarity_sel}==0?\"display:none\":\"\"\n}",
@@ -3137,9 +3137,7 @@
                                                         "value": "",
                                                         "precision": 0,
                                                         "preArgs": [],
-                                                        "target": [
-                                                            null
-                                                        ],
+                                                        "target": [],
                                                         "doubleTap": false,
                                                         "height": "auto",
                                                         "popupLabel": "",
@@ -3188,9 +3186,7 @@
                                                         "value": "",
                                                         "precision": 0,
                                                         "preArgs": [],
-                                                        "target": [
-                                                            null
-                                                        ],
+                                                        "target": [],
                                                         "doubleTap": false,
                                                         "height": "auto",
                                                         "popupLabel": "",
@@ -3595,7 +3591,7 @@
                                                         "label": "^sync-alt",
                                                         "address": "/refresh_plugin_list",
                                                         "norelease": true,
-                                                        "id": "push_7",
+                                                        "id": "push_1",
                                                         "linkId": "",
                                                         "color": "auto",
                                                         "css": "",
