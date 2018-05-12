@@ -89,11 +89,7 @@
                 widgets: [
                     {
                         type:'modal', id: 'plugin_' + plugins[i].id, label:plugins[i].name, address:'/strip/plugin/descriptor', preArgs: [getCurrentStrip(), plugins[i].id], css: 'flex:1',
-                        widgets: [{
-                            type:'text', width:'100%', height:'100%', label:false, color:'transparent',
-                            css: '*{background:transparent}',
-                            value: '<div class="spinner"></div>'
-                        }]
+                        widgets: [{type:'clone', 'widgetId':'loading',width:'100%', height:'100%'}]
                     },
                 ]
             }
@@ -173,7 +169,8 @@
                 preArgs: [sends[i].targetId, sends[i].id],
                 range: {"min": {"inf": -193},"6%": -60,"12%": -50,"20%": -40,"30%": -30,"42%": -20,"60%": -10,"80%": 0,"max": 6},
                 unit: 'dB',
-                value: sends[i].gain,
+                // Ardour sends a fader position (0-1) instead of a db gain
+                value: 20*Math.log10(Math.pow(2.0,(Math.sqrt(Math.sqrt(Math.sqrt(sends[i].gain)))*198.0-192.0)/6.0)),
                 css:'flex:1'
             })
             strip.widgets.push({
