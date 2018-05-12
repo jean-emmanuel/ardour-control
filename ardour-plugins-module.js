@@ -155,7 +155,6 @@
 
         for (var i in sends) {
 
-
             var strip = {type:'strip', label:`${dir} ${i+1}`, widgets:[], height:'100%', width:'80rem'}
             strip.widgets.push({
                 type:'text',
@@ -168,7 +167,7 @@
             })
             strip.widgets.push({
                 type:'fader',
-                id: 'send_' + sends[i] + '_to_' + sends[i].targetId,
+                id: 'send_' + sends[i].id + '_to_' + sends[i].targetId,
                 label: false,
                 address: '/strip/send/gain',
                 preArgs: [sends[i].targetId, sends[i].id],
@@ -310,13 +309,13 @@
 
                 if (args.length > 1) {
                     for (var i=1; i<args.length; i+=5) {
-                        sends[i] = {
-                            tagetId: args[i].value,
+                        sends.push({
+                            targetId: args[0].value,
                             name: args[i+1].value,
                             id: args[i+2].value,
                             gain: args[i+3].value,
                             enabled: args[i+4].value
-                        }
+                        })
                     }
                 }
                 createSendsReceivesGui('Send')
@@ -328,13 +327,13 @@
 
                 if (args.length > 1) {
                     for (var i=0; i<args.length; i+=5) {
-                        sends[i] = {
-                            tagetId: args[i].value,
+                        sends.push({
+                            targetId: args[i].value,
                             name: args[i+1].value,
                             id: args[i+2].value,
                             gain: args[i+3].value,
                             enabled: args[i+4].value
-                        }
+                        })
                     }
                 }
                 createSendsReceivesGui('Receive')
