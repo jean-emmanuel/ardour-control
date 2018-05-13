@@ -862,7 +862,7 @@
                                 "precision": 0,
                                 "target": [],
                                 "color": "auto",
-                                "preArgs": "#{\nf = 1 + 2 + 16 + 128 + 8192;\n@{display_transport}==1?f=f+64:\"\";\n}\n\n[\n  @{bank_size},\n  @{trip_type_bitsum},\n  #{f},\n  0,\n  0,\n  1\n]",
+                                "preArgs": "#{\nf = 1 + 2 + 16 + 128 + 8192 + 16384;\n@{display_transport}==1?f=f+64:\"\";\n}\n\n[\n  @{bank_size},\n  @{trip_type_bitsum},\n  #{f},\n  0,\n  0,\n  1\n]",
                                 "norelease": true,
                                 "address": "/set_surface",
                                 "linkId": "",
