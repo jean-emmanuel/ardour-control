@@ -630,6 +630,28 @@
                                             null
                                         ],
                                         "bypass": false,
+                                        "width": 100
+                                    },
+                                    {
+                                        "type": "toggle",
+                                        "id": "display_input",
+                                        "linkId": "",
+                                        "label": "Gain Input",
+                                        "color": "auto",
+                                        "css": "",
+                                        "doubleTap": false,
+                                        "led": false,
+                                        "on": 1,
+                                        "off": 0,
+                                        "default": 1,
+                                        "value": "",
+                                        "precision": 2,
+                                        "address": "/display_pan",
+                                        "preArgs": [],
+                                        "target": [
+                                            null
+                                        ],
+                                        "bypass": false,
                                         "width": "auto"
                                     },
                                     {
@@ -1070,7 +1092,7 @@
                                         "id": "zero",
                                         "linkId": "",
                                         "label": "^step-backward",
-                                        "css": "",
+                                        "css": "margin: 3rem 2rem",
                                         "on": 1,
                                         "off": 0,
                                         "precision": 2,
@@ -1087,7 +1109,7 @@
                                         "id": "end",
                                         "linkId": "",
                                         "label": "^step-forward",
-                                        "css": "",
+                                        "css": "margin: 3rem 2rem",
                                         "on": 1,
                                         "off": 0,
                                         "precision": 2,
@@ -1105,7 +1127,7 @@
                                         "linkId": "",
                                         "label": "^play",
                                         "color": "lime",
-                                        "css": "",
+                                        "css": "margin: 3rem 2rem",
                                         "on": 1,
                                         "off": 0,
                                         "precision": 2,
@@ -1122,7 +1144,7 @@
                                         "linkId": "",
                                         "label": "^stop",
                                         "color": "red",
-                                        "css": "",
+                                        "css": "margin: 3rem 2rem",
                                         "on": 1,
                                         "off": 0,
                                         "precision": 2,
@@ -1139,7 +1161,7 @@
                                         "linkId": "",
                                         "label": "^circle",
                                         "color": "red",
-                                        "css": "",
+                                        "css": "margin: 3rem 2rem",
                                         "on": 1,
                                         "off": 0,
                                         "precision": 2,
@@ -1169,7 +1191,7 @@
                                     }
                                 ],
                                 "variables": {},
-                                "border": true,
+                                "border": false,
                                 "css": "#{\n@{display_transport}==0?\"display:none\":\"\"\n}",
                                 "horizontal": true,
                                 "stretch": false,
@@ -1197,7 +1219,7 @@
                                 "type": "strip",
                                 "widgets": [
                                     {
-                                        "type": "panel",
+                                        "type": "strip",
                                         "id": "strip_scroll_panel",
                                         "label": false,
                                         "color": "auto",
@@ -1240,7 +1262,7 @@
                                                         "css": "#{\n@{display_trim}==0?\"display:none\":\"\"\n}",
                                                         "horizontal": true,
                                                         "stretch": false,
-                                                        "border": true,
+                                                        "border": false,
                                                         "spacing": 4,
                                                         "variables": "@{parent.variables}",
                                                         "widgets": [
@@ -1250,7 +1272,7 @@
                                                                 "label": false,
                                                                 "width": 50,
                                                                 "color": "auto",
-                                                                "horizontal": true,
+                                                                "horizontal": false,
                                                                 "stretch": true,
                                                                 "border": false,
                                                                 "spacing": 0,
@@ -1265,13 +1287,13 @@
                                                                         "preArgs": [],
                                                                         "widgetId": "",
                                                                         "address": "/trim_label_@{parent.variables.n}",
-                                                                        "vertical": true,
-                                                                        "width": "auto",
-                                                                        "css": "line-height:12rem",
+                                                                        "vertical": false,
+                                                                        "css": "",
                                                                         "linkId": "",
                                                                         "wrap": false,
                                                                         "align": "",
-                                                                        "default": ""
+                                                                        "default": "",
+                                                                        "height": "auto"
                                                                     },
                                                                     {
                                                                         "type": "input",
@@ -1287,12 +1309,12 @@
                                                                         "target": [],
                                                                         "value": "",
                                                                         "address": "/trim_input_@{parent.variables.n}",
-                                                                        "width": "auto",
                                                                         "css": "",
-                                                                        "vertical": true,
+                                                                        "vertical": false,
                                                                         "align": "",
                                                                         "default": "",
-                                                                        "bypass": false
+                                                                        "bypass": false,
+                                                                        "height": "auto"
                                                                     }
                                                                 ],
                                                                 "_style": "style",
@@ -1377,7 +1399,7 @@
                                                         "css": "#{\n@{display_recbar}==0?\"display:none\":\"\"\n}",
                                                         "horizontal": true,
                                                         "stretch": false,
-                                                        "border": true,
+                                                        "border": false,
                                                         "spacing": 4,
                                                         "variables": "@{parent.variables}",
                                                         "widgets": [
@@ -1563,7 +1585,7 @@
                                                             }
                                                         ],
                                                         "height": "auto",
-                                                        "border": true,
+                                                        "border": false,
                                                         "horizontal": true,
                                                         "stretch": false,
                                                         "_style": "style",
@@ -1593,7 +1615,7 @@
                                                         "unit": "dB",
                                                         "height": 30,
                                                         "color": "auto",
-                                                        "css": "margin:3rem 3rem 0",
+                                                        "css": "margin:3rem 3rem 0;\n#{\n@{display_input}==0?\"display:none\":\"\"\n}",
                                                         "widgetId": "fader_@{parent.variables.n}",
                                                         "editable": true,
                                                         "value": "",
@@ -1652,7 +1674,7 @@
                                                         "css": "",
                                                         "horizontal": true,
                                                         "stretch": false,
-                                                        "border": true,
+                                                        "border": false,
                                                         "spacing": 4,
                                                         "variables": "@{parent.variables}",
                                                         "widgets": [
@@ -1729,7 +1751,7 @@
                                                         "css": "",
                                                         "horizontal": true,
                                                         "stretch": true,
-                                                        "border": true,
+                                                        "border": false,
                                                         "spacing": 4,
                                                         "variables": "@{parent.variables}",
                                                         "widgets": [
@@ -1797,16 +1819,12 @@
                                                 ],
                                                 "color": "auto",
                                                 "spacing": 0,
-                                                "border": true,
+                                                "border": false,
                                                 "horizontal": false,
                                                 "stretch": false,
                                                 "_style": "style",
                                                 "_children": "children",
-                                                "width": 120,
-                                                "height": "100%",
                                                 "scroll": true,
-                                                "top": "auto",
-                                                "left": "auto",
                                                 "variables": {
                                                     "n": 1
                                                 },
@@ -1824,16 +1842,13 @@
                                                 "noSync": false,
                                                 "_value": "value (tab selection)",
                                                 "default": "",
-                                                "bypass": false
+                                                "bypass": false,
+                                                "width": 120
                                             },
                                             {
                                                 "type": "clone",
                                                 "id": "clone_2",
-                                                "width": 120,
-                                                "height": "100%",
                                                 "widgetId": "channel_strip",
-                                                "left": "auto",
-                                                "top": "auto",
                                                 "css": "",
                                                 "props": {
                                                     "variables": {
@@ -1842,13 +1857,12 @@
                                                     "id": "channel_strip_2"
                                                 },
                                                 "label": "",
-                                                "variables": "@{parent.variables}"
+                                                "variables": "@{parent.variables}",
+                                                "width": 120
                                             },
                                             {
                                                 "type": "clone",
                                                 "id": "clone_3",
-                                                "width": 120,
-                                                "height": "100%",
                                                 "widgetId": "channel_strip",
                                                 "css": "",
                                                 "props": {
@@ -1857,16 +1871,13 @@
                                                     },
                                                     "id": "channel_strip_3"
                                                 },
-                                                "left": "auto",
-                                                "top": "auto",
                                                 "label": "",
-                                                "variables": "@{parent.variables}"
+                                                "variables": "@{parent.variables}",
+                                                "width": 120
                                             },
                                             {
                                                 "type": "clone",
                                                 "id": "clone_4",
-                                                "width": 120,
-                                                "height": "100%",
                                                 "widgetId": "channel_strip",
                                                 "css": "",
                                                 "props": {
@@ -1875,16 +1886,13 @@
                                                     },
                                                     "id": "channel_strip_4"
                                                 },
-                                                "left": "auto",
-                                                "top": "auto",
                                                 "label": "",
-                                                "variables": "@{parent.variables}"
+                                                "variables": "@{parent.variables}",
+                                                "width": 120
                                             },
                                             {
                                                 "type": "clone",
                                                 "id": "clone_5",
-                                                "width": 120,
-                                                "height": "100%",
                                                 "widgetId": "channel_strip",
                                                 "css": "",
                                                 "props": {
@@ -1893,16 +1901,13 @@
                                                     },
                                                     "id": "channel_strip_5"
                                                 },
-                                                "left": "auto",
-                                                "top": "auto",
                                                 "label": "",
-                                                "variables": "@{parent.variables}"
+                                                "variables": "@{parent.variables}",
+                                                "width": 120
                                             },
                                             {
                                                 "type": "clone",
                                                 "id": "clone_6",
-                                                "width": 120,
-                                                "height": "100%",
                                                 "widgetId": "channel_strip",
                                                 "css": "",
                                                 "props": {
@@ -1911,16 +1916,13 @@
                                                     },
                                                     "id": "channel_strip_6"
                                                 },
-                                                "left": "auto",
-                                                "top": "auto",
                                                 "label": "",
-                                                "variables": "@{parent.variables}"
+                                                "variables": "@{parent.variables}",
+                                                "width": 120
                                             },
                                             {
                                                 "type": "clone",
                                                 "id": "clone_7",
-                                                "width": 120,
-                                                "height": "100%",
                                                 "widgetId": "#{\n@{bank_size}>6?\n\"channel_strip\" : \"\"\n}",
                                                 "css": "#{\n@{bank_size}<8?\n\"display:none\" : \"\"\n}",
                                                 "props": {
@@ -1929,16 +1931,13 @@
                                                     },
                                                     "id": "channel_strip_7"
                                                 },
-                                                "left": "auto",
-                                                "top": "auto",
                                                 "label": "",
-                                                "variables": "@{parent.variables}"
+                                                "variables": "@{parent.variables}",
+                                                "width": 120
                                             },
                                             {
                                                 "type": "clone",
                                                 "id": "clone_8",
-                                                "width": 120,
-                                                "height": "100%",
                                                 "widgetId": "#{\n@{bank_size}>6?\n\"channel_strip\" : \"\"\n}",
                                                 "css": "#{\n@{bank_size}<8?\n\"display:none\" : \"\"\n}",
                                                 "props": {
@@ -1947,16 +1946,13 @@
                                                     },
                                                     "id": "channel_strip_8"
                                                 },
-                                                "left": "auto",
-                                                "top": "auto",
                                                 "label": "",
-                                                "variables": "@{parent.variables}"
+                                                "variables": "@{parent.variables}",
+                                                "width": 120
                                             },
                                             {
                                                 "type": "clone",
                                                 "id": "clone_9",
-                                                "width": 120,
-                                                "height": "100%",
                                                 "widgetId": "#{\n@{bank_size}>8?\n\"channel_strip\" : \"\"\n}",
                                                 "css": "#{\n@{bank_size}<10?\n\"display:none\" : \"\"\n}",
                                                 "props": {
@@ -1965,16 +1961,13 @@
                                                     },
                                                     "id": "channel_strip_9"
                                                 },
-                                                "left": "auto",
-                                                "top": "auto",
                                                 "label": "",
-                                                "variables": "@{parent.variables}"
+                                                "variables": "@{parent.variables}",
+                                                "width": 120
                                             },
                                             {
                                                 "type": "clone",
                                                 "id": "clone_10",
-                                                "width": 120,
-                                                "height": "100%",
                                                 "widgetId": "#{\n@{bank_size}>8?\n\"channel_strip\" : \"\"\n}",
                                                 "css": "#{\n@{bank_size}<10?\n\"display:none\" : \"\"\n}",
                                                 "props": {
@@ -1983,16 +1976,13 @@
                                                     },
                                                     "id": "channel_strip_10"
                                                 },
-                                                "left": "auto",
-                                                "top": "auto",
                                                 "label": "",
-                                                "variables": "@{parent.variables}"
+                                                "variables": "@{parent.variables}",
+                                                "width": 120
                                             },
                                             {
                                                 "type": "clone",
                                                 "id": "clone_11",
-                                                "width": 120,
-                                                "height": "100%",
                                                 "widgetId": "#{\n@{bank_size}>10?\n\"channel_strip\" : \"\"\n}",
                                                 "css": "#{\n@{bank_size}<12?\n\"display:none\" : \"\"\n}",
                                                 "props": {
@@ -2001,16 +1991,13 @@
                                                     },
                                                     "id": "channel_strip_11"
                                                 },
-                                                "left": "auto",
-                                                "top": "auto",
                                                 "label": "",
-                                                "variables": "@{parent.variables}"
+                                                "variables": "@{parent.variables}",
+                                                "width": 120
                                             },
                                             {
                                                 "type": "clone",
                                                 "id": "clone_12",
-                                                "width": 120,
-                                                "height": "100%",
                                                 "widgetId": "#{\n@{bank_size}>10?\n\"channel_strip\" : \"\"\n}",
                                                 "css": "#{\n@{bank_size}<12?\n\"display:none\" : \"\"\n}",
                                                 "props": {
@@ -2019,13 +2006,12 @@
                                                     },
                                                     "id": "channel_strip_12"
                                                 },
-                                                "left": "auto",
-                                                "top": "auto",
                                                 "label": "",
-                                                "variables": "@{parent.variables}"
+                                                "variables": "@{parent.variables}",
+                                                "width": 120
                                             }
                                         ],
-                                        "css": "flex:1",
+                                        "css": "flex:1;\nmargin-right:1px;",
                                         "border": true,
                                         "_style": "style",
                                         "_children": "children",
@@ -2042,7 +2028,12 @@
                                         "noSync": false,
                                         "default": "",
                                         "bypass": false,
-                                        "width": "auto"
+                                        "width": "auto",
+                                        "horizontal": true,
+                                        "stretch": false,
+                                        "_geometry": "geometry",
+                                        "_panel": "panel",
+                                        "_value": "value (tab selection)"
                                     },
                                     {
                                         "type": "strip",
@@ -2076,7 +2067,7 @@
                                                 "css": "#{\n@{display_trim}==0?\"display:none\":\"\"\n}",
                                                 "horizontal": true,
                                                 "stretch": false,
-                                                "border": true,
+                                                "border": false,
                                                 "spacing": 4,
                                                 "variables": "@{parent.variables}",
                                                 "widgets": [
@@ -2086,7 +2077,7 @@
                                                         "label": false,
                                                         "width": 50,
                                                         "color": "auto",
-                                                        "horizontal": true,
+                                                        "horizontal": false,
                                                         "stretch": true,
                                                         "border": false,
                                                         "spacing": 0,
@@ -2102,12 +2093,12 @@
                                                                 "preArgs": [],
                                                                 "widgetId": "",
                                                                 "address": "/mastertrim_label",
-                                                                "vertical": true,
-                                                                "width": "auto",
+                                                                "vertical": false,
                                                                 "linkId": "",
                                                                 "wrap": false,
                                                                 "align": "",
-                                                                "default": ""
+                                                                "default": "",
+                                                                "height": "auto"
                                                             },
                                                             {
                                                                 "type": "input",
@@ -2123,12 +2114,12 @@
                                                                 "target": [],
                                                                 "value": "",
                                                                 "address": "/mastertrim_input",
-                                                                "width": "auto",
                                                                 "css": "",
-                                                                "vertical": true,
+                                                                "vertical": false,
                                                                 "align": "",
                                                                 "default": "",
-                                                                "bypass": false
+                                                                "bypass": false,
+                                                                "height": "auto"
                                                             }
                                                         ],
                                                         "_style": "style",
@@ -2211,7 +2202,7 @@
                                                 "css": "#{\n@{display_monitor}==0?\"display:none\":\"\"\n}",
                                                 "horizontal": true,
                                                 "stretch": true,
-                                                "border": true,
+                                                "border": false,
                                                 "spacing": 4,
                                                 "variables": "@{parent.variables}",
                                                 "widgets": [
@@ -2532,7 +2523,7 @@
                                                     }
                                                 ],
                                                 "height": "auto",
-                                                "border": true,
+                                                "border": false,
                                                 "horizontal": true,
                                                 "stretch": false,
                                                 "_style": "style",
@@ -2562,7 +2553,7 @@
                                                 "unit": "dB",
                                                 "height": 30,
                                                 "color": "auto",
-                                                "css": "margin:3rem 3rem 0",
+                                                "css": "margin:3rem 3rem 0;\n#{\n@{display_input}==0?\"display:none\":\"\"\n}",
                                                 "widgetId": "Master",
                                                 "editable": true,
                                                 "value": "",
@@ -2619,7 +2610,7 @@
                                                 "css": "",
                                                 "horizontal": true,
                                                 "stretch": true,
-                                                "border": true,
+                                                "border": false,
                                                 "spacing": 4,
                                                 "variables": "@{parent.variables}",
                                                 "widgets": [
@@ -2689,7 +2680,7 @@
                                                 "css": "",
                                                 "horizontal": true,
                                                 "stretch": true,
-                                                "border": true,
+                                                "border": false,
                                                 "spacing": 4,
                                                 "variables": "@{parent.variables}",
                                                 "widgets": [
@@ -2749,7 +2740,7 @@
                                             }
                                         ],
                                         "spacing": 0,
-                                        "border": true,
+                                        "border": false,
                                         "horizontal": false,
                                         "stretch": false,
                                         "_style": "style",
@@ -2933,7 +2924,7 @@
                                                 "css": "#{\n@{display_trim_sel}==0?\"display:none\":\"\"\n}",
                                                 "horizontal": true,
                                                 "stretch": false,
-                                                "border": true,
+                                                "border": false,
                                                 "spacing": 4,
                                                 "variables": "@{parent.variables}",
                                                 "widgets": [
@@ -2943,7 +2934,7 @@
                                                         "label": false,
                                                         "width": 50,
                                                         "color": "auto",
-                                                        "horizontal": true,
+                                                        "horizontal": false,
                                                         "stretch": true,
                                                         "border": false,
                                                         "spacing": 0,
@@ -2954,17 +2945,17 @@
                                                                 "id": "select_trim_label",
                                                                 "label": false,
                                                                 "color": "auto",
-                                                                "css": "line-height:12rem",
+                                                                "css": "",
                                                                 "value": "Trim",
                                                                 "preArgs": [],
                                                                 "widgetId": "",
                                                                 "address": "/select_trim_label",
-                                                                "vertical": true,
-                                                                "width": "auto",
+                                                                "vertical": false,
                                                                 "linkId": "",
                                                                 "wrap": false,
                                                                 "align": "",
-                                                                "default": ""
+                                                                "default": "",
+                                                                "height": "auto"
                                                             },
                                                             {
                                                                 "type": "input",
@@ -2981,11 +2972,11 @@
                                                                 "target": [],
                                                                 "address": "/select_trim_input",
                                                                 "value": "",
-                                                                "width": "auto",
-                                                                "vertical": true,
+                                                                "vertical": false,
                                                                 "align": "",
                                                                 "default": "",
-                                                                "bypass": false
+                                                                "bypass": false,
+                                                                "height": "auto"
                                                             }
                                                         ],
                                                         "_style": "style",
@@ -3088,7 +3079,7 @@
                                                 "css": "#{\n@{display_recbar_sel}==0?\"display:none\":\"\"\n}",
                                                 "horizontal": true,
                                                 "stretch": false,
-                                                "border": true,
+                                                "border": false,
                                                 "spacing": 4,
                                                 "variables": "@{parent.variables}",
                                                 "widgets": [
@@ -3181,7 +3172,7 @@
                                                 "css": "",
                                                 "horizontal": false,
                                                 "stretch": false,
-                                                "border": true,
+                                                "border": false,
                                                 "spacing": 4,
                                                 "variables": "@{parent.variables}",
                                                 "widgets": [
@@ -3355,7 +3346,7 @@
                                                     }
                                                 ],
                                                 "height": "auto",
-                                                "border": true,
+                                                "border": false,
                                                 "horizontal": true,
                                                 "stretch": false,
                                                 "_style": "style",
@@ -3385,7 +3376,7 @@
                                                 "unit": "dB",
                                                 "height": 30,
                                                 "color": "auto",
-                                                "css": "margin:3rem 3rem 0",
+                                                "css": "margin:3rem 3rem 0;\n#{\n@{display_input}==0?\"display:none\":\"\"\n}",
                                                 "widgetId": "fader_select",
                                                 "editable": true,
                                                 "value": "",
@@ -3442,7 +3433,7 @@
                                                 "css": "",
                                                 "horizontal": true,
                                                 "stretch": false,
-                                                "border": true,
+                                                "border": false,
                                                 "spacing": 4,
                                                 "variables": "@{parent.variables}",
                                                 "widgets": [
@@ -3515,7 +3506,7 @@
                                                 "css": "#{\n@{display_expand}==0?\"display:none\":\"\"\n}",
                                                 "horizontal": true,
                                                 "stretch": true,
-                                                "border": true,
+                                                "border": false,
                                                 "spacing": 4,
                                                 "variables": "@{parent.variables}",
                                                 "widgets": [
@@ -3562,7 +3553,7 @@
                                         ],
                                         "color": "auto",
                                         "spacing": 0,
-                                        "border": true,
+                                        "border": false,
                                         "horizontal": false,
                                         "stretch": false,
                                         "_style": "style",
@@ -3621,11 +3612,11 @@
                                                 "label": false,
                                                 "height": "auto",
                                                 "color": "auto",
-                                                "css": "flex:1",
+                                                "css": "flex:1;margin:0rem",
                                                 "scroll": true,
                                                 "horizontal": false,
                                                 "stretch": false,
-                                                "border": true,
+                                                "border": false,
                                                 "spacing": 4,
                                                 "variables": "@{parent.variables}",
                                                 "widgets": [
@@ -3669,7 +3660,7 @@
                                         "address": "/plugins_panel",
                                         "preArgs": [],
                                         "target": [],
-                                        "border": true,
+                                        "border": false,
                                         "linkId": "",
                                         "noSync": false,
                                         "default": "",
