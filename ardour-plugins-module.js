@@ -23,9 +23,10 @@ function createPluginsList(ssid, plugins) {
             mode: 'horizontal',
             label: false,
             scroll: false,
-            padding: -1,
+            padding: 0,
             height: 20,
             alphaStroke: 0,
+            innerPadding: false,
             widgets: [
                 {
                     type: 'button',
@@ -50,7 +51,7 @@ function createPluginsList(ssid, plugins) {
                     expand: true,
                     alphaStroke: 0,
                     alphaFillOff: 0.15,
-                    linkId: 'plugin_modal',
+                    linkId: '>> plugin_modal',
                     id: `strip_${ssid}_plugin_${plugins[i].id}`,
                     label: plugins[i].name,
                     address: '/strip/plugin/descriptor',
@@ -257,7 +258,7 @@ module.exports = {
         }
 
         else if (address == '/strip/plugin/descriptor_end' && args.length > 1) {
-
+            console.log(args)
             createPluginsGui()
 
             return
