@@ -2001,8 +2001,8 @@
                     "alphaStroke": "auto",
                     "alphaFillOff": 0.15,
                     "alphaFillOn": "auto",
-                    "padding": 0,
-                    "css": ":host {\n  margin: 5rem 5rem 0;\n  --widget-spacing: 0rem;\n  font-size: 80%;\n--scrollbar-size: 8rem\n}\n> inner > .widget {\nflex-shrink: 0!important;\n}\n.button-container:last-child label {\n  justify-content: left;\n}",
+                    "padding": 1,
+                    "css": ":host {\n  margin: 5rem 5rem 0;\n  font-size: 80%;\n--scrollbar-size: 8rem\n}\n> inner > .widget {\nflex-shrink: 0!important;\n}\n.button-container:last-child label {\n  justify-content: left;\n}",
                     "value": "",
                     "default": "",
                     "linkId": "",
@@ -2536,7 +2536,7 @@
                 "alphaStroke": 0,
                 "alphaFillOff": "auto",
                 "alphaFillOn": "auto",
-                "padding": -1,
+                "padding": 0,
                 "widgetType": "clone",
                 "layout": "horizontal",
                 "gridTemplate": "",
@@ -2552,7 +2552,7 @@
                 "decimals": 2,
                 "target": "",
                 "bypass": false,
-                "innerPadding": true,
+                "innerPadding": false,
                 "colorBg": "auto"
               },
               {
@@ -2568,8 +2568,8 @@
                 "css": "background: var(--color-background);\nposition: fixed;\nz-index: 1;\nborder-right: 1rem solid var(--color-background);",
                 "width": 20,
                 "bypass": false,
-                "left": 2,
-                "top": 2,
+                "left": 1.8181818181818166,
+                "top": 1.8181818181818181,
                 "height": 40,
                 "doubleTap": false,
                 "value": "",
@@ -2666,7 +2666,7 @@
             "traversing": false,
             "script": "",
             "ignoreDefaults": false,
-            "innerPadding": true,
+            "innerPadding": false,
             "colorBg": "auto"
           },
           {
@@ -3347,7 +3347,7 @@
         "id": "strip_1",
         "linkId": "",
         "height": "auto",
-        "css": "margin: 0 4rem",
+        "css": "margin: 0 5rem",
         "scroll": true,
         "variables": "@{parent.variables}",
         "preArgs": [],
@@ -3387,6 +3387,6 @@
     "innerPadding": true,
     "colorBg": "auto"
   },
-  "version": "1.0.0-alpha12",
+  "version": "1.0.0-alpha13",
   "type": "Open Stage Control session"
 }
