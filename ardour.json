@@ -2533,7 +2533,7 @@
                 "decimals": 0,
                 "typeTags": "i",
                 "layout": "vertical",
-                "visible": true,
+                "visible": false,
                 "interaction": true,
                 "expand": "false",
                 "colorText": "auto",
