@@ -38,7 +38,7 @@
         "visible": true,
         "interaction": true,
         "width": "auto",
-        "height": 38,
+        "height": 39,
         "expand": "false",
         "colorText": "auto",
         "colorWidget": "auto",
@@ -48,7 +48,7 @@
         "alphaFillOff": "auto",
         "alphaFillOn": "auto",
         "padding": 0,
-        "css": "",
+        "css": "border-bottom:2rem solid var(--color-fill)",
         "layout": "horizontal",
         "justify": "start",
         "gridTemplate": "",
@@ -3425,6 +3425,6 @@
     "innerPadding": true,
     "colorBg": "auto"
   },
-  "version": "1.0.0-alpha17",
+  "version": "1.0.0-alpha18",
   "type": "Open Stage Control session"
 }
