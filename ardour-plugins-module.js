@@ -1,4 +1,3 @@
-
 STRIP_NAMES = {}
 PLUGIN_NAMES = {}
 PLUGIN = {}
@@ -196,6 +195,11 @@ function paramsToWidget(params, ppid) {
 
     return widget
 }
+
+app.on('sessionOpened', ()=>{
+    // make client send config to ardour
+    receive('/SET', 'connect', 1)
+})
 
 module.exports = {
 
