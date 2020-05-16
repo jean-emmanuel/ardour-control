@@ -198,6 +198,7 @@ function paramsToWidget(params, ppid) {
 
 app.on('sessionOpened', ()=>{
     // make client send config to ardour
+    receive('/SET', 'load_config', 1)
     receive('/SET', 'connect', 1)
 })
 
@@ -262,7 +263,7 @@ module.exports = {
         }
 
         else if (address == '/strip/plugin/descriptor_end' && args.length > 1) {
-            console.log(args)
+
             createPluginsGui()
 
             return
@@ -314,7 +315,6 @@ module.exports = {
         var {address, args, host, port} = data
 
         if (address === '/strip/plugin/list') {
-            console.log(args)
 
             if (!args[1].value) {
                 // empty plugin panel
