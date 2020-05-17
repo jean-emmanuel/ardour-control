@@ -1173,7 +1173,7 @@
                 "alphaFillOff": 0,
                 "alphaFillOn": "auto",
                 "padding": "auto",
-                "css": "inner {\npadding: 16rem\n}\nhr {\nheight: 8rem\n}\np {\nline-height: 20rem;\n}\nb {\nfont-weight: bold\n}",
+                "css": "inner {\npadding: 16rem;\n}\nhr {\nheight: 8rem\n}\np {\nline-height: 20rem;\n}\nb {\nfont-weight: bold\n}\n* {\nuser-select:text;\n}",
                 "value": "",
                 "default": "",
                 "linkId": "",
@@ -3628,6 +3628,6 @@
     "innerPadding": true,
     "colorBg": "auto"
   },
-  "version": "1.0.0-beta3",
+  "version": "1.0.0-beta4",
   "type": "Open Stage Control session"
 }
