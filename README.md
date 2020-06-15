@@ -25,10 +25,10 @@ OSC Control Surface for Ardour.
 
 ```bash
 # Running from sources:
-npm start -- -l path/to/ardour.js -c path/to/ardour-plugins-module.js -s 127.0.0.1:3819
+npm start -- -l path/to/ardour.json -c path/to/ardour-plugins-module.js -s 127.0.0.1:3819
 
 # Running from binaries:
-open-stage-control -- -l path/to/ardour.js -c path/to/ardour-plugins-module.js -s 127.0.0.1:3819
+open-stage-control -- -l path/to/ardour.json -c path/to/ardour-plugins-module.js -s 127.0.0.1:3819
 
 ```
 
@@ -38,7 +38,7 @@ If the interface doesn't sync properly, try increasing the udp buffer size :
 https://www.systutorials.com/241303/how-to-enlarge-linux-udp-buffer-size/
 ```bash
 # check buffer size
-/proc/sys/net/core/rmem_default
+cat /proc/sys/net/core/rmem_default
 
 # change buffer size
 sudo sysctl -w net.core.rmem_default=262144
