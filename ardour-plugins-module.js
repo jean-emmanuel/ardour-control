@@ -73,8 +73,8 @@ function createPluginsList(ssid, plugins) {
 function createPluginsGui() {
 
     var widgets = [],
-        toggles = {type:'panel', layout: 'vertical', label: false, alphaStroke: 0, widgets:[], width:200},
-        faders =  {type:'panel', layout: 'vertical', label: false, alphaStroke: 0, widgets:[], expand:true}
+        toggles = {type:'panel', layout: 'vertical', label: false, alphaStroke: 0, widgets:[], width:200, contain: false, innerPadding: false, padding: 0},
+        faders =  {type:'panel', layout: 'vertical', label: false, alphaStroke: 0, widgets:[], expand:true, contain: false, innerPadding: false, padding: 0}
 
     for (var j in PLUGIN.parameters) {
         if (256 & PLUGIN.parameters.flags) continue
@@ -83,7 +83,7 @@ function createPluginsGui() {
         var pane = w.type === 'button' ? toggles : faders
         pane.widgets.push({
             type: 'panel',
-            height: 25,
+            height: 35,
             layout: 'horizontal',
             label: false,
             padding: 0,
@@ -121,7 +121,7 @@ function createPluginsGui() {
 
     _receive('/EDIT', 'plugin_modal', {
         widgets: widgets,
-        label: STRIP_NAMES[CURRENT_SSID] + ' ^chevron-right ' + PLUGIN_NAMES[CURRENT_SSID + '_' + PLUGIN.id]
+        popupLabel: STRIP_NAMES[CURRENT_SSID] + ' ^chevron-right ' + PLUGIN_NAMES[CURRENT_SSID + '_' + PLUGIN.id]
     })
 
 }
@@ -145,16 +145,18 @@ function paramsToWidget(params, ppid) {
         precision: 2 & params.flags ? 0 : 2,
         logScale: 4 & params.flags ? true : false,
         unit: unit,
-        value: params.value
+        value: params.value,
+        alphaStroke: 0,
+        alphaFillOff: 0.1
     }
 
     if (type == 'button') {
         widget.mode = 'toggle'
         widget.off = params.min
         widget.on = params.max
-        widget.width = 25
+        widget.width = 35
+        widget.padding = 1
         widget.label = false
-        widget.alphaFillOff = 0.15
     } else if (type == 'fader'){
         widget.horizontal = true
         widget.label = false
