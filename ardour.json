@@ -9,7 +9,7 @@
       null
     ],
     "variables": {},
-    "css": "\n.knob-strip .knob-container {\nright: 0;\nleft: auto;\nborder-radius: 37rem / 45rem;\n}\n.knob-strip .input-container {\n  z-index: 0;\n  --alpha-stroke: 0;\n}\n\n.text-container {\n  --widget-padding: -1rem;\n  --alpha-stroke: 0;\n  --alpha-fill-off: 0.1;\n}\n.modal-container,\n.button-container {\n  --alpha-stroke: 0;\n  --alpha-fill-off: 0.15;\n  --widget-padding: -1rem;\n}\n.input-container {\n  --alpha-stroke: 0; \n  --alpha-fill-off: 0.05;\n}",
+    "css": "\n.knob-strip .knob-container {\nright: 0;\nleft: auto;\nborder-radius: 37rem / 45rem;\n}\n.knob-strip .input-container {\n  z-index: 0;\n  --alpha-stroke: 0;\n}\n\n.text-container {\n  --widget-padding: -1rem;\n  --alpha-stroke: 0;\n  --alpha-fill-off: 0.1;\n}\n.modal-container,\n.button-container {\n  --alpha-stroke: 0;\n  --alpha-fill-off: 0.15;\n  --widget-padding: -1rem;\n}\n.input-container {\n  --alpha-stroke: 0; \n  --alpha-fill-off: 0.05;\n}\n.button-container.no-pulse inner:after {\n  animation: none\n}",
     "id": "root",
     "linkId": "",
     "default": "",
@@ -619,7 +619,8 @@
                 "script": "",
                 "ignoreDefaults": false,
                 "innerPadding": false,
-                "colorBg": "auto"
+                "colorBg": "auto",
+                "contain": true
               },
               {
                 "type": "panel",
@@ -737,7 +738,8 @@
                 "script": "",
                 "ignoreDefaults": false,
                 "innerPadding": false,
-                "colorBg": "auto"
+                "colorBg": "auto",
+                "contain": true
               },
               {
                 "type": "panel",
@@ -888,7 +890,8 @@
                 "script": "",
                 "ignoreDefaults": false,
                 "innerPadding": false,
-                "colorBg": "auto"
+                "colorBg": "auto",
+                "contain": true
               },
               {
                 "type": "panel",
@@ -1153,7 +1156,8 @@
                 "verticalTabs": false,
                 "traversing": false,
                 "innerPadding": false,
-                "colorBg": "auto"
+                "colorBg": "auto",
+                "contain": true
               },
               {
                 "type": "html",
@@ -1341,10 +1345,12 @@
                 "script": "",
                 "ignoreDefaults": false,
                 "innerPadding": false,
-                "colorBg": "auto"
+                "colorBg": "auto",
+                "contain": true
               }
             ],
-            "innerPadding": true
+            "innerPadding": true,
+            "contain": true
           }
         ],
         "variables": "@{parent.variables}",
@@ -1382,7 +1388,8 @@
         "script": "",
         "ignoreDefaults": false,
         "innerPadding": false,
-        "colorBg": "auto"
+        "colorBg": "auto",
+        "contain": true
       },
       {
         "type": "panel",
@@ -1552,7 +1559,7 @@
             "id": "play",
             "linkId": "",
             "label": "^play",
-            "css": "",
+            "css": "class: no-pulse",
             "on": 1,
             "off": 0,
             "preArgs": [],
@@ -1590,7 +1597,7 @@
             "id": "transport_stop",
             "linkId": "",
             "label": "^stop",
-            "css": "",
+            "css": "class: no-pulse",
             "on": 1,
             "off": 0,
             "preArgs": [],
@@ -1626,7 +1633,7 @@
           {
             "type": "button",
             "id": "masterrec",
-            "css": "",
+            "css": "class: no-pulse",
             "preArgs": [],
             "value": "",
             "address": "/rec_enable_toggle",
@@ -1701,7 +1708,7 @@
             "preArgs": [],
             "target": [],
             "width": 55,
-            "css": "",
+            "css": "class: no-pulse",
             "linkId": "",
             "default": "",
             "bypass": false,
@@ -1736,7 +1743,7 @@
             "id": "metro",
             "linkId": "",
             "label": "^hourglass",
-            "css": "",
+            "css": "class: no-pulse",
             "on": 1,
             "off": 0,
             "preArgs": [],
@@ -1772,7 +1779,8 @@
         ],
         "tabs": [],
         "innerPadding": true,
-        "colorBg": "auto"
+        "colorBg": "auto",
+        "contain": true
       },
       {
         "type": "panel",
@@ -1815,13 +1823,14 @@
             "bypass": false,
             "widgets": [],
             "doubleTap": false,
-            "popupLabel": "",
+            "popupLabel": "samsara ^chevron-right Calf Equalizer 5 Band",
             "popupWidth": "80%",
             "popupHeight": "80%",
             "popupLeft": "auto",
             "popupTop": "auto",
             "innerPadding": true,
-            "colorBg": "auto"
+            "colorBg": "auto",
+            "contain": true
           },
           {
             "type": "panel",
@@ -2024,7 +2033,8 @@
                     "script": "",
                     "ignoreDefaults": false,
                     "innerPadding": true,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "contain": true
                   },
                   {
                     "type": "panel",
@@ -2223,7 +2233,8 @@
                     "script": "",
                     "ignoreDefaults": false,
                     "innerPadding": true,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "contain": true
                   },
                   {
                     "type": "panel",
@@ -2265,7 +2276,8 @@
                     "widgets": [],
                     "tabs": [],
                     "innerPadding": true,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "contain": true
                   },
                   {
                     "type": "panel",
@@ -2508,7 +2520,8 @@
                     "verticalTabs": false,
                     "traversing": false,
                     "innerPadding": true,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "contain": true
                   },
                   {
                     "type": "panel",
@@ -2679,7 +2692,8 @@
                     "verticalTabs": false,
                     "traversing": false,
                     "innerPadding": true,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "contain": true
                   },
                   {
                     "type": "input",
@@ -2754,7 +2768,8 @@
                 "script": "",
                 "ignoreDefaults": false,
                 "innerPadding": false,
-                "colorBg": "auto"
+                "colorBg": "auto",
+                "contain": true
               },
               {
                 "type": "matrix",
@@ -2809,13 +2824,13 @@
                 "css": "background: var(--color-background);\nposition: fixed;\nz-index: 1;\nborder-right: 1rem solid var(--color-background);",
                 "width": 20,
                 "bypass": false,
-                "left": 1.8181818181818166,
-                "top": 1.8181818181818181,
+                "left": 2,
+                "top": 2,
                 "height": 40,
                 "doubleTap": false,
                 "value": "",
                 "decimals": 2,
-                "mode": "push",
+                "mode": "tap",
                 "visible": true,
                 "interaction": true,
                 "expand": "false",
@@ -2824,7 +2839,7 @@
                 "colorStroke": "auto",
                 "colorFill": "auto",
                 "alphaStroke": 0,
-                "alphaFillOff": 0.15,
+                "alphaFillOff": "#{OSC{@{this.address}, 0}?0.5:0.15}",
                 "alphaFillOn": "auto",
                 "padding": "auto",
                 "colorTextOn": "auto",
@@ -2853,7 +2868,7 @@
                 "doubleTap": false,
                 "value": "",
                 "decimals": 2,
-                "mode": "push",
+                "mode": "tap",
                 "visible": true,
                 "interaction": true,
                 "expand": "false",
@@ -2862,7 +2877,7 @@
                 "colorStroke": "auto",
                 "colorFill": "auto",
                 "alphaStroke": 0,
-                "alphaFillOff": 0.15,
+                "alphaFillOff": "#{OSC{@{this.address}, 0}?0.5:0.15}",
                 "alphaFillOn": "auto",
                 "padding": "auto",
                 "colorTextOn": "auto",
@@ -2908,7 +2923,8 @@
             "script": "",
             "ignoreDefaults": false,
             "innerPadding": false,
-            "colorBg": "auto"
+            "colorBg": "auto",
+            "contain": true
           },
           {
             "type": "panel",
@@ -3137,7 +3153,8 @@
                 "script": "",
                 "ignoreDefaults": false,
                 "innerPadding": true,
-                "colorBg": "auto"
+                "colorBg": "auto",
+                "contain": true
               },
               {
                 "type": "panel",
@@ -3249,7 +3266,7 @@
                     "vertical": false,
                     "wrap": false,
                     "align": "center",
-                    "value": "Trim",
+                    "value": "Pan",
                     "default": "",
                     "linkId": "",
                     "script": "",
@@ -3294,7 +3311,8 @@
                 "script": "",
                 "ignoreDefaults": false,
                 "innerPadding": true,
-                "colorBg": "auto"
+                "colorBg": "auto",
+                "contain": true
               },
               {
                 "type": "panel",
@@ -3375,7 +3393,8 @@
                 ],
                 "tabs": [],
                 "innerPadding": true,
-                "colorBg": "auto"
+                "colorBg": "auto",
+                "contain": true
               },
               {
                 "type": "panel",
@@ -3542,7 +3561,8 @@
                 "verticalTabs": false,
                 "traversing": false,
                 "innerPadding": true,
-                "colorBg": "auto"
+                "colorBg": "auto",
+                "contain": true
               },
               {
                 "type": "input",
@@ -3582,7 +3602,8 @@
             ],
             "tabs": [],
             "innerPadding": false,
-            "colorBg": "auto"
+            "colorBg": "auto",
+            "contain": true
           }
         ],
         "id": "strip_1",
@@ -3622,12 +3643,14 @@
         "script": "",
         "ignoreDefaults": false,
         "innerPadding": false,
-        "colorBg": "auto"
+        "colorBg": "auto",
+        "contain": true
       }
     ],
     "innerPadding": true,
-    "colorBg": "auto"
+    "colorBg": "auto",
+    "contain": true
   },
-  "version": "1.0.0-beta4",
+  "version": "1.0.3",
   "type": "Open Stage Control session"
 }
