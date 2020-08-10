@@ -10,6 +10,7 @@ if (settings.read('send')) {
     [host, port] = settings.read('send')[0].split(':')
 } else {
     console.warn('(WARNING) "send" option not set')
+    error = true
 }
 
 // Shorthand for osc sending to ardour
