@@ -4,11 +4,9 @@ OSC Control Surface for Ardour.
 
 ## Requirements
 
-- [Ardour](http://ardour.org/) v6.0
+- [Ardour](http://ardour.org/) v6
 - [Open Stage Control](https://github.com/jean-emmanuel/open-stage-control) v1
 
-
-*This is a work in progress*
 
 *For Ardour v5.12 / OSC v0.49: https://github.com/jean-emmanuel/ardour-control/tree/v1.0*
 
@@ -16,7 +14,7 @@ OSC Control Surface for Ardour.
 
 - all tracks (using banking)
 - transport
-- plugins (ladspa-like generic ui)
+- plugins (generic ui)
 
 ## Getting started
 
