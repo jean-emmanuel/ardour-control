@@ -3,11 +3,22 @@ PLUGIN_NAMES = {}
 PLUGIN = {}
 CURRENT_SSID = 0
 
-// Shorthand for osc sending to ardour
-var [host, port] = settings.read('send')[0].split(':')
-_send = (address, ...args)=>{
-    send(host, port, address, ...args)
+
+var host, port, error = false
+
+if (settings.read('send')) {
+    [host, port] = settings.read('send')[0].split(':')
+} else {
+    console.warn('(WARNING) "send" option not set')
 }
+
+// Shorthand for osc sending to ardour
+
+_send = (address, ...args)=>{
+    if (!error) send(host, port, address, ...args)
+}
+
+// Shorthand for osc sending to client
 
 _receive = (address, ...args)=>{
     receive(host, port, address, ...args)
