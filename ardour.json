@@ -965,13 +965,9 @@
                     "padding": "auto",
                     "css": "",
                     "widgetType": "button",
-                    "quantity": "#{globals.transport.length}",
+                    "quantity": "#{@{transport.widgets}.length}",
                     "start": 0,
-                    "props": {
-                      "id": "display_#{globals.transport[$]}",
-                      "label": "#{globals.transport[$]}",
-                      "default": 1
-                    },
+                    "props": "JS{{\nlocals.transport = @{transport.widgets}.map(x=>x.id)\n}}\n{\n  \"id\": \"display_#{locals.transport[$]}\",\n  \"label\": \"#{locals.transport[$]}\",\n  \"default\": 1\n}",
                     "layout": "horizontal",
                     "gridTemplate": "",
                     "traversing": true,
@@ -4196,25 +4192,6 @@
         "innerPadding": false,
         "colorBg": "auto",
         "contain": true
-      },
-      {
-        "type": "script",
-        "id": "transport_btns_list",
-        "event": "value",
-        "script": "var widgets = getProp(\"transport\", \"widgets\")\nglobals.transport = widgets.map(x=>x.id)\nupdateProp(\"transport_btns\", \"quantity\")\nupdateProp(\"transport_btns\", \"props\")",
-        "keyBinding": "",
-        "keyRepeat": true,
-        "keyType": "keydown",
-        "value": 1,
-        "default": "",
-        "linkId": "",
-        "address": "auto",
-        "preArgs": "",
-        "typeTags": "",
-        "decimals": 2,
-        "target": "",
-        "ignoreDefaults": false,
-        "bypass": false
       }
     ],
     "innerPadding": true,
