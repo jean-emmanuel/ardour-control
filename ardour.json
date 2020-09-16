@@ -7,7 +7,7 @@
     "preArgs": "",
     "target": "",
     "variables": {},
-    "css": "\n.knob-strip .knob-container {\nright: 0;\nleft: auto;\nborder-radius: 37rem / 45rem;\n}\n.knob-strip .input-container {\n  z-index: 0;\n  --alpha-stroke: 0;\n}\n\n.text-container {\n  --widget-padding: -1rem;\n  --alpha-stroke: 0;\n  --alpha-fill-off: 0.1;\n}\n.modal-container,\n.button-container {\n  --alpha-stroke: 0;\n  --alpha-fill-off: 0.15;\n  --widget-padding: -1rem;\n}\n.input-container {\n  --alpha-stroke: 0; \n  --alpha-fill-off: 0.05;\n}\n.button-container.no-pulse inner:after {\n  animation: none\n}",
+    "css": ".knob-strip .knob-container {\nright: 0;\nleft: auto;\nborder-radius: 37rem / 45rem;\n}\n.knob-strip .input-container {\n  z-index: 0;\n  --alpha-stroke: 0;\n}\n\n.text-container {\n  --widget-padding: -1rem;\n  --alpha-stroke: 0;\n  --alpha-fill-off: 0.1;\n}\n.modal-container,\n.button-container {\n  --alpha-stroke: 0;\n  --alpha-fill-off: 0.15;\n  --widget-padding: -1rem;\n}\n\n.input-container {\n  --alpha-stroke: 0; \n  --alpha-fill-off: 0.05;\n}\n.button-container.no-pulse inner:after {\n  animation: none\n}",
     "id": "root",
     "linkId": "",
     "default": "",
@@ -63,7 +63,8 @@
             "colorBg": "auto",
             "vertical": false,
             "wrap": false,
-            "align": ""
+            "align": "",
+            "lineWidth": "auto"
           },
           {
             "type": "modal",
@@ -145,7 +146,8 @@
                     "preArgs": "",
                     "typeTags": "",
                     "target": "",
-                    "ignoreDefaults": false
+                    "ignoreDefaults": false,
+                    "lineWidth": "auto"
                   },
                   {
                     "type": "button",
@@ -183,7 +185,10 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   },
                   {
                     "type": "button",
@@ -221,7 +226,10 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   },
                   {
                     "type": "button",
@@ -259,7 +267,10 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   },
                   {
                     "type": "button",
@@ -297,7 +308,10 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   },
                   {
                     "type": "button",
@@ -335,7 +349,10 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   },
                   {
                     "type": "button",
@@ -373,7 +390,10 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   },
                   {
                     "type": "button",
@@ -411,7 +431,10 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   },
                   {
                     "type": "button",
@@ -449,7 +472,10 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   },
                   {
                     "type": "button",
@@ -487,7 +513,10 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   },
                   {
                     "type": "button",
@@ -525,7 +554,10 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   },
                   {
                     "type": "input",
@@ -560,7 +592,8 @@
                     "asYouType": false,
                     "script": "",
                     "ignoreDefaults": true,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto"
                   }
                 ],
                 "variables": {},
@@ -598,7 +631,8 @@
                 "ignoreDefaults": false,
                 "innerPadding": false,
                 "colorBg": "auto",
-                "contain": true
+                "contain": true,
+                "lineWidth": "auto"
               },
               {
                 "type": "panel",
@@ -641,7 +675,8 @@
                     "preArgs": "",
                     "typeTags": "",
                     "target": "",
-                    "ignoreDefaults": false
+                    "ignoreDefaults": false,
+                    "lineWidth": "auto"
                   },
                   {
                     "type": "switch",
@@ -684,7 +719,8 @@
                     "colorTextOn": "auto",
                     "script": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto"
                   }
                 ],
                 "default": "",
@@ -717,7 +753,8 @@
                 "ignoreDefaults": false,
                 "innerPadding": false,
                 "colorBg": "auto",
-                "contain": true
+                "contain": true,
+                "lineWidth": "auto"
               },
               {
                 "type": "panel",
@@ -760,7 +797,8 @@
                     "preArgs": "",
                     "typeTags": "",
                     "target": "",
-                    "ignoreDefaults": false
+                    "ignoreDefaults": false,
+                    "lineWidth": "auto"
                   },
                   {
                     "type": "button",
@@ -798,7 +836,10 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   },
                   {
                     "type": "button",
@@ -836,7 +877,10 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   }
                 ],
                 "default": "",
@@ -869,7 +913,8 @@
                 "ignoreDefaults": false,
                 "innerPadding": false,
                 "colorBg": "auto",
-                "contain": true
+                "contain": true,
+                "lineWidth": "auto"
               },
               {
                 "type": "panel",
@@ -907,7 +952,8 @@
                     "preArgs": "",
                     "typeTags": "",
                     "target": "",
-                    "ignoreDefaults": false
+                    "ignoreDefaults": false,
+                    "lineWidth": "auto"
                   },
                   {
                     "type": "input",
@@ -942,7 +988,8 @@
                     "asYouType": false,
                     "script": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto"
                   },
                   {
                     "type": "matrix",
@@ -982,7 +1029,8 @@
                     "decimals": 2,
                     "target": "",
                     "ignoreDefaults": false,
-                    "bypass": false
+                    "bypass": false,
+                    "lineWidth": "auto"
                   }
                 ],
                 "variables": {},
@@ -1020,7 +1068,8 @@
                 "ignoreDefaults": false,
                 "innerPadding": false,
                 "colorBg": "auto",
-                "contain": true
+                "contain": true,
+                "lineWidth": "auto"
               },
               {
                 "type": "panel",
@@ -1085,7 +1134,8 @@
                     "preArgs": "",
                     "typeTags": "",
                     "target": "",
-                    "ignoreDefaults": false
+                    "ignoreDefaults": false,
+                    "lineWidth": "auto"
                   },
                   {
                     "type": "button",
@@ -1123,7 +1173,10 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   },
                   {
                     "type": "button",
@@ -1161,7 +1214,10 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   },
                   {
                     "type": "button",
@@ -1199,7 +1255,10 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   },
                   {
                     "type": "button",
@@ -1237,7 +1296,10 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   },
                   {
                     "type": "button",
@@ -1275,7 +1337,10 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   },
                   {
                     "type": "button",
@@ -1313,7 +1378,10 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   },
                   {
                     "type": "button",
@@ -1351,7 +1419,10 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   },
                   {
                     "type": "button",
@@ -1389,7 +1460,10 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   }
                 ],
                 "tabs": [],
@@ -1400,7 +1474,8 @@
                 "traversing": false,
                 "innerPadding": false,
                 "colorBg": "auto",
-                "contain": true
+                "contain": true,
+                "lineWidth": "auto"
               },
               {
                 "type": "panel",
@@ -1443,7 +1518,8 @@
                     "preArgs": "",
                     "typeTags": "",
                     "target": "",
-                    "ignoreDefaults": false
+                    "ignoreDefaults": false,
+                    "lineWidth": "auto"
                   },
                   {
                     "type": "button",
@@ -1454,7 +1530,7 @@
                     "doubleTap": false,
                     "on": 1,
                     "off": 0,
-                    "default": 1,
+                    "default": 0,
                     "value": "",
                     "address": "auto",
                     "preArgs": "",
@@ -1481,7 +1557,10 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   },
                   {
                     "type": "button",
@@ -1519,45 +1598,10 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto"
-                  },
-                  {
-                    "type": "button",
-                    "id": "display_dev_strip",
-                    "linkId": "",
-                    "label": "Dev strip",
-                    "css": "",
-                    "doubleTap": false,
-                    "on": 1,
-                    "off": 0,
-                    "default": 0,
-                    "value": "",
-                    "address": "auto",
-                    "preArgs": "",
-                    "target": "",
-                    "bypass": true,
-                    "width": "auto",
-                    "left": "auto",
-                    "top": "auto",
-                    "height": "auto",
-                    "decimals": 2,
-                    "mode": "toggle",
-                    "visible": true,
-                    "interaction": true,
-                    "expand": "false",
-                    "colorText": "auto",
-                    "colorWidget": "auto",
-                    "colorStroke": "auto",
-                    "colorFill": "auto",
-                    "alphaStroke": "auto",
-                    "alphaFillOff": "auto",
-                    "alphaFillOn": "auto",
-                    "padding": "auto",
-                    "colorTextOn": "auto",
-                    "script": "",
-                    "typeTags": "",
-                    "ignoreDefaults": false,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   },
                   {
                     "type": "button",
@@ -1595,7 +1639,51 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
+                  },
+                  {
+                    "type": "button",
+                    "id": "display_dev_strip",
+                    "linkId": "",
+                    "label": "Dev strip",
+                    "css": "",
+                    "doubleTap": false,
+                    "on": 1,
+                    "off": 0,
+                    "default": 0,
+                    "value": "",
+                    "address": "auto",
+                    "preArgs": "",
+                    "target": "",
+                    "bypass": true,
+                    "width": "auto",
+                    "left": "auto",
+                    "top": "auto",
+                    "height": "auto",
+                    "decimals": 2,
+                    "mode": "toggle",
+                    "visible": true,
+                    "interaction": true,
+                    "expand": "false",
+                    "colorText": "auto",
+                    "colorWidget": "auto",
+                    "colorStroke": "auto",
+                    "colorFill": "auto",
+                    "alphaStroke": "auto",
+                    "alphaFillOff": "auto",
+                    "alphaFillOn": "auto",
+                    "padding": "auto",
+                    "colorTextOn": "auto",
+                    "script": "",
+                    "typeTags": "",
+                    "ignoreDefaults": false,
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   }
                 ],
                 "default": "",
@@ -1628,7 +1716,8 @@
                 "ignoreDefaults": false,
                 "innerPadding": false,
                 "colorBg": "auto",
-                "contain": true
+                "contain": true,
+                "lineWidth": "auto"
               },
               {
                 "type": "html",
@@ -1659,7 +1748,8 @@
                 "target": "",
                 "ignoreDefaults": false,
                 "interaction": true,
-                "html": "<p><b>Usage notes</b>\n<p>----------------\n<hr/><hr/>\n<p><b>Ardour Configuration</b><hr/>\n<p>- Minimum version: 6\n<p>- Open Sound Control must be enabled in Settings > Control Surface\n<p>- Port mode must be set to \"Auto\" in Settings > Control Surface > OSC > Protocol parameters\n\n<hr/><hr/>\n<p><b>Open Stage Control Configuration</b><hr/>\n<p>- Minimum version: 1.0.0\n<p>- send: 127.0.0.1:3819\n<p>- custom-module: ardour-plugins-module.js"
+                "html": "<p><b>Usage notes</b>\n<p>----------------\n<hr/><hr/>\n<p><b>Ardour Configuration</b><hr/>\n<p>- Minimum version: 6\n<p>- Open Sound Control must be enabled in Settings > Control Surface\n<p>- Port mode must be set to \"Auto\" in Settings > Control Surface > OSC > Protocol parameters\n\n<hr/><hr/>\n<p><b>Open Stage Control Configuration</b><hr/>\n<p>- Minimum version: 1.2.1\n<p>- send: 127.0.0.1:3819\n<p>- custom-module: ardour-plugins-module.js",
+                "lineWidth": "auto"
               },
               {
                 "type": "panel",
@@ -1708,7 +1798,10 @@
                     "doubleTap": false,
                     "mode": "tap",
                     "colorTextOn": "auto",
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   },
                   {
                     "type": "button",
@@ -1746,7 +1839,10 @@
                     "decimals": 2,
                     "target": "",
                     "ignoreDefaults": false,
-                    "bypass": false
+                    "bypass": false,
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   },
                   {
                     "type": "button",
@@ -1784,7 +1880,10 @@
                     "decimals": 2,
                     "target": "",
                     "ignoreDefaults": false,
-                    "bypass": false
+                    "bypass": false,
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   }
                 ],
                 "default": "",
@@ -1817,11 +1916,13 @@
                 "ignoreDefaults": false,
                 "innerPadding": false,
                 "colorBg": "auto",
-                "contain": true
+                "contain": true,
+                "lineWidth": "auto"
               }
             ],
             "innerPadding": true,
-            "contain": true
+            "contain": true,
+            "lineWidth": "auto"
           }
         ],
         "variables": "@{parent.variables}",
@@ -1860,7 +1961,8 @@
         "ignoreDefaults": false,
         "innerPadding": false,
         "colorBg": "auto",
-        "contain": true
+        "contain": true,
+        "lineWidth": "auto"
       },
       {
         "type": "panel",
@@ -1880,13 +1982,13 @@
         "alphaFillOff": "auto",
         "alphaFillOn": "auto",
         "padding": 4,
-        "css": "",
+        "css": "--scrollbar-size:4rem",
         "layout": "horizontal",
         "justify": "start",
         "gridTemplate": "",
         "verticalTabs": false,
         "traversing": false,
-        "scroll": false,
+        "scroll": true,
         "variables": {},
         "value": "",
         "default": "",
@@ -1947,7 +2049,9 @@
             "steps": "",
             "design": "compact",
             "gradient": [],
-            "sensitivity": 1
+            "sensitivity": 1,
+            "knobSize": 2,
+            "lineWidth": "auto"
           },
           {
             "type": "button",
@@ -1985,7 +2089,10 @@
             "script": "",
             "typeTags": "",
             "ignoreDefaults": false,
-            "colorBg": "auto"
+            "colorBg": "auto",
+            "lineWidth": "auto",
+            "vertical": false,
+            "wrap": false
           },
           {
             "type": "button",
@@ -2023,7 +2130,10 @@
             "on": 1,
             "off": 0,
             "mode": "tap",
-            "colorTextOn": "auto"
+            "colorTextOn": "auto",
+            "lineWidth": "auto",
+            "vertical": false,
+            "wrap": false
           },
           {
             "type": "button",
@@ -2061,7 +2171,10 @@
             "script": "",
             "typeTags": "",
             "ignoreDefaults": false,
-            "colorBg": "auto"
+            "colorBg": "auto",
+            "lineWidth": "auto",
+            "vertical": false,
+            "wrap": false
           },
           {
             "type": "button",
@@ -2099,7 +2212,10 @@
             "script": "",
             "typeTags": "",
             "ignoreDefaults": false,
-            "colorBg": "auto"
+            "colorBg": "auto",
+            "lineWidth": "auto",
+            "vertical": false,
+            "wrap": false
           },
           {
             "type": "button",
@@ -2137,7 +2253,10 @@
             "on": 1,
             "off": 0,
             "mode": "tap",
-            "colorTextOn": "auto"
+            "colorTextOn": "auto",
+            "lineWidth": "auto",
+            "vertical": false,
+            "wrap": false
           },
           {
             "type": "button",
@@ -2175,7 +2294,10 @@
             "script": "",
             "typeTags": "",
             "ignoreDefaults": false,
-            "colorBg": "auto"
+            "colorBg": "auto",
+            "lineWidth": "auto",
+            "vertical": false,
+            "wrap": false
           },
           {
             "type": "button",
@@ -2213,7 +2335,10 @@
             "script": "",
             "typeTags": "",
             "ignoreDefaults": false,
-            "colorBg": "auto"
+            "colorBg": "auto",
+            "lineWidth": "auto",
+            "vertical": false,
+            "wrap": false
           },
           {
             "type": "button",
@@ -2251,7 +2376,10 @@
             "mode": "tap",
             "interaction": true,
             "colorTextOn": "auto",
-            "colorBg": "auto"
+            "colorBg": "auto",
+            "lineWidth": "auto",
+            "vertical": false,
+            "wrap": false
           },
           {
             "type": "text",
@@ -2261,7 +2389,7 @@
             "target": "",
             "address": "/position/smpte",
             "css": "font-size:120%;",
-            "width": "auto",
+            "width": 200,
             "left": "auto",
             "top": "auto",
             "height": "auto",
@@ -2283,7 +2411,8 @@
             "vertical": false,
             "wrap": false,
             "align": "",
-            "colorBg": "auto"
+            "colorBg": "auto",
+            "lineWidth": "auto"
           },
           {
             "type": "button",
@@ -2321,7 +2450,10 @@
             "off": 0,
             "mode": "tap",
             "colorTextOn": "auto",
-            "colorBg": "auto"
+            "colorBg": "auto",
+            "lineWidth": "auto",
+            "vertical": false,
+            "wrap": false
           },
           {
             "type": "button",
@@ -2359,13 +2491,17 @@
             "script": "",
             "typeTags": "",
             "ignoreDefaults": false,
-            "colorBg": "auto"
+            "colorBg": "auto",
+            "lineWidth": "auto",
+            "vertical": false,
+            "wrap": false
           }
         ],
         "tabs": [],
         "innerPadding": true,
         "colorBg": "auto",
-        "contain": true
+        "contain": false,
+        "lineWidth": "auto"
       },
       {
         "type": "panel",
@@ -2415,7 +2551,8 @@
             "popupTop": "auto",
             "innerPadding": true,
             "colorBg": "auto",
-            "contain": true
+            "contain": true,
+            "lineWidth": "auto"
           },
           {
             "type": "panel",
@@ -2459,7 +2596,8 @@
                     "typeTags": "",
                     "target": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto"
                   },
                   {
                     "type": "panel",
@@ -2476,7 +2614,7 @@
                           "@{parent.variables.n}"
                         ],
                         "css": "",
-                        "width": 45,
+                        "width": 46,
                         "linkId": "trim_knob_@{parent.variables.n}",
                         "default": "",
                         "left": "auto",
@@ -2488,7 +2626,7 @@
                         "expand": false,
                         "colorText": "auto",
                         "colorWidget": "auto",
-                        "colorStroke": "auto",
+                        "colorStroke": "#dfefff",
                         "colorFill": "auto",
                         "alphaStroke": "auto",
                         "alphaFillOff": "auto",
@@ -2514,7 +2652,9 @@
                         "angle": 270,
                         "steps": "",
                         "sensitivity": 0.5,
-                        "colorBg": "auto"
+                        "colorBg": "auto",
+                        "design": "solid",
+                        "lineWidth": "auto"
                       },
                       {
                         "type": "input",
@@ -2549,7 +2689,8 @@
                         "unit": "",
                         "align": "",
                         "asYouType": false,
-                        "colorBg": "auto"
+                        "colorBg": "auto",
+                        "lineWidth": "auto"
                       },
                       {
                         "type": "text",
@@ -2581,7 +2722,8 @@
                         "typeTags": "",
                         "target": "",
                         "ignoreDefaults": false,
-                        "colorBg": "auto"
+                        "colorBg": "auto",
+                        "lineWidth": "auto"
                       }
                     ],
                     "height": 45,
@@ -2619,7 +2761,8 @@
                     "ignoreDefaults": false,
                     "innerPadding": true,
                     "colorBg": "auto",
-                    "contain": true
+                    "contain": true,
+                    "lineWidth": "auto"
                   },
                   {
                     "type": "panel",
@@ -2661,7 +2804,8 @@
                         "align": "",
                         "unit": "",
                         "asYouType": false,
-                        "colorBg": "auto"
+                        "colorBg": "auto",
+                        "lineWidth": "auto"
                       },
                       {
                         "type": "knob",
@@ -2674,7 +2818,7 @@
                         ],
                         "value": "",
                         "address": "/strip/pan_stereo_position",
-                        "width": 45,
+                        "width": 46,
                         "doubleTap": true,
                         "default": "",
                         "bypass": false,
@@ -2688,7 +2832,7 @@
                         "interaction": true,
                         "expand": false,
                         "colorText": "auto",
-                        "colorStroke": "auto",
+                        "colorStroke": "#dfefff",
                         "colorFill": "auto",
                         "alphaStroke": "auto",
                         "alphaFillOff": "auto",
@@ -2710,7 +2854,9 @@
                         "steps": "",
                         "sensitivity": 0.5,
                         "angle": 270,
-                        "colorBg": "auto"
+                        "colorBg": "auto",
+                        "design": "solid",
+                        "lineWidth": "auto"
                       },
                       {
                         "type": "button",
@@ -2750,7 +2896,10 @@
                         "off": 0,
                         "mode": "toggle",
                         "colorTextOn": "auto",
-                        "colorBg": "auto"
+                        "colorBg": "auto",
+                        "lineWidth": "auto",
+                        "vertical": false,
+                        "wrap": false
                       },
                       {
                         "type": "text",
@@ -2782,7 +2931,8 @@
                         "typeTags": "",
                         "target": "",
                         "ignoreDefaults": false,
-                        "colorBg": "auto"
+                        "colorBg": "auto",
+                        "lineWidth": "auto"
                       }
                     ],
                     "scroll": false,
@@ -2819,7 +2969,8 @@
                     "ignoreDefaults": false,
                     "innerPadding": true,
                     "colorBg": "auto",
-                    "contain": true
+                    "contain": true,
+                    "lineWidth": "auto"
                   },
                   {
                     "type": "panel",
@@ -2862,7 +3013,8 @@
                     "tabs": [],
                     "innerPadding": true,
                     "colorBg": "auto",
-                    "contain": true
+                    "contain": true,
+                    "lineWidth": "auto"
                   },
                   {
                     "type": "panel",
@@ -2934,7 +3086,10 @@
                         "off": 0,
                         "mode": "toggle",
                         "colorTextOn": "auto",
-                        "colorBg": "auto"
+                        "colorBg": "auto",
+                        "lineWidth": "auto",
+                        "vertical": false,
+                        "wrap": false
                       },
                       {
                         "type": "button",
@@ -2974,7 +3129,10 @@
                         "on": 1,
                         "mode": "toggle",
                         "colorTextOn": "auto",
-                        "colorBg": "auto"
+                        "colorBg": "auto",
+                        "lineWidth": "auto",
+                        "vertical": false,
+                        "wrap": false
                       },
                       {
                         "type": "button",
@@ -3014,7 +3172,10 @@
                         "colorTextOn": "auto",
                         "script": "",
                         "ignoreDefaults": false,
-                        "colorBg": "auto"
+                        "colorBg": "auto",
+                        "lineWidth": "auto",
+                        "vertical": false,
+                        "wrap": false
                       },
                       {
                         "type": "button",
@@ -3054,7 +3215,10 @@
                         "script": "",
                         "typeTags": "",
                         "ignoreDefaults": false,
-                        "colorBg": "auto"
+                        "colorBg": "auto",
+                        "lineWidth": "auto",
+                        "vertical": false,
+                        "wrap": false
                       },
                       {
                         "type": "button",
@@ -3094,7 +3258,10 @@
                         "script": "",
                         "typeTags": "",
                         "ignoreDefaults": false,
-                        "colorBg": "auto"
+                        "colorBg": "auto",
+                        "lineWidth": "auto",
+                        "vertical": false,
+                        "wrap": false
                       }
                     ],
                     "scroll": true,
@@ -3106,7 +3273,8 @@
                     "traversing": false,
                     "innerPadding": true,
                     "colorBg": "auto",
-                    "contain": true
+                    "contain": true,
+                    "lineWidth": "auto"
                   },
                   {
                     "type": "panel",
@@ -3166,12 +3334,12 @@
                         "preArgs": [
                           "@{parent.variables.n}"
                         ],
-                        "css": "#{\n@{display_compact_fader} ? \"\" : `\nz-index:-1;\nbottom: 11rem;\nheight: auto;\n`\n}",
+                        "css": "#{\n@{display_compact_fader} ? \"\" : `\nz-index:-1;\nbottom: 16rem;\nheight: auto;\n`\n}",
                         "width": 10,
                         "linkId": "",
                         "default": "",
                         "left": 37,
-                        "top": 11,
+                        "top": 16,
                         "height": "auto",
                         "gradient": {
                           "0": "green",
@@ -3206,7 +3374,9 @@
                         "ignoreDefaults": false,
                         "bypass": false,
                         "touchAddress": "",
-                        "colorBg": "auto"
+                        "colorBg": "auto",
+                        "knobSize": "auto",
+                        "lineWidth": "auto"
                       },
                       {
                         "type": "fader",
@@ -3260,13 +3430,15 @@
                         "alphaStroke": "#{\n@{display_compact_fader} ? 0 : \"auto\"\n}",
                         "alphaFillOff": "#{\n@{display_compact_fader} ? 0.05 : \"auto\"\n}",
                         "alphaFillOn": "auto",
-                        "padding": "auto",
+                        "padding": "#{\n@{display_compact_fader} ? 0 : 15\n}",
                         "gradient": [],
                         "sensitivity": 1,
                         "script": "",
                         "typeTags": "",
                         "ignoreDefaults": false,
-                        "colorBg": "auto"
+                        "colorBg": "auto",
+                        "knobSize": 30,
+                        "lineWidth": "auto"
                       }
                     ],
                     "scroll": false,
@@ -3278,7 +3450,8 @@
                     "traversing": false,
                     "innerPadding": true,
                     "colorBg": "auto",
-                    "contain": true
+                    "contain": true,
+                    "lineWidth": "auto"
                   },
                   {
                     "type": "input",
@@ -3313,7 +3486,8 @@
                     "unit": "dB",
                     "align": "",
                     "asYouType": false,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto"
                   }
                 ],
                 "scroll": true,
@@ -3354,7 +3528,8 @@
                 "ignoreDefaults": false,
                 "innerPadding": false,
                 "colorBg": "auto",
-                "contain": true
+                "contain": true,
+                "lineWidth": "auto"
               },
               {
                 "type": "matrix",
@@ -3394,7 +3569,8 @@
                 "target": "",
                 "bypass": false,
                 "innerPadding": false,
-                "colorBg": "auto"
+                "colorBg": "auto",
+                "lineWidth": "auto"
               },
               {
                 "type": "button",
@@ -3432,7 +3608,10 @@
                 "script": "",
                 "typeTags": "",
                 "ignoreDefaults": false,
-                "colorBg": "auto"
+                "colorBg": "auto",
+                "lineWidth": "auto",
+                "vertical": false,
+                "wrap": false
               },
               {
                 "type": "button",
@@ -3470,7 +3649,10 @@
                 "script": "",
                 "typeTags": "",
                 "ignoreDefaults": false,
-                "colorBg": "auto"
+                "colorBg": "auto",
+                "lineWidth": "auto",
+                "vertical": false,
+                "wrap": false
               }
             ],
             "css": "",
@@ -3509,7 +3691,8 @@
             "ignoreDefaults": false,
             "innerPadding": false,
             "colorBg": "auto",
-            "contain": true
+            "contain": true,
+            "lineWidth": "auto"
           },
           {
             "type": "panel",
@@ -3581,7 +3764,8 @@
                 "typeTags": "",
                 "target": "",
                 "ignoreDefaults": false,
-                "colorBg": "auto"
+                "colorBg": "auto",
+                "lineWidth": "auto"
               },
               {
                 "type": "panel",
@@ -3596,7 +3780,7 @@
                     "address": "/master/trimdB",
                     "preArgs": "",
                     "css": "",
-                    "width": 45,
+                    "width": 46,
                     "linkId": "trim_knob_@{parent.variables.n}",
                     "default": "",
                     "left": "auto",
@@ -3608,7 +3792,7 @@
                     "expand": false,
                     "colorText": "auto",
                     "colorWidget": "auto",
-                    "colorStroke": "auto",
+                    "colorStroke": "#dfefff",
                     "colorFill": "auto",
                     "alphaStroke": "auto",
                     "alphaFillOff": "auto",
@@ -3634,7 +3818,9 @@
                     "angle": 270,
                     "steps": "",
                     "sensitivity": 0.5,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "design": "solid",
+                    "lineWidth": "auto"
                   },
                   {
                     "type": "input",
@@ -3669,7 +3855,8 @@
                     "unit": "",
                     "align": "",
                     "asYouType": false,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto"
                   },
                   {
                     "type": "text",
@@ -3701,7 +3888,8 @@
                     "typeTags": "",
                     "target": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto"
                   }
                 ],
                 "height": 45,
@@ -3739,7 +3927,8 @@
                 "ignoreDefaults": false,
                 "innerPadding": true,
                 "colorBg": "auto",
-                "contain": true
+                "contain": true,
+                "lineWidth": "auto"
               },
               {
                 "type": "panel",
@@ -3781,7 +3970,8 @@
                     "align": "",
                     "unit": "",
                     "asYouType": false,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto"
                   },
                   {
                     "type": "knob",
@@ -3792,7 +3982,7 @@
                     "preArgs": "",
                     "value": "",
                     "address": "/master/pan_stereo_position",
-                    "width": 45,
+                    "width": 46,
                     "doubleTap": true,
                     "default": "",
                     "bypass": false,
@@ -3806,7 +3996,7 @@
                     "interaction": true,
                     "expand": false,
                     "colorText": "auto",
-                    "colorStroke": "auto",
+                    "colorStroke": "#dfefff",
                     "colorFill": "auto",
                     "alphaStroke": "auto",
                     "alphaFillOff": "auto",
@@ -3828,7 +4018,9 @@
                     "steps": "",
                     "sensitivity": 0.5,
                     "angle": 270,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "design": "solid",
+                    "lineWidth": "auto"
                   },
                   {
                     "type": "text",
@@ -3860,7 +4052,8 @@
                     "typeTags": "",
                     "target": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto"
                   }
                 ],
                 "scroll": false,
@@ -3897,7 +4090,8 @@
                 "ignoreDefaults": false,
                 "innerPadding": true,
                 "colorBg": "auto",
-                "contain": true
+                "contain": true,
+                "lineWidth": "auto"
               },
               {
                 "type": "panel",
@@ -3973,13 +4167,17 @@
                     "off": 0,
                     "mode": "toggle",
                     "colorTextOn": "auto",
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "lineWidth": "auto",
+                    "vertical": false,
+                    "wrap": false
                   }
                 ],
                 "tabs": [],
                 "innerPadding": true,
                 "colorBg": "auto",
-                "contain": true
+                "contain": true,
+                "lineWidth": "auto"
               },
               {
                 "type": "panel",
@@ -4019,12 +4217,12 @@
                     "value": "",
                     "address": "/master/meter",
                     "preArgs": "",
-                    "css": "#{\n@{display_compact_fader} ? \"\" : `\nz-index:-1;\nbottom: 11rem;\nheight: auto;\n`\n}",
+                    "css": "#{\n@{display_compact_fader} ? \"\" : `\nz-index:-1;\nbottom: 16rem;\nheight: auto;\n`\n}",
                     "width": 10,
                     "linkId": "",
                     "default": "",
                     "left": 37,
-                    "top": 11,
+                    "top": 16,
                     "height": "auto",
                     "decimals": 2,
                     "interaction": false,
@@ -4077,7 +4275,9 @@
                     "sensitivity": 1,
                     "steps": "",
                     "touchAddress": "",
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "knobSize": "auto",
+                    "lineWidth": "auto"
                   },
                   {
                     "type": "fader",
@@ -4106,7 +4306,7 @@
                     "alphaStroke": "#{\n@{display_compact_fader} ? 0 : \"auto\"\n}",
                     "alphaFillOff": "#{\n@{display_compact_fader} ? 0.05 : \"auto\"\n}",
                     "alphaFillOn": "auto",
-                    "padding": "auto",
+                    "padding": 15,
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
@@ -4135,7 +4335,9 @@
                     "design": "#{\n@{display_compact_fader} ? \"compact\" : \"default\"\n}",
                     "gradient": [],
                     "sensitivity": 1,
-                    "colorBg": "auto"
+                    "colorBg": "auto",
+                    "knobSize": 30,
+                    "lineWidth": "auto"
                   }
                 ],
                 "scroll": false,
@@ -4147,7 +4349,8 @@
                 "traversing": false,
                 "innerPadding": true,
                 "colorBg": "auto",
-                "contain": true
+                "contain": true,
+                "lineWidth": "auto"
               },
               {
                 "type": "input",
@@ -4182,13 +4385,15 @@
                 "unit": "dB",
                 "align": "",
                 "asYouType": false,
-                "colorBg": "auto"
+                "colorBg": "auto",
+                "lineWidth": "auto"
               }
             ],
             "tabs": [],
             "innerPadding": false,
             "colorBg": "auto",
-            "contain": true
+            "contain": true,
+            "lineWidth": "auto"
           }
         ],
         "id": "main_panel",
@@ -4229,13 +4434,17 @@
         "ignoreDefaults": false,
         "innerPadding": false,
         "colorBg": "auto",
-        "contain": true
+        "contain": true,
+        "lineWidth": "auto"
       }
     ],
     "innerPadding": true,
     "colorBg": "auto",
-    "contain": true
+    "contain": true,
+    "lineWidth": "auto",
+    "width": "auto",
+    "height": "auto"
   },
-  "version": "1.0.4",
+  "version": "1.2.1",
   "type": "Open Stage Control session"
 }
