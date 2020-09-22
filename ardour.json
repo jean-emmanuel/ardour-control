@@ -59,7 +59,6 @@
             "default": "",
             "script": "",
             "typeTags": "",
-            "ignoreDefaults": false,
             "colorBg": "auto",
             "vertical": false,
             "wrap": false,
@@ -146,7 +145,6 @@
                     "preArgs": "",
                     "typeTags": "",
                     "target": "",
-                    "ignoreDefaults": false,
                     "lineWidth": "auto"
                   },
                   {
@@ -675,7 +673,6 @@
                     "preArgs": "",
                     "typeTags": "",
                     "target": "",
-                    "ignoreDefaults": false,
                     "lineWidth": "auto"
                   },
                   {
@@ -797,7 +794,6 @@
                     "preArgs": "",
                     "typeTags": "",
                     "target": "",
-                    "ignoreDefaults": false,
                     "lineWidth": "auto"
                   },
                   {
@@ -952,7 +948,6 @@
                     "preArgs": "",
                     "typeTags": "",
                     "target": "",
-                    "ignoreDefaults": false,
                     "lineWidth": "auto"
                   },
                   {
@@ -1134,7 +1129,6 @@
                     "preArgs": "",
                     "typeTags": "",
                     "target": "",
-                    "ignoreDefaults": false,
                     "lineWidth": "auto"
                   },
                   {
@@ -1559,7 +1553,6 @@
                     "preArgs": "",
                     "typeTags": "",
                     "target": "",
-                    "ignoreDefaults": false,
                     "lineWidth": "auto"
                   },
                   {
@@ -1785,9 +1778,7 @@
                 "script": "",
                 "address": "auto",
                 "preArgs": "",
-                "typeTags": "",
                 "target": "",
-                "ignoreDefaults": false,
                 "interaction": true,
                 "html": "<p><b>Usage notes</b>\n<p>----------------\n<hr/><hr/>\n<p><b>Ardour Configuration</b><hr/>\n<p>- Minimum version: 6\n<p>- Open Sound Control must be enabled in Settings > Control Surface\n<p>- Port mode must be set to \"Auto\" in Settings > Control Surface > OSC > Protocol parameters\n\n<hr/><hr/>\n<p><b>Open Stage Control Configuration</b><hr/>\n<p>- Minimum version: 1.2.1\n<p>- send: 127.0.0.1:3819\n<p>- custom-module: ardour-plugins-module.js",
                 "lineWidth": "auto"
@@ -2448,7 +2439,6 @@
             "default": "",
             "script": "",
             "typeTags": "",
-            "ignoreDefaults": false,
             "vertical": false,
             "wrap": false,
             "align": "",
@@ -2585,7 +2575,7 @@
             "bypass": false,
             "widgets": [],
             "doubleTap": false,
-            "popupLabel": "samsara ^chevron-right Calf Equalizer 5 Band",
+            "popupLabel": "OHs ^chevron-right Calf Equalizer 5 Band",
             "popupWidth": "80%",
             "popupHeight": "80%",
             "popupLeft": "auto",
@@ -2636,7 +2626,6 @@
                     "script": "",
                     "typeTags": "",
                     "target": "",
-                    "ignoreDefaults": false,
                     "colorBg": "auto",
                     "lineWidth": "auto"
                   },
@@ -2762,7 +2751,6 @@
                         "preArgs": "",
                         "typeTags": "",
                         "target": "",
-                        "ignoreDefaults": false,
                         "colorBg": "auto",
                         "lineWidth": "auto"
                       }
@@ -2971,7 +2959,6 @@
                         "preArgs": "",
                         "typeTags": "",
                         "target": "",
-                        "ignoreDefaults": false,
                         "colorBg": "auto",
                         "lineWidth": "auto"
                       }
@@ -3027,7 +3014,7 @@
                     "colorWidget": "auto",
                     "colorStroke": "auto",
                     "colorFill": "auto",
-                    "alphaStroke": "auto",
+                    "alphaStroke": 0.2,
                     "alphaFillOff": 0.15,
                     "alphaFillOn": "auto",
                     "padding": 1,
@@ -3804,7 +3791,6 @@
                 "script": "",
                 "typeTags": "",
                 "target": "",
-                "ignoreDefaults": false,
                 "colorBg": "auto",
                 "lineWidth": "auto"
               },
@@ -3928,7 +3914,6 @@
                     "preArgs": "",
                     "typeTags": "",
                     "target": "",
-                    "ignoreDefaults": false,
                     "colorBg": "auto",
                     "lineWidth": "auto"
                   }
@@ -4092,7 +4077,6 @@
                     "preArgs": "",
                     "typeTags": "",
                     "target": "",
-                    "ignoreDefaults": false,
                     "colorBg": "auto",
                     "lineWidth": "auto"
                   }
@@ -4486,6 +4470,6 @@
     "width": "auto",
     "height": "auto"
   },
-  "version": "1.2.1",
+  "version": "1.3.0",
   "type": "Open Stage Control session"
 }
