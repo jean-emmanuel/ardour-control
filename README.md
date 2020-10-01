@@ -19,7 +19,10 @@ OSC Control Surface for Ardour.
 ## Getting started
 
 - Enable OSC in ardour
-- launch Open Stage Control :
+- launch Open Stage Control with these options:
+  - `load`: `path/to/ardour-control/ardour.json`
+  - `custom-module`: `path/to/ardour-control/ardour-plugins-module.js`
+  - `send`: `127.0.0.1:3819` (if ardour is running on a different computer, replace 127.0.0.1 with the computer's IP)
 
 ```bash
 # Running from sources:
