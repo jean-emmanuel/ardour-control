@@ -7,7 +7,7 @@
     "preArgs": "",
     "target": "",
     "variables": {},
-    "css": ".knob-strip .knob-container {\nright: 0;\nleft: auto;\nborder-radius: 37rem / 45rem;\n}\n.knob-strip .input-container {\n  z-index: 0;\n  --alpha-stroke: 0;\n}\n\n.text-container {\n  --widget-padding: -1rem;\n  --alpha-stroke: 0;\n  --alpha-fill-off: 0.1;\n}\n.modal-container,\n.button-container {\n  --alpha-stroke: 0;\n  --alpha-fill-off: 0.15;\n  --widget-padding: -1rem;\n}\n\n.input-container {\n  --alpha-stroke: 0; \n  --alpha-fill-off: 0.05;\n}\n.button-container.no-pulse inner:after {\n  animation: none\n}",
+    "css": ".knob-strip .knob-container {\nright: 0;\nleft: auto;\nborder-radius: 37rem / 45rem;\nbackground: var(--color-background);\n}\n.knob-strip .input-container {\n  z-index: 0;\n  --alpha-stroke: 0;\n}\n\n.text-container {\n  --widget-padding: -1rem;\n  --alpha-stroke: 0;\n  --alpha-fill-off: 0.1;\n}\n.modal-container,\n.button-container {\n  --alpha-stroke: 0;\n  --alpha-fill-off: 0.15;\n  --widget-padding: -1rem;\n}\n\n.input-container {\n  --alpha-stroke: 0; \n  --alpha-fill-off: 0.05;\n}\n.button-container.no-pulse inner:after {\n  animation: none\n}",
     "id": "root",
     "linkId": "",
     "default": "",
@@ -58,8 +58,6 @@
             "padding": "auto",
             "default": "",
             "script": "",
-            "typeTags": "",
-            "colorBg": "auto",
             "vertical": false,
             "wrap": false,
             "align": "",
@@ -92,7 +90,7 @@
             "alphaStroke": "auto",
             "alphaFillOff": 0.25,
             "alphaFillOn": 0.5,
-            "padding": 4,
+            "padding": "auto",
             "default": "",
             "script": "",
             "typeTags": "",
@@ -124,7 +122,6 @@
                     "width": 100,
                     "height": "auto",
                     "expand": "false",
-                    "colorBg": "auto",
                     "colorText": "auto",
                     "colorWidget": "grey",
                     "colorStroke": "auto",
@@ -143,7 +140,6 @@
                     "script": "",
                     "address": "auto",
                     "preArgs": "",
-                    "typeTags": "",
                     "target": "",
                     "lineWidth": "auto"
                   },
@@ -183,7 +179,6 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -224,7 +219,6 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -265,7 +259,6 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -306,7 +299,6 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -347,7 +339,6 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -388,7 +379,6 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -429,7 +419,6 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -470,7 +459,6 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -511,7 +499,6 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -552,7 +539,6 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -590,7 +576,6 @@
                     "asYouType": false,
                     "script": "set(\"connect\", 1)",
                     "ignoreDefaults": false,
-                    "colorBg": "auto",
                     "lineWidth": "auto"
                   }
                 ],
@@ -652,7 +637,6 @@
                     "width": 100,
                     "height": "auto",
                     "expand": "false",
-                    "colorBg": "auto",
                     "colorText": "auto",
                     "colorWidget": "grey",
                     "colorStroke": "auto",
@@ -671,7 +655,6 @@
                     "script": "",
                     "address": "auto",
                     "preArgs": "",
-                    "typeTags": "",
                     "target": "",
                     "lineWidth": "auto"
                   },
@@ -716,7 +699,6 @@
                     "colorTextOn": "auto",
                     "script": "set(\"connect\", 1)",
                     "ignoreDefaults": false,
-                    "colorBg": "auto",
                     "lineWidth": "auto"
                   }
                 ],
@@ -773,7 +755,6 @@
                     "width": 100,
                     "height": "auto",
                     "expand": "false",
-                    "colorBg": "auto",
                     "colorText": "auto",
                     "colorWidget": "grey",
                     "colorStroke": "auto",
@@ -792,7 +773,6 @@
                     "script": "",
                     "address": "auto",
                     "preArgs": "",
-                    "typeTags": "",
                     "target": "",
                     "lineWidth": "auto"
                   },
@@ -832,7 +812,6 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -873,7 +852,6 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -927,7 +905,6 @@
                     "width": 100,
                     "height": "auto",
                     "expand": "false",
-                    "colorBg": "auto",
                     "colorText": "auto",
                     "colorWidget": "grey",
                     "colorStroke": "auto",
@@ -946,7 +923,6 @@
                     "script": "",
                     "address": "auto",
                     "preArgs": "",
-                    "typeTags": "",
                     "target": "",
                     "lineWidth": "auto"
                   },
@@ -989,7 +965,13 @@
                     "target": "",
                     "ignoreDefaults": false,
                     "bypass": true,
-                    "lineWidth": "auto"
+                    "lineWidth": "auto",
+                    "justify": "start",
+                    "contain": true,
+                    "scroll": true,
+                    "variables": "@{parent.variables}",
+                    "widgets": [],
+                    "tabs": []
                   }
                 ],
                 "variables": {},
@@ -1072,7 +1054,6 @@
                     "width": 100,
                     "height": "auto",
                     "expand": "false",
-                    "colorBg": "auto",
                     "colorText": "auto",
                     "colorWidget": "grey",
                     "colorStroke": "auto",
@@ -1091,7 +1072,6 @@
                     "script": "",
                     "address": "auto",
                     "preArgs": "",
-                    "typeTags": "",
                     "target": "",
                     "lineWidth": "auto"
                   },
@@ -1131,7 +1111,6 @@
                     "script": "set(\"connect\", 1)",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -1172,7 +1151,6 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -1213,7 +1191,6 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -1254,7 +1231,6 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -1295,7 +1271,6 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -1336,7 +1311,6 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -1377,7 +1351,6 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -1418,7 +1391,6 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -1459,7 +1431,6 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -1496,7 +1467,6 @@
                     "width": 100,
                     "height": "auto",
                     "expand": "false",
-                    "colorBg": "auto",
                     "colorText": "auto",
                     "colorWidget": "grey",
                     "colorStroke": "auto",
@@ -1515,7 +1485,6 @@
                     "script": "",
                     "address": "auto",
                     "preArgs": "",
-                    "typeTags": "",
                     "target": "",
                     "lineWidth": "auto"
                   },
@@ -1555,7 +1524,6 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -1596,7 +1564,6 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -1637,7 +1604,6 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -1678,7 +1644,6 @@
                     "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -1726,7 +1691,6 @@
                 "width": 100,
                 "height": "auto",
                 "expand": true,
-                "colorBg": "auto",
                 "colorText": "auto",
                 "colorWidget": "grey",
                 "colorStroke": "auto",
@@ -1794,7 +1758,6 @@
                     "doubleTap": false,
                     "mode": "tap",
                     "colorTextOn": "auto",
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -1809,7 +1772,6 @@
                     "width": "auto",
                     "height": "auto",
                     "expand": true,
-                    "colorBg": "auto",
                     "colorText": "auto",
                     "colorWidget": "auto",
                     "colorStroke": "auto",
@@ -1850,7 +1812,6 @@
                     "width": "auto",
                     "height": "auto",
                     "expand": true,
-                    "colorBg": "auto",
                     "colorText": "auto",
                     "colorWidget": "auto",
                     "colorStroke": "auto",
@@ -1918,7 +1879,10 @@
             ],
             "innerPadding": true,
             "contain": true,
-            "lineWidth": "auto"
+            "lineWidth": "auto",
+            "justify": "start",
+            "popupPadding": "auto",
+            "tabs": []
           }
         ],
         "variables": "@{parent.variables}",
@@ -2025,7 +1989,6 @@
             "typeTags": "",
             "target": "",
             "ignoreDefaults": false,
-            "colorBg": "auto",
             "bypass": false,
             "doubleTap": false,
             "decimals": 2,
@@ -2039,7 +2002,6 @@
             },
             "origin": 0,
             "logScale": false,
-            "touchAddress": "",
             "pips": false,
             "dashed": false,
             "steps": "",
@@ -2085,7 +2047,6 @@
             "script": "",
             "typeTags": "",
             "ignoreDefaults": false,
-            "colorBg": "auto",
             "lineWidth": "auto",
             "vertical": false,
             "wrap": false
@@ -2122,7 +2083,6 @@
             "target": "",
             "ignoreDefaults": false,
             "bypass": false,
-            "colorBg": "auto",
             "on": 1,
             "off": 0,
             "mode": "tap",
@@ -2167,7 +2127,6 @@
             "script": "",
             "typeTags": "",
             "ignoreDefaults": false,
-            "colorBg": "auto",
             "lineWidth": "auto",
             "vertical": false,
             "wrap": false
@@ -2208,7 +2167,6 @@
             "script": "",
             "typeTags": "",
             "ignoreDefaults": false,
-            "colorBg": "auto",
             "lineWidth": "auto",
             "vertical": false,
             "wrap": false
@@ -2245,7 +2203,6 @@
             "target": "",
             "ignoreDefaults": false,
             "bypass": false,
-            "colorBg": "auto",
             "on": 1,
             "off": 0,
             "mode": "tap",
@@ -2290,7 +2247,6 @@
             "script": "",
             "typeTags": "",
             "ignoreDefaults": false,
-            "colorBg": "auto",
             "lineWidth": "auto",
             "vertical": false,
             "wrap": false
@@ -2331,7 +2287,6 @@
             "script": "",
             "typeTags": "",
             "ignoreDefaults": false,
-            "colorBg": "auto",
             "lineWidth": "auto",
             "vertical": false,
             "wrap": false
@@ -2372,7 +2327,6 @@
             "mode": "tap",
             "interaction": true,
             "colorTextOn": "auto",
-            "colorBg": "auto",
             "lineWidth": "auto",
             "vertical": false,
             "wrap": false
@@ -2402,11 +2356,9 @@
             "padding": "auto",
             "default": "",
             "script": "",
-            "typeTags": "",
             "vertical": false,
             "wrap": false,
             "align": "",
-            "colorBg": "auto",
             "lineWidth": "auto"
           },
           {
@@ -2445,7 +2397,6 @@
             "off": 0,
             "mode": "tap",
             "colorTextOn": "auto",
-            "colorBg": "auto",
             "lineWidth": "auto",
             "vertical": false,
             "wrap": false
@@ -2486,7 +2437,6 @@
             "script": "",
             "typeTags": "",
             "ignoreDefaults": false,
-            "colorBg": "auto",
             "lineWidth": "auto",
             "vertical": false,
             "wrap": false
@@ -2547,7 +2497,10 @@
             "innerPadding": true,
             "colorBg": "auto",
             "contain": true,
-            "lineWidth": "auto"
+            "lineWidth": "auto",
+            "justify": "start",
+            "popupPadding": "auto",
+            "tabs": []
           },
           {
             "type": "panel",
@@ -2588,9 +2541,7 @@
                     "alphaFillOn": "auto",
                     "padding": -1,
                     "script": "",
-                    "typeTags": "",
                     "target": "",
-                    "colorBg": "auto",
                     "lineWidth": "auto"
                   },
                   {
@@ -2640,13 +2591,11 @@
                         "logScale": false,
                         "origin": 0,
                         "spring": false,
-                        "touchAddress": "",
                         "pips": false,
                         "dashed": false,
                         "angle": 270,
                         "steps": "",
                         "sensitivity": 0.5,
-                        "colorBg": "auto",
                         "design": "solid",
                         "lineWidth": "auto"
                       },
@@ -2683,7 +2632,6 @@
                         "unit": "",
                         "align": "",
                         "asYouType": false,
-                        "colorBg": "auto",
                         "lineWidth": "auto"
                       },
                       {
@@ -2713,9 +2661,7 @@
                         "script": "",
                         "address": "/text_1",
                         "preArgs": "",
-                        "typeTags": "",
                         "target": "",
-                        "colorBg": "auto",
                         "lineWidth": "auto"
                       }
                     ],
@@ -2797,7 +2743,6 @@
                         "align": "",
                         "unit": "",
                         "asYouType": false,
-                        "colorBg": "auto",
                         "lineWidth": "auto"
                       },
                       {
@@ -2841,13 +2786,11 @@
                         "logScale": false,
                         "origin": 0.5,
                         "spring": false,
-                        "touchAddress": "",
                         "pips": false,
                         "dashed": false,
                         "steps": "",
                         "sensitivity": 0.5,
                         "angle": 270,
-                        "colorBg": "auto",
                         "design": "solid",
                         "lineWidth": "auto"
                       },
@@ -2889,7 +2832,6 @@
                         "off": 0,
                         "mode": "toggle",
                         "colorTextOn": "auto",
-                        "colorBg": "auto",
                         "lineWidth": "auto",
                         "vertical": false,
                         "wrap": false
@@ -2921,9 +2863,7 @@
                         "script": "",
                         "address": "/text_1",
                         "preArgs": "",
-                        "typeTags": "",
                         "target": "",
-                        "colorBg": "auto",
                         "lineWidth": "auto"
                       }
                     ],
@@ -3078,7 +3018,6 @@
                         "off": 0,
                         "mode": "toggle",
                         "colorTextOn": "auto",
-                        "colorBg": "auto",
                         "lineWidth": "auto",
                         "vertical": false,
                         "wrap": false
@@ -3121,7 +3060,6 @@
                         "on": 1,
                         "mode": "toggle",
                         "colorTextOn": "auto",
-                        "colorBg": "auto",
                         "lineWidth": "auto",
                         "vertical": false,
                         "wrap": false
@@ -3164,7 +3102,6 @@
                         "colorTextOn": "auto",
                         "script": "",
                         "ignoreDefaults": false,
-                        "colorBg": "auto",
                         "lineWidth": "auto",
                         "vertical": false,
                         "wrap": false
@@ -3207,7 +3144,6 @@
                         "script": "",
                         "typeTags": "",
                         "ignoreDefaults": false,
-                        "colorBg": "auto",
                         "lineWidth": "auto",
                         "vertical": false,
                         "wrap": false
@@ -3250,7 +3186,6 @@
                         "script": "",
                         "typeTags": "",
                         "ignoreDefaults": false,
-                        "colorBg": "auto",
                         "lineWidth": "auto",
                         "vertical": false,
                         "wrap": false
@@ -3365,8 +3300,6 @@
                         "target": "",
                         "ignoreDefaults": false,
                         "bypass": false,
-                        "touchAddress": "",
-                        "colorBg": "auto",
                         "knobSize": "auto",
                         "lineWidth": "auto"
                       },
@@ -3399,7 +3332,6 @@
                         "spring": false,
                         "value": "",
                         "address": "/strip/gain",
-                        "touchAddress": "",
                         "pips": true,
                         "dashed": false,
                         "doubleTap": false,
@@ -3428,7 +3360,6 @@
                         "script": "",
                         "typeTags": "",
                         "ignoreDefaults": false,
-                        "colorBg": "auto",
                         "knobSize": 30,
                         "lineWidth": "auto"
                       }
@@ -3478,7 +3409,6 @@
                     "unit": "dB",
                     "align": "",
                     "asYouType": false,
-                    "colorBg": "auto",
                     "lineWidth": "auto"
                   }
                 ],
@@ -3562,7 +3492,13 @@
                 "bypass": false,
                 "innerPadding": false,
                 "colorBg": "auto",
-                "lineWidth": "auto"
+                "lineWidth": "auto",
+                "justify": "start",
+                "contain": true,
+                "scroll": true,
+                "variables": "@{parent.variables}",
+                "widgets": [],
+                "tabs": []
               },
               {
                 "type": "button",
@@ -3600,7 +3536,6 @@
                 "script": "",
                 "typeTags": "",
                 "ignoreDefaults": false,
-                "colorBg": "auto",
                 "lineWidth": "auto",
                 "vertical": false,
                 "wrap": false
@@ -3641,7 +3576,6 @@
                 "script": "",
                 "typeTags": "",
                 "ignoreDefaults": false,
-                "colorBg": "auto",
                 "lineWidth": "auto",
                 "vertical": false,
                 "wrap": false
@@ -3753,9 +3687,7 @@
                 "alphaFillOn": "auto",
                 "padding": -1,
                 "script": "",
-                "typeTags": "",
                 "target": "",
-                "colorBg": "auto",
                 "lineWidth": "auto"
               },
               {
@@ -3803,13 +3735,11 @@
                     "logScale": false,
                     "origin": 0,
                     "spring": false,
-                    "touchAddress": "",
                     "pips": false,
                     "dashed": false,
                     "angle": 270,
                     "steps": "",
                     "sensitivity": 0.5,
-                    "colorBg": "auto",
                     "design": "solid",
                     "lineWidth": "auto"
                   },
@@ -3846,7 +3776,6 @@
                     "unit": "",
                     "align": "",
                     "asYouType": false,
-                    "colorBg": "auto",
                     "lineWidth": "auto"
                   },
                   {
@@ -3876,9 +3805,7 @@
                     "script": "",
                     "address": "/text_1",
                     "preArgs": "",
-                    "typeTags": "",
                     "target": "",
-                    "colorBg": "auto",
                     "lineWidth": "auto"
                   }
                 ],
@@ -3960,7 +3887,6 @@
                     "align": "",
                     "unit": "",
                     "asYouType": false,
-                    "colorBg": "auto",
                     "lineWidth": "auto"
                   },
                   {
@@ -4002,13 +3928,11 @@
                     "logScale": false,
                     "origin": 0.5,
                     "spring": false,
-                    "touchAddress": "",
                     "pips": false,
                     "dashed": false,
                     "steps": "",
                     "sensitivity": 0.5,
                     "angle": 270,
-                    "colorBg": "auto",
                     "design": "solid",
                     "lineWidth": "auto"
                   },
@@ -4039,9 +3963,7 @@
                     "script": "",
                     "address": "/text_1",
                     "preArgs": "",
-                    "typeTags": "",
                     "target": "",
-                    "colorBg": "auto",
                     "lineWidth": "auto"
                   }
                 ],
@@ -4156,7 +4078,6 @@
                     "off": 0,
                     "mode": "toggle",
                     "colorTextOn": "auto",
-                    "colorBg": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false
@@ -4263,8 +4184,6 @@
                     "spring": false,
                     "sensitivity": 1,
                     "steps": "",
-                    "touchAddress": "",
-                    "colorBg": "auto",
                     "knobSize": "auto",
                     "lineWidth": "auto"
                   },
@@ -4317,14 +4236,12 @@
                     "snap": false,
                     "origin": "auto",
                     "spring": false,
-                    "touchAddress": "",
                     "pips": true,
                     "dashed": false,
                     "steps": "",
                     "design": "#{\n@{display_compact_fader} ? \"compact\" : \"default\"\n}",
                     "gradient": [],
                     "sensitivity": 1,
-                    "colorBg": "auto",
                     "knobSize": 30,
                     "lineWidth": "auto"
                   }
@@ -4374,7 +4291,6 @@
                 "unit": "dB",
                 "align": "",
                 "asYouType": false,
-                "colorBg": "auto",
                 "lineWidth": "auto"
               }
             ],
@@ -4430,10 +4346,10 @@
     "innerPadding": true,
     "colorBg": "auto",
     "contain": true,
-    "lineWidth": "auto",
     "width": "auto",
-    "height": "auto"
+    "height": "auto",
+    "visible": true
   },
-  "version": "1.3.1",
+  "version": "1.5.4",
   "type": "Open Stage Control session"
 }
