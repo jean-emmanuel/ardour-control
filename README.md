@@ -29,7 +29,7 @@ OSC Control Surface for Ardour.
 npm start -- -l path/to/ardour.json -c path/to/ardour-plugins-module.js -s 127.0.0.1:3819
 
 # Running from binaries:
-open-stage-control -- -l path/to/ardour.json -c path/to/ardour-plugins-module.js -s 127.0.0.1:3819
+open-stage-control -l path/to/ardour.json -c path/to/ardour-plugins-module.js -s 127.0.0.1:3819
 
 ```
 
