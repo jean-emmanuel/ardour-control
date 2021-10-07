@@ -1,5 +1,8 @@
 {
-  "session": {
+  "version": "1.10.3",
+  "type": "session",
+  "createdWith": "Open Stage Control",
+  "content": {
     "type": "root",
     "tabs": [],
     "value": "",
@@ -61,7 +64,10 @@
             "vertical": false,
             "wrap": false,
             "align": "",
-            "lineWidth": "auto"
+            "lineWidth": "auto",
+            "comments": "",
+            "html": "",
+            "decimals": 2
           },
           {
             "type": "modal",
@@ -141,7 +147,10 @@
                     "address": "auto",
                     "preArgs": "",
                     "target": "",
-                    "lineWidth": "auto"
+                    "lineWidth": "auto",
+                    "comments": "",
+                    "html": "",
+                    "decimals": 2
                   },
                   {
                     "type": "button",
@@ -181,7 +190,9 @@
                     "ignoreDefaults": true,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "button",
@@ -221,7 +232,9 @@
                     "ignoreDefaults": true,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "button",
@@ -261,7 +274,9 @@
                     "ignoreDefaults": true,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "button",
@@ -301,7 +316,9 @@
                     "ignoreDefaults": true,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "button",
@@ -341,7 +358,9 @@
                     "ignoreDefaults": true,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "button",
@@ -381,7 +400,9 @@
                     "ignoreDefaults": true,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "button",
@@ -421,7 +442,9 @@
                     "ignoreDefaults": true,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "button",
@@ -461,7 +484,9 @@
                     "ignoreDefaults": true,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "button",
@@ -501,7 +526,9 @@
                     "ignoreDefaults": true,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "button",
@@ -541,7 +568,9 @@
                     "ignoreDefaults": true,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "input",
@@ -576,7 +605,11 @@
                     "asYouType": false,
                     "script": "set(\"connect\", 1)",
                     "ignoreDefaults": false,
-                    "lineWidth": "auto"
+                    "lineWidth": "auto",
+                    "comments": "",
+                    "html": "",
+                    "numeric": false,
+                    "validation": ""
                   }
                 ],
                 "variables": {},
@@ -615,7 +648,9 @@
                 "innerPadding": false,
                 "colorBg": "auto",
                 "contain": true,
-                "lineWidth": "auto"
+                "lineWidth": "auto",
+                "comments": "",
+                "html": ""
               },
               {
                 "type": "panel",
@@ -656,7 +691,10 @@
                     "address": "auto",
                     "preArgs": "",
                     "target": "",
-                    "lineWidth": "auto"
+                    "lineWidth": "auto",
+                    "comments": "",
+                    "html": "",
+                    "decimals": 2
                   },
                   {
                     "type": "switch",
@@ -699,7 +737,10 @@
                     "colorTextOn": "auto",
                     "script": "set(\"connect\", 1)",
                     "ignoreDefaults": false,
-                    "lineWidth": "auto"
+                    "lineWidth": "auto",
+                    "comments": "",
+                    "html": "",
+                    "wrap": false
                   }
                 ],
                 "default": "",
@@ -733,7 +774,9 @@
                 "innerPadding": false,
                 "colorBg": "auto",
                 "contain": true,
-                "lineWidth": "auto"
+                "lineWidth": "auto",
+                "comments": "",
+                "html": ""
               },
               {
                 "type": "panel",
@@ -774,7 +817,10 @@
                     "address": "auto",
                     "preArgs": "",
                     "target": "",
-                    "lineWidth": "auto"
+                    "lineWidth": "auto",
+                    "comments": "",
+                    "html": "",
+                    "decimals": 2
                   },
                   {
                     "type": "button",
@@ -814,7 +860,9 @@
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "button",
@@ -854,7 +902,9 @@
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   }
                 ],
                 "default": "",
@@ -888,7 +938,9 @@
                 "innerPadding": false,
                 "colorBg": "auto",
                 "contain": true,
-                "lineWidth": "auto"
+                "lineWidth": "auto",
+                "comments": "",
+                "html": ""
               },
               {
                 "type": "panel",
@@ -924,7 +976,10 @@
                     "address": "auto",
                     "preArgs": "",
                     "target": "",
-                    "lineWidth": "auto"
+                    "lineWidth": "auto",
+                    "comments": "",
+                    "html": "",
+                    "decimals": 2
                   },
                   {
                     "type": "matrix",
@@ -948,7 +1003,6 @@
                     "css": "",
                     "widgetType": "button",
                     "quantity": "#{(@{transport.widgets} || []).length}",
-                    "start": 0,
                     "props": "JS{{\nlocals.transport = (@{transport.widgets} || []).map(x=>x.id)\n}}\n{\n  \"id\": \"display_#{locals.transport[$]}\",\n  \"label\": \"#{locals.transport[$]}\",\n  \"default\": 1\n}",
                     "layout": "horizontal",
                     "gridTemplate": "",
@@ -971,7 +1025,9 @@
                     "scroll": true,
                     "variables": "@{parent.variables}",
                     "widgets": [],
-                    "tabs": []
+                    "tabs": [],
+                    "comments": "",
+                    "html": ""
                   }
                 ],
                 "variables": {},
@@ -1010,7 +1066,9 @@
                 "innerPadding": false,
                 "colorBg": "auto",
                 "contain": true,
-                "lineWidth": "auto"
+                "lineWidth": "auto",
+                "comments": "",
+                "html": ""
               },
               {
                 "type": "panel",
@@ -1073,7 +1131,10 @@
                     "address": "auto",
                     "preArgs": "",
                     "target": "",
-                    "lineWidth": "auto"
+                    "lineWidth": "auto",
+                    "comments": "",
+                    "html": "",
+                    "decimals": 2
                   },
                   {
                     "type": "button",
@@ -1113,7 +1174,9 @@
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "button",
@@ -1153,7 +1216,9 @@
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "button",
@@ -1193,7 +1258,9 @@
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "button",
@@ -1233,7 +1300,9 @@
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "button",
@@ -1273,7 +1342,9 @@
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "button",
@@ -1313,7 +1384,9 @@
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "button",
@@ -1353,7 +1426,9 @@
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "button",
@@ -1393,7 +1468,9 @@
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "button",
@@ -1433,7 +1510,9 @@
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   }
                 ],
                 "tabs": [],
@@ -1445,7 +1524,9 @@
                 "innerPadding": false,
                 "colorBg": "auto",
                 "contain": true,
-                "lineWidth": "auto"
+                "lineWidth": "auto",
+                "comments": "",
+                "html": ""
               },
               {
                 "type": "panel",
@@ -1486,7 +1567,10 @@
                     "address": "auto",
                     "preArgs": "",
                     "target": "",
-                    "lineWidth": "auto"
+                    "lineWidth": "auto",
+                    "comments": "",
+                    "html": "",
+                    "decimals": 2
                   },
                   {
                     "type": "button",
@@ -1526,7 +1610,9 @@
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "button",
@@ -1566,7 +1652,9 @@
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "button",
@@ -1606,7 +1694,9 @@
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "button",
@@ -1646,7 +1736,9 @@
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   }
                 ],
                 "default": "",
@@ -1680,7 +1772,9 @@
                 "innerPadding": false,
                 "colorBg": "auto",
                 "contain": true,
-                "lineWidth": "auto"
+                "lineWidth": "auto",
+                "comments": "",
+                "html": ""
               },
               {
                 "type": "html",
@@ -1709,7 +1803,8 @@
                 "target": "",
                 "interaction": true,
                 "html": "<p><b>Usage notes</b>\n<p>----------------\n<hr/><hr/>\n<p><b>Ardour Configuration</b><hr/>\n<p>- Minimum version: 6\n<p>- Open Sound Control must be enabled in Settings > Control Surface\n<p>- Port mode must be set to \"Auto\" in Settings > Control Surface > OSC > Protocol parameters\n\n<hr/><hr/>\n<p><b>Open Stage Control Configuration</b><hr/>\n<p>- Minimum version: 1.2.1\n<p>- send: 127.0.0.1:3819\n<p>- custom-module: ardour-plugins-module.js",
-                "lineWidth": "auto"
+                "lineWidth": "auto",
+                "comments": ""
               },
               {
                 "type": "panel",
@@ -1760,7 +1855,9 @@
                     "colorTextOn": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "button",
@@ -1800,7 +1897,9 @@
                     "bypass": false,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "button",
@@ -1840,7 +1939,9 @@
                     "bypass": false,
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   }
                 ],
                 "default": "",
@@ -1874,7 +1975,9 @@
                 "innerPadding": false,
                 "colorBg": "auto",
                 "contain": true,
-                "lineWidth": "auto"
+                "lineWidth": "auto",
+                "comments": "",
+                "html": ""
               }
             ],
             "innerPadding": true,
@@ -1882,7 +1985,10 @@
             "lineWidth": "auto",
             "justify": "start",
             "popupPadding": "auto",
-            "tabs": []
+            "tabs": [],
+            "comments": "",
+            "relative": false,
+            "ignoreTabs": false
           }
         ],
         "variables": "@{parent.variables}",
@@ -1922,7 +2028,9 @@
         "innerPadding": false,
         "colorBg": "auto",
         "contain": true,
-        "lineWidth": "auto"
+        "lineWidth": "auto",
+        "comments": "",
+        "html": ""
       },
       {
         "type": "panel",
@@ -1963,55 +2071,6 @@
         "bypass": false,
         "widgets": [
           {
-            "type": "fader",
-            "id": "shuttle",
-            "height": "auto",
-            "css": "",
-            "preArgs": "",
-            "value": "",
-            "address": "/set_transport_speed",
-            "linkId": "",
-            "default": "",
-            "left": "auto",
-            "top": "auto",
-            "width": 114,
-            "visible": "#{@{display_@{this.id}}}",
-            "expand": false,
-            "colorText": "auto",
-            "colorWidget": "auto",
-            "colorStroke": "auto",
-            "colorFill": "auto",
-            "alphaStroke": 0,
-            "alphaFillOff": 0.1,
-            "alphaFillOn": "auto",
-            "padding": -1,
-            "script": "",
-            "typeTags": "",
-            "target": "",
-            "ignoreDefaults": false,
-            "bypass": false,
-            "doubleTap": false,
-            "decimals": 2,
-            "interaction": true,
-            "horizontal": true,
-            "snap": false,
-            "spring": true,
-            "range": {
-              "min": -8,
-              "max": 8
-            },
-            "origin": 0,
-            "logScale": false,
-            "pips": false,
-            "dashed": false,
-            "steps": "",
-            "design": "compact",
-            "gradient": [],
-            "sensitivity": 1,
-            "knobSize": 2,
-            "lineWidth": "auto"
-          },
-          {
             "type": "button",
             "id": "loop",
             "linkId": "",
@@ -2049,7 +2108,9 @@
             "ignoreDefaults": false,
             "lineWidth": "auto",
             "vertical": false,
-            "wrap": false
+            "wrap": false,
+            "comments": "",
+            "html": ""
           },
           {
             "type": "button",
@@ -2089,7 +2150,9 @@
             "colorTextOn": "auto",
             "lineWidth": "auto",
             "vertical": false,
-            "wrap": false
+            "wrap": false,
+            "comments": "",
+            "html": ""
           },
           {
             "type": "button",
@@ -2129,7 +2192,9 @@
             "ignoreDefaults": false,
             "lineWidth": "auto",
             "vertical": false,
-            "wrap": false
+            "wrap": false,
+            "comments": "",
+            "html": ""
           },
           {
             "type": "button",
@@ -2169,7 +2234,9 @@
             "ignoreDefaults": false,
             "lineWidth": "auto",
             "vertical": false,
-            "wrap": false
+            "wrap": false,
+            "comments": "",
+            "html": ""
           },
           {
             "type": "button",
@@ -2209,7 +2276,9 @@
             "colorTextOn": "auto",
             "lineWidth": "auto",
             "vertical": false,
-            "wrap": false
+            "wrap": false,
+            "comments": "",
+            "html": ""
           },
           {
             "type": "button",
@@ -2249,7 +2318,9 @@
             "ignoreDefaults": false,
             "lineWidth": "auto",
             "vertical": false,
-            "wrap": false
+            "wrap": false,
+            "comments": "",
+            "html": ""
           },
           {
             "type": "button",
@@ -2289,7 +2360,9 @@
             "ignoreDefaults": false,
             "lineWidth": "auto",
             "vertical": false,
-            "wrap": false
+            "wrap": false,
+            "comments": "",
+            "html": ""
           },
           {
             "type": "button",
@@ -2329,7 +2402,9 @@
             "colorTextOn": "auto",
             "lineWidth": "auto",
             "vertical": false,
-            "wrap": false
+            "wrap": false,
+            "comments": "",
+            "html": ""
           },
           {
             "type": "text",
@@ -2359,7 +2434,10 @@
             "vertical": false,
             "wrap": false,
             "align": "",
-            "lineWidth": "auto"
+            "lineWidth": "auto",
+            "comments": "",
+            "html": "",
+            "decimals": 2
           },
           {
             "type": "button",
@@ -2399,7 +2477,9 @@
             "colorTextOn": "auto",
             "lineWidth": "auto",
             "vertical": false,
-            "wrap": false
+            "wrap": false,
+            "comments": "",
+            "html": ""
           },
           {
             "type": "button",
@@ -2439,14 +2519,18 @@
             "ignoreDefaults": false,
             "lineWidth": "auto",
             "vertical": false,
-            "wrap": false
+            "wrap": false,
+            "comments": "",
+            "html": ""
           }
         ],
         "tabs": [],
         "innerPadding": true,
         "colorBg": "auto",
         "contain": false,
-        "lineWidth": "auto"
+        "lineWidth": "auto",
+        "comments": "",
+        "html": ""
       },
       {
         "type": "panel",
@@ -2500,7 +2584,10 @@
             "lineWidth": "auto",
             "justify": "start",
             "popupPadding": "auto",
-            "tabs": []
+            "tabs": [],
+            "comments": "",
+            "relative": false,
+            "ignoreTabs": false
           },
           {
             "type": "panel",
@@ -2542,7 +2629,10 @@
                     "padding": -1,
                     "script": "",
                     "target": "",
-                    "lineWidth": "auto"
+                    "lineWidth": "auto",
+                    "comments": "",
+                    "html": "",
+                    "decimals": 2
                   },
                   {
                     "type": "panel",
@@ -2597,7 +2687,9 @@
                         "steps": "",
                         "sensitivity": 0.5,
                         "design": "solid",
-                        "lineWidth": "auto"
+                        "lineWidth": "auto",
+                        "comments": "",
+                        "html": ""
                       },
                       {
                         "type": "input",
@@ -2632,7 +2724,11 @@
                         "unit": "",
                         "align": "",
                         "asYouType": false,
-                        "lineWidth": "auto"
+                        "lineWidth": "auto",
+                        "comments": "",
+                        "html": "",
+                        "numeric": false,
+                        "validation": ""
                       },
                       {
                         "type": "text",
@@ -2662,7 +2758,10 @@
                         "address": "/text_1",
                         "preArgs": "",
                         "target": "",
-                        "lineWidth": "auto"
+                        "lineWidth": "auto",
+                        "comments": "",
+                        "html": "",
+                        "decimals": 2
                       }
                     ],
                     "height": 45,
@@ -2701,7 +2800,9 @@
                     "innerPadding": true,
                     "colorBg": "auto",
                     "contain": true,
-                    "lineWidth": "auto"
+                    "lineWidth": "auto",
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "panel",
@@ -2743,7 +2844,11 @@
                         "align": "",
                         "unit": "",
                         "asYouType": false,
-                        "lineWidth": "auto"
+                        "lineWidth": "auto",
+                        "comments": "",
+                        "html": "",
+                        "numeric": false,
+                        "validation": ""
                       },
                       {
                         "type": "knob",
@@ -2780,8 +2885,8 @@
                         "typeTags": "",
                         "ignoreDefaults": false,
                         "range": {
-                          "min": 0,
-                          "max": 1
+                          "min": 1,
+                          "max": 0
                         },
                         "logScale": false,
                         "origin": 0.5,
@@ -2792,7 +2897,9 @@
                         "sensitivity": 0.5,
                         "angle": 270,
                         "design": "solid",
-                        "lineWidth": "auto"
+                        "lineWidth": "auto",
+                        "comments": "",
+                        "html": ""
                       },
                       {
                         "type": "button",
@@ -2834,7 +2941,9 @@
                         "colorTextOn": "auto",
                         "lineWidth": "auto",
                         "vertical": false,
-                        "wrap": false
+                        "wrap": false,
+                        "comments": "",
+                        "html": ""
                       },
                       {
                         "type": "text",
@@ -2864,7 +2973,10 @@
                         "address": "/text_1",
                         "preArgs": "",
                         "target": "",
-                        "lineWidth": "auto"
+                        "lineWidth": "auto",
+                        "comments": "",
+                        "html": "",
+                        "decimals": 2
                       }
                     ],
                     "scroll": false,
@@ -2902,7 +3014,9 @@
                     "innerPadding": true,
                     "colorBg": "auto",
                     "contain": true,
-                    "lineWidth": "auto"
+                    "lineWidth": "auto",
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "panel",
@@ -2946,7 +3060,9 @@
                     "innerPadding": true,
                     "colorBg": "auto",
                     "contain": true,
-                    "lineWidth": "auto"
+                    "lineWidth": "auto",
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "panel",
@@ -3020,7 +3136,9 @@
                         "colorTextOn": "auto",
                         "lineWidth": "auto",
                         "vertical": false,
-                        "wrap": false
+                        "wrap": false,
+                        "comments": "",
+                        "html": ""
                       },
                       {
                         "type": "button",
@@ -3062,7 +3180,9 @@
                         "colorTextOn": "auto",
                         "lineWidth": "auto",
                         "vertical": false,
-                        "wrap": false
+                        "wrap": false,
+                        "comments": "",
+                        "html": ""
                       },
                       {
                         "type": "button",
@@ -3104,7 +3224,9 @@
                         "ignoreDefaults": false,
                         "lineWidth": "auto",
                         "vertical": false,
-                        "wrap": false
+                        "wrap": false,
+                        "comments": "",
+                        "html": ""
                       },
                       {
                         "type": "button",
@@ -3146,7 +3268,9 @@
                         "ignoreDefaults": false,
                         "lineWidth": "auto",
                         "vertical": false,
-                        "wrap": false
+                        "wrap": false,
+                        "comments": "",
+                        "html": ""
                       },
                       {
                         "type": "button",
@@ -3188,7 +3312,9 @@
                         "ignoreDefaults": false,
                         "lineWidth": "auto",
                         "vertical": false,
-                        "wrap": false
+                        "wrap": false,
+                        "comments": "",
+                        "html": ""
                       }
                     ],
                     "scroll": true,
@@ -3201,7 +3327,9 @@
                     "innerPadding": true,
                     "colorBg": "auto",
                     "contain": true,
-                    "lineWidth": "auto"
+                    "lineWidth": "auto",
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "panel",
@@ -3301,7 +3429,9 @@
                         "ignoreDefaults": false,
                         "bypass": false,
                         "knobSize": "auto",
-                        "lineWidth": "auto"
+                        "lineWidth": "auto",
+                        "comments": "",
+                        "html": ""
                       },
                       {
                         "type": "fader",
@@ -3361,7 +3491,9 @@
                         "typeTags": "",
                         "ignoreDefaults": false,
                         "knobSize": 30,
-                        "lineWidth": "auto"
+                        "lineWidth": "auto",
+                        "comments": "",
+                        "html": ""
                       }
                     ],
                     "scroll": false,
@@ -3374,7 +3506,9 @@
                     "innerPadding": true,
                     "colorBg": "auto",
                     "contain": true,
-                    "lineWidth": "auto"
+                    "lineWidth": "auto",
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "input",
@@ -3409,7 +3543,11 @@
                     "unit": "dB",
                     "align": "",
                     "asYouType": false,
-                    "lineWidth": "auto"
+                    "lineWidth": "auto",
+                    "comments": "",
+                    "html": "",
+                    "numeric": false,
+                    "validation": ""
                   }
                 ],
                 "scroll": true,
@@ -3451,7 +3589,9 @@
                 "innerPadding": false,
                 "colorBg": "auto",
                 "contain": true,
-                "lineWidth": "auto"
+                "lineWidth": "auto",
+                "comments": "",
+                "html": ""
               },
               {
                 "type": "matrix",
@@ -3479,7 +3619,6 @@
                 "layout": "horizontal",
                 "gridTemplate": "",
                 "quantity": "@{bank_size}",
-                "start": 0,
                 "traversing": false,
                 "value": "",
                 "default": "",
@@ -3498,7 +3637,9 @@
                 "scroll": true,
                 "variables": "@{parent.variables}",
                 "widgets": [],
-                "tabs": []
+                "tabs": [],
+                "comments": "",
+                "html": ""
               },
               {
                 "type": "button",
@@ -3538,7 +3679,9 @@
                 "ignoreDefaults": false,
                 "lineWidth": "auto",
                 "vertical": false,
-                "wrap": false
+                "wrap": false,
+                "comments": "",
+                "html": ""
               },
               {
                 "type": "button",
@@ -3578,7 +3721,9 @@
                 "ignoreDefaults": false,
                 "lineWidth": "auto",
                 "vertical": false,
-                "wrap": false
+                "wrap": false,
+                "comments": "",
+                "html": ""
               }
             ],
             "css": "",
@@ -3618,7 +3763,9 @@
             "innerPadding": false,
             "colorBg": "auto",
             "contain": true,
-            "lineWidth": "auto"
+            "lineWidth": "auto",
+            "comments": "",
+            "html": ""
           },
           {
             "type": "panel",
@@ -3688,7 +3835,10 @@
                 "padding": -1,
                 "script": "",
                 "target": "",
-                "lineWidth": "auto"
+                "lineWidth": "auto",
+                "comments": "",
+                "html": "",
+                "decimals": 2
               },
               {
                 "type": "panel",
@@ -3741,7 +3891,9 @@
                     "steps": "",
                     "sensitivity": 0.5,
                     "design": "solid",
-                    "lineWidth": "auto"
+                    "lineWidth": "auto",
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "input",
@@ -3776,7 +3928,11 @@
                     "unit": "",
                     "align": "",
                     "asYouType": false,
-                    "lineWidth": "auto"
+                    "lineWidth": "auto",
+                    "comments": "",
+                    "html": "",
+                    "numeric": false,
+                    "validation": ""
                   },
                   {
                     "type": "text",
@@ -3806,7 +3962,10 @@
                     "address": "/text_1",
                     "preArgs": "",
                     "target": "",
-                    "lineWidth": "auto"
+                    "lineWidth": "auto",
+                    "comments": "",
+                    "html": "",
+                    "decimals": 2
                   }
                 ],
                 "height": 45,
@@ -3845,7 +4004,9 @@
                 "innerPadding": true,
                 "colorBg": "auto",
                 "contain": true,
-                "lineWidth": "auto"
+                "lineWidth": "auto",
+                "comments": "",
+                "html": ""
               },
               {
                 "type": "panel",
@@ -3887,7 +4048,11 @@
                     "align": "",
                     "unit": "",
                     "asYouType": false,
-                    "lineWidth": "auto"
+                    "lineWidth": "auto",
+                    "comments": "",
+                    "html": "",
+                    "numeric": false,
+                    "validation": ""
                   },
                   {
                     "type": "knob",
@@ -3934,7 +4099,9 @@
                     "sensitivity": 0.5,
                     "angle": 270,
                     "design": "solid",
-                    "lineWidth": "auto"
+                    "lineWidth": "auto",
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "text",
@@ -3964,7 +4131,10 @@
                     "address": "/text_1",
                     "preArgs": "",
                     "target": "",
-                    "lineWidth": "auto"
+                    "lineWidth": "auto",
+                    "comments": "",
+                    "html": "",
+                    "decimals": 2
                   }
                 ],
                 "scroll": false,
@@ -4002,7 +4172,9 @@
                 "innerPadding": true,
                 "colorBg": "auto",
                 "contain": true,
-                "lineWidth": "auto"
+                "lineWidth": "auto",
+                "comments": "",
+                "html": ""
               },
               {
                 "type": "panel",
@@ -4080,14 +4252,18 @@
                     "colorTextOn": "auto",
                     "lineWidth": "auto",
                     "vertical": false,
-                    "wrap": false
+                    "wrap": false,
+                    "comments": "",
+                    "html": ""
                   }
                 ],
                 "tabs": [],
                 "innerPadding": true,
                 "colorBg": "auto",
                 "contain": true,
-                "lineWidth": "auto"
+                "lineWidth": "auto",
+                "comments": "",
+                "html": ""
               },
               {
                 "type": "panel",
@@ -4185,7 +4361,9 @@
                     "sensitivity": 1,
                     "steps": "",
                     "knobSize": "auto",
-                    "lineWidth": "auto"
+                    "lineWidth": "auto",
+                    "comments": "",
+                    "html": ""
                   },
                   {
                     "type": "fader",
@@ -4243,7 +4421,9 @@
                     "gradient": [],
                     "sensitivity": 1,
                     "knobSize": 30,
-                    "lineWidth": "auto"
+                    "lineWidth": "auto",
+                    "comments": "",
+                    "html": ""
                   }
                 ],
                 "scroll": false,
@@ -4256,7 +4436,9 @@
                 "innerPadding": true,
                 "colorBg": "auto",
                 "contain": true,
-                "lineWidth": "auto"
+                "lineWidth": "auto",
+                "comments": "",
+                "html": ""
               },
               {
                 "type": "input",
@@ -4291,14 +4473,20 @@
                 "unit": "dB",
                 "align": "",
                 "asYouType": false,
-                "lineWidth": "auto"
+                "lineWidth": "auto",
+                "comments": "",
+                "html": "",
+                "numeric": false,
+                "validation": ""
               }
             ],
             "tabs": [],
             "innerPadding": false,
             "colorBg": "auto",
             "contain": true,
-            "lineWidth": "auto"
+            "lineWidth": "auto",
+            "comments": "",
+            "html": ""
           }
         ],
         "id": "main_panel",
@@ -4340,7 +4528,9 @@
         "innerPadding": false,
         "colorBg": "auto",
         "contain": true,
-        "lineWidth": "auto"
+        "lineWidth": "auto",
+        "comments": "",
+        "html": ""
       }
     ],
     "innerPadding": true,
@@ -4348,8 +4538,8 @@
     "contain": true,
     "width": "auto",
     "height": "auto",
-    "visible": true
-  },
-  "version": "1.5.4",
-  "type": "Open Stage Control session"
+    "visible": true,
+    "comments": "",
+    "html": ""
+  }
 }
