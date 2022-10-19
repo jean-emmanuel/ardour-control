@@ -4,11 +4,8 @@ OSC Control Surface for Ardour.
 
 ## Requirements
 
-- [Ardour](http://ardour.org/) v6
-- [Open Stage Control](https://github.com/jean-emmanuel/open-stage-control) v1
-
-
-*For Ardour v5.12 / OSC v0.49: https://github.com/jean-emmanuel/ardour-control/tree/v1.0*
+- [Ardour](http://ardour.org/) v7
+- [Open Stage Control](https://github.com/jean-emmanuel/open-stage-control) v1.18.0
 
 ## Features
 

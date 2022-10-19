@@ -1,5 +1,5 @@
 {
-  "version": "1.10.3",
+  "version": "1.18.0",
   "type": "session",
   "createdWith": "Open Stage Control",
   "content": {
@@ -10,7 +10,7 @@
     "preArgs": "",
     "target": "",
     "variables": {},
-    "css": ".knob-strip .knob-container {\nright: 0;\nleft: auto;\nborder-radius: 37rem / 45rem;\nbackground: var(--color-background);\n}\n.knob-strip .input-container {\n  z-index: 0;\n  --alpha-stroke: 0;\n}\n\n.text-container {\n  --widget-padding: -1rem;\n  --alpha-stroke: 0;\n  --alpha-fill-off: 0.1;\n}\n.modal-container,\n.button-container {\n  --alpha-stroke: 0;\n  --alpha-fill-off: 0.15;\n  --widget-padding: -1rem;\n}\n\n.input-container {\n  --alpha-stroke: 0; \n  --alpha-fill-off: 0.05;\n}\n.button-container.no-pulse inner:after {\n  animation: none\n}",
+    "css": ".knob-strip .knob-container {\nright: 0;\nleft: auto;\nborder-radius: 37rem / 45rem;\nbackground: var(--color-background);\n}\n.knob-strip .input-container {\n  z-index: 0;\n  --alpha-stroke: 0;\n}\n\n.text-container {\n  --widget-padding: -1rem;\n  --alpha-stroke: 0;\n  --alpha-fill-off: 0.1;\n}\n.modal-container,\n.button-container {\n  --alpha-stroke: 0;\n  --alpha-fill-off: 0.15;\n  --widget-padding: -1rem;\n}\n\n.input-container {\n  --alpha-stroke: 0; \n  --alpha-fill-off: 0.05;\n}\n.button-container.no-pulse inner:after {\n  animation: none\n}\n\n.flat-btns .button-container {\n--alpha-stroke:1;\n--alpha-fill-off: 0;\n--color-stroke: var(--color-text);\n}\n\n.flat-btns .button-container.on {\n--alpha-stroke:1;\n--alpha-fill-on: 0.2;\n--color-text-on: var(--color-widget);\n--color-stroke: var(--color-widget)\n}",
     "id": "root",
     "linkId": "",
     "default": "",
@@ -28,7 +28,6 @@
     "justify": "start",
     "gridTemplate": "",
     "verticalTabs": false,
-    "script": "",
     "ignoreDefaults": false,
     "widgets": [
       {
@@ -60,21 +59,24 @@
             "alphaFillOn": "auto",
             "padding": "auto",
             "default": "",
-            "script": "",
             "vertical": false,
             "wrap": false,
             "align": "",
             "lineWidth": "auto",
             "comments": "",
             "html": "",
-            "decimals": 2
+            "decimals": 2,
+            "onValue": "",
+            "lock": false,
+            "onCreate": "",
+            "borderRadius": "auto"
           },
           {
             "type": "modal",
             "id": "config_modal",
             "linkId": "",
             "label": "^cog",
-            "css": "label:after{display:none}",
+            "css": "label:after{display:none}\n.popup {\nbackxdrop-filter: blur(4px);\n}\n.popup-wrapper {\nbox-shadow: 0 0 50px 0 rgba(0,0,0,0.5);\nborder-radius:5px\n}\n.cfg-label {\nmin-width: 120rem!important;\n}\n.cfg-label inner {\npadding-left:8rem;\n}",
             "preArgs": "",
             "target": "",
             "address": "/modal_2",
@@ -98,7 +100,6 @@
             "alphaFillOn": 0.5,
             "padding": "auto",
             "default": "",
-            "script": "",
             "typeTags": "",
             "ignoreDefaults": false,
             "colorBg": "auto",
@@ -117,7 +118,7 @@
                 "type": "panel",
                 "id": "strip_types_select",
                 "height": 60,
-                "css": "grid-columns: 1 / 2;",
+                "css": "grid-columns: 1 / 2;\nmargin-top:1rem",
                 "widgets": [
                   {
                     "type": "text",
@@ -136,21 +137,24 @@
                     "alphaFillOff": "auto",
                     "alphaFillOn": "auto",
                     "padding": "auto",
-                    "css": "inner {\npadding: 8rem\n}",
+                    "css": "class: cfg-label",
                     "vertical": false,
                     "wrap": false,
                     "align": "left",
                     "value": "Strips",
                     "default": "",
                     "linkId": "",
-                    "script": "",
                     "address": "auto",
                     "preArgs": "",
                     "target": "",
                     "lineWidth": "auto",
                     "comments": "",
                     "html": "",
-                    "decimals": 2
+                    "decimals": 2,
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "button",
@@ -185,14 +189,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -227,14 +235,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -269,14 +281,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -311,14 +327,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -353,14 +373,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -395,14 +419,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -437,14 +465,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -479,14 +511,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -521,14 +557,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -563,14 +603,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": true,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "input",
@@ -603,13 +647,16 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "asYouType": false,
-                    "script": "set(\"connect\", 1)",
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "comments": "",
                     "html": "",
                     "numeric": false,
-                    "validation": ""
+                    "validation": "",
+                    "onValue": "set(\"connect\", 1)",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto"
                   }
                 ],
                 "variables": {},
@@ -638,19 +685,22 @@
                 "alphaStroke": 0,
                 "alphaFillOff": "auto",
                 "alphaFillOn": "auto",
-                "padding": "auto",
+                "padding": 1,
                 "justify": "start",
                 "gridTemplate": "",
                 "verticalTabs": false,
                 "traversing": false,
-                "script": "",
                 "ignoreDefaults": false,
                 "innerPadding": false,
                 "colorBg": "auto",
                 "contain": true,
                 "lineWidth": "auto",
                 "comments": "",
-                "html": ""
+                "html": "",
+                "onValue": "",
+                "lock": false,
+                "onCreate": "",
+                "borderRadius": "auto"
               },
               {
                 "type": "panel",
@@ -680,21 +730,24 @@
                     "alphaFillOff": "auto",
                     "alphaFillOn": "auto",
                     "padding": "auto",
-                    "css": "inner {\npadding: 8rem\n}",
+                    "css": "class: cfg-label",
                     "vertical": false,
                     "wrap": false,
                     "align": "left",
                     "value": "Bank size",
                     "default": "",
                     "linkId": "",
-                    "script": "",
                     "address": "auto",
                     "preArgs": "",
                     "target": "",
                     "lineWidth": "auto",
                     "comments": "",
                     "html": "",
-                    "decimals": 2
+                    "decimals": 2,
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "switch",
@@ -708,13 +761,6 @@
                     "preArgs": "",
                     "target": "",
                     "bypass": true,
-                    "values": [
-                      6,
-                      8,
-                      10,
-                      12,
-                      16
-                    ],
                     "left": "auto",
                     "top": "auto",
                     "width": "auto",
@@ -731,16 +777,26 @@
                     "alphaFillOff": 0.15,
                     "alphaFillOn": "auto",
                     "padding": -1,
-                    "layout": "horizontal",
-                    "gridTemplate": "",
                     "mode": "tap",
                     "colorTextOn": "auto",
-                    "script": "set(\"connect\", 1)",
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "comments": "",
                     "html": "",
-                    "wrap": false
+                    "wrap": false,
+                    "onValue": "set(\"connect\", 1)",
+                    "lock": false,
+                    "onCreate": "",
+                    "values": [
+                      6,
+                      8,
+                      10,
+                      12,
+                      16
+                    ],
+                    "layout": "horizontal",
+                    "gridTemplate": "",
+                    "borderRadius": "auto"
                   }
                 ],
                 "default": "",
@@ -764,19 +820,22 @@
                 "alphaStroke": 0,
                 "alphaFillOff": "auto",
                 "alphaFillOn": "auto",
-                "padding": "auto",
+                "padding": 1,
                 "justify": "start",
                 "gridTemplate": "",
                 "verticalTabs": false,
                 "traversing": false,
-                "script": "",
                 "ignoreDefaults": false,
                 "innerPadding": false,
                 "colorBg": "auto",
                 "contain": true,
                 "lineWidth": "auto",
                 "comments": "",
-                "html": ""
+                "html": "",
+                "onValue": "",
+                "lock": false,
+                "onCreate": "",
+                "borderRadius": "auto"
               },
               {
                 "type": "panel",
@@ -806,21 +865,24 @@
                     "alphaFillOff": "auto",
                     "alphaFillOn": "auto",
                     "padding": "auto",
-                    "css": "inner {\npadding: 8rem\n}",
+                    "css": "class: cfg-label",
                     "vertical": false,
                     "wrap": false,
                     "align": "left",
                     "value": "Layout",
                     "default": "",
                     "linkId": "",
-                    "script": "",
                     "address": "auto",
                     "preArgs": "",
                     "target": "",
                     "lineWidth": "auto",
                     "comments": "",
                     "html": "",
-                    "decimals": 2
+                    "decimals": 2,
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "button",
@@ -855,14 +917,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -897,14 +963,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   }
                 ],
                 "default": "",
@@ -928,19 +998,22 @@
                 "alphaStroke": 0,
                 "alphaFillOff": "auto",
                 "alphaFillOn": "auto",
-                "padding": "auto",
+                "padding": 1,
                 "justify": "start",
                 "gridTemplate": "",
                 "verticalTabs": false,
                 "traversing": false,
-                "script": "",
                 "ignoreDefaults": false,
                 "innerPadding": false,
                 "colorBg": "auto",
                 "contain": true,
                 "lineWidth": "auto",
                 "comments": "",
-                "html": ""
+                "html": "",
+                "onValue": "",
+                "lock": false,
+                "onCreate": "",
+                "borderRadius": "auto"
               },
               {
                 "type": "panel",
@@ -965,21 +1038,24 @@
                     "alphaFillOff": "auto",
                     "alphaFillOn": "auto",
                     "padding": "auto",
-                    "css": "inner {\npadding: 8rem\n}",
+                    "css": "class: cfg-label",
                     "vertical": false,
                     "wrap": false,
                     "align": "left",
                     "value": "Transport",
                     "default": "",
                     "linkId": "",
-                    "script": "",
                     "address": "auto",
                     "preArgs": "",
                     "target": "",
                     "lineWidth": "auto",
                     "comments": "",
                     "html": "",
-                    "decimals": 2
+                    "decimals": 2,
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "matrix",
@@ -999,7 +1075,7 @@
                     "alphaStroke": 0,
                     "alphaFillOff": "auto",
                     "alphaFillOn": "auto",
-                    "padding": "auto",
+                    "padding": 1,
                     "css": "",
                     "widgetType": "button",
                     "quantity": "#{(@{transport.widgets} || []).length}",
@@ -1011,7 +1087,6 @@
                     "value": "",
                     "default": "",
                     "linkId": "",
-                    "script": "",
                     "address": "auto",
                     "preArgs": "",
                     "typeTags": "",
@@ -1027,7 +1102,11 @@
                     "widgets": [],
                     "tabs": [],
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto"
                   }
                 ],
                 "variables": {},
@@ -1056,19 +1135,22 @@
                 "alphaStroke": 0,
                 "alphaFillOff": "auto",
                 "alphaFillOn": "auto",
-                "padding": "auto",
+                "padding": 1,
                 "justify": "start",
                 "gridTemplate": "",
                 "verticalTabs": false,
                 "traversing": false,
-                "script": "",
                 "ignoreDefaults": false,
                 "innerPadding": false,
                 "colorBg": "auto",
                 "contain": true,
                 "lineWidth": "auto",
                 "comments": "",
-                "html": ""
+                "html": "",
+                "onValue": "",
+                "lock": false,
+                "onCreate": "",
+                "borderRadius": "auto"
               },
               {
                 "type": "panel",
@@ -1096,9 +1178,8 @@
                 "alphaStroke": 0,
                 "alphaFillOff": "auto",
                 "alphaFillOn": "auto",
-                "padding": "auto",
+                "padding": 1,
                 "default": "",
-                "script": "",
                 "ignoreDefaults": false,
                 "scroll": true,
                 "variables": "@{parent.variables}",
@@ -1120,21 +1201,24 @@
                     "alphaFillOff": "auto",
                     "alphaFillOn": "auto",
                     "padding": "auto",
-                    "css": "inner {\npadding: 8rem\n}",
+                    "css": "class: cfg-label",
                     "vertical": false,
                     "wrap": false,
                     "align": "left",
                     "value": "Strip options",
                     "default": "",
                     "linkId": "",
-                    "script": "",
                     "address": "auto",
                     "preArgs": "",
                     "target": "",
                     "lineWidth": "auto",
                     "comments": "",
                     "html": "",
-                    "decimals": 2
+                    "decimals": 2,
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "button",
@@ -1169,14 +1253,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "set(\"connect\", 1)",
                     "typeTags": "",
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "set(\"connect\", 1)",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -1211,14 +1299,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -1253,14 +1345,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -1295,14 +1391,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -1337,14 +1437,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -1379,14 +1483,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -1421,14 +1529,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -1463,14 +1575,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -1505,14 +1621,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   }
                 ],
                 "tabs": [],
@@ -1526,7 +1646,11 @@
                 "contain": true,
                 "lineWidth": "auto",
                 "comments": "",
-                "html": ""
+                "html": "",
+                "onValue": "",
+                "lock": false,
+                "onCreate": "",
+                "borderRadius": "auto"
               },
               {
                 "type": "panel",
@@ -1556,21 +1680,24 @@
                     "alphaFillOff": "auto",
                     "alphaFillOn": "auto",
                     "padding": "auto",
-                    "css": "inner {\npadding: 8rem\n}",
+                    "css": "class: cfg-label",
                     "vertical": false,
                     "wrap": false,
                     "align": "left",
                     "value": "Misc",
                     "default": "",
                     "linkId": "",
-                    "script": "",
                     "address": "auto",
                     "preArgs": "",
                     "target": "",
                     "lineWidth": "auto",
                     "comments": "",
                     "html": "",
-                    "decimals": 2
+                    "decimals": 2,
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "button",
@@ -1605,14 +1732,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -1647,14 +1778,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -1689,14 +1824,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -1731,14 +1870,18 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "colorTextOn": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
                     "lineWidth": "auto",
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   }
                 ],
                 "default": "",
@@ -1762,19 +1905,22 @@
                 "alphaStroke": 0,
                 "alphaFillOff": "auto",
                 "alphaFillOn": "auto",
-                "padding": "auto",
+                "padding": 1,
                 "justify": "start",
                 "gridTemplate": "",
                 "verticalTabs": false,
                 "traversing": false,
-                "script": "",
                 "ignoreDefaults": false,
                 "innerPadding": false,
                 "colorBg": "auto",
                 "contain": true,
                 "lineWidth": "auto",
                 "comments": "",
-                "html": ""
+                "html": "",
+                "onValue": "",
+                "lock": false,
+                "onCreate": "",
+                "borderRadius": "auto"
               },
               {
                 "type": "html",
@@ -1793,18 +1939,21 @@
                 "alphaFillOff": 0,
                 "alphaFillOn": "auto",
                 "padding": "auto",
-                "css": "inner {\npadding: 16rem;\n}\nhr {\nheight: 8rem\n}\np {\nline-height: 20rem;\n}\nb {\nfont-weight: bold\n}\n* {\nuser-select:text;\n}",
+                "css": "inner {\npadding: 16rem;\n}\nhr {\nheight: 8rem\n}\np {\nline-height: 20rem;\n}\nb {\nfont-weight: bold\n}\n* {\nuser-select:text;\n}\n.html {\noverflow: auto;\ntext-align: left;\n}",
                 "value": "",
                 "default": "",
                 "linkId": "",
-                "script": "",
                 "address": "auto",
                 "preArgs": "",
                 "target": "",
                 "interaction": true,
-                "html": "<p><b>Usage notes</b>\n<p>----------------\n<hr/><hr/>\n<p><b>Ardour Configuration</b><hr/>\n<p>- Minimum version: 6\n<p>- Open Sound Control must be enabled in Settings > Control Surface\n<p>- Port mode must be set to \"Auto\" in Settings > Control Surface > OSC > Protocol parameters\n\n<hr/><hr/>\n<p><b>Open Stage Control Configuration</b><hr/>\n<p>- Minimum version: 1.2.1\n<p>- send: 127.0.0.1:3819\n<p>- custom-module: ardour-plugins-module.js",
+                "html": "<p><b>Usage notes</b>\n<p>----------------\n<hr/><hr/>\n<p><b>Ardour Configuration</b><hr/>\n<p>- Minimum version: 7\n<p>- Open Sound Control must be enabled in Settings > Control Surface\n<p>- Port mode must be set to \"Auto\" in Settings > Control Surface > OSC > Protocol parameters\n\n<hr/><hr/>\n<p><b>Open Stage Control Configuration</b><hr/>\n<p>- Minimum version: 1.18.0\n<p>- send: 127.0.0.1:3819\n<p>- custom-module: ardour-plugins-module.js",
                 "lineWidth": "auto",
-                "comments": ""
+                "comments": "",
+                "onValue": "",
+                "lock": false,
+                "onCreate": "",
+                "borderRadius": "auto"
               },
               {
                 "type": "panel",
@@ -1845,7 +1994,6 @@
                     "alphaFillOff": "auto",
                     "alphaFillOn": "auto",
                     "padding": "auto",
-                    "script": "var f = 1 + 2 + 16 + 16384\n\nif (get(\"display_meters\")) f += 128\n\nif (get(\"display_transport\")) f += 64\n\nvar args = [\n  \"/set_surface\",\n  get(\"bank_size\"),\n  get(\"trip_type_bitsum\"),\n  f,\n  0,\n  0,\n  0,\n  0\n]\n\nsend.apply(null, args)",
                     "typeTags": "i",
                     "ignoreDefaults": false,
                     "on": 1,
@@ -1857,7 +2005,12 @@
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "var f = 1 + 2 + 16 + 16384\n\nif (get(\"display_meters\")) f += 128\n\nif (get(\"display_transport\")) f += 64\n\nvar args = [\n  \"/set_surface\",\n  get(\"bank_size\"),\n  get(\"trip_type_bitsum\"),\n  f,\n  0,\n  0,\n  0,\n  0\n]\n\nsend.apply(null, args)",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -1887,7 +2040,6 @@
                     "value": "",
                     "default": "",
                     "linkId": "",
-                    "script": "var v = stateGet(\"config_modal\")\ndelete v.config_modal\nstorage.setItem(\"osc-ardour-6.config\", v)",
                     "address": "auto",
                     "preArgs": "",
                     "typeTags": "",
@@ -1899,7 +2051,12 @@
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "var v = stateGet(\"config_modal\")\ndelete v.config_modal\nstorage.setItem(\"osc-ardour-6.config\", v)",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   },
                   {
                     "type": "button",
@@ -1929,7 +2086,6 @@
                     "value": "",
                     "default": "",
                     "linkId": "",
-                    "script": "var v = storage.getItem(\"osc-ardour-6.config\")\nstateSet(v)",
                     "address": "auto",
                     "preArgs": "",
                     "typeTags": "",
@@ -1941,7 +2097,12 @@
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "var v = storage.getItem(\"osc-ardour-6.config\")\nstateSet(v)",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   }
                 ],
                 "default": "",
@@ -1970,25 +2131,32 @@
                 "gridTemplate": "",
                 "verticalTabs": false,
                 "traversing": false,
-                "script": "",
                 "ignoreDefaults": false,
                 "innerPadding": false,
                 "colorBg": "auto",
                 "contain": true,
                 "lineWidth": "auto",
                 "comments": "",
-                "html": ""
+                "html": "",
+                "onValue": "",
+                "lock": false,
+                "onCreate": "",
+                "borderRadius": "auto"
               }
             ],
-            "innerPadding": true,
+            "innerPadding": false,
             "contain": true,
             "lineWidth": "auto",
             "justify": "start",
-            "popupPadding": "auto",
+            "popupPadding": 1,
             "tabs": [],
             "comments": "",
             "relative": false,
-            "ignoreTabs": false
+            "ignoreTabs": false,
+            "onValue": "",
+            "lock": false,
+            "onCreate": "",
+            "borderRadius": "auto"
           }
         ],
         "variables": "@{parent.variables}",
@@ -2023,14 +2191,17 @@
         "gridTemplate": "",
         "verticalTabs": false,
         "traversing": false,
-        "script": "",
         "ignoreDefaults": false,
         "innerPadding": false,
         "colorBg": "auto",
         "contain": true,
         "lineWidth": "auto",
         "comments": "",
-        "html": ""
+        "html": "",
+        "onValue": "",
+        "lock": false,
+        "onCreate": "",
+        "borderRadius": "auto"
       },
       {
         "type": "panel",
@@ -2061,7 +2232,6 @@
         "value": "",
         "default": "",
         "linkId": "",
-        "script": "",
         "address": "/transport",
         "preArgs": "",
         "typeTags": "i",
@@ -2103,14 +2273,18 @@
             "padding": "auto",
             "colorTextOn": "auto",
             "default": "",
-            "script": "",
             "typeTags": "",
             "ignoreDefaults": false,
             "lineWidth": "auto",
             "vertical": false,
             "wrap": false,
             "comments": "",
-            "html": ""
+            "html": "",
+            "onValue": "",
+            "lock": false,
+            "onCreate": "",
+            "borderRadius": "auto",
+            "decoupled": false
           },
           {
             "type": "button",
@@ -2136,7 +2310,6 @@
             "value": "",
             "default": "",
             "linkId": "",
-            "script": "",
             "address": "/goto_start",
             "preArgs": "",
             "typeTags": "",
@@ -2152,7 +2325,12 @@
             "vertical": false,
             "wrap": false,
             "comments": "",
-            "html": ""
+            "html": "",
+            "onValue": "",
+            "lock": false,
+            "onCreate": "",
+            "borderRadius": "auto",
+            "decoupled": false
           },
           {
             "type": "button",
@@ -2187,14 +2365,18 @@
             "padding": -1,
             "colorTextOn": "auto",
             "default": "",
-            "script": "",
             "typeTags": "",
             "ignoreDefaults": false,
             "lineWidth": "auto",
             "vertical": false,
             "wrap": false,
             "comments": "",
-            "html": ""
+            "html": "",
+            "onValue": "",
+            "lock": false,
+            "onCreate": "",
+            "borderRadius": "auto",
+            "decoupled": false
           },
           {
             "type": "button",
@@ -2229,14 +2411,18 @@
             "padding": "auto",
             "colorTextOn": "auto",
             "default": "",
-            "script": "",
             "typeTags": "",
             "ignoreDefaults": false,
             "lineWidth": "auto",
             "vertical": false,
             "wrap": false,
             "comments": "",
-            "html": ""
+            "html": "",
+            "onValue": "",
+            "lock": false,
+            "onCreate": "",
+            "borderRadius": "auto",
+            "decoupled": false
           },
           {
             "type": "button",
@@ -2262,7 +2448,6 @@
             "value": "",
             "default": "",
             "linkId": "",
-            "script": "",
             "address": "/prev_marker",
             "preArgs": "",
             "typeTags": "",
@@ -2278,7 +2463,12 @@
             "vertical": false,
             "wrap": false,
             "comments": "",
-            "html": ""
+            "html": "",
+            "onValue": "",
+            "lock": false,
+            "onCreate": "",
+            "borderRadius": "auto",
+            "decoupled": false
           },
           {
             "type": "button",
@@ -2313,14 +2503,18 @@
             "padding": "auto",
             "colorTextOn": "auto",
             "default": "",
-            "script": "",
             "typeTags": "",
             "ignoreDefaults": false,
             "lineWidth": "auto",
             "vertical": false,
             "wrap": false,
             "comments": "",
-            "html": ""
+            "html": "",
+            "onValue": "",
+            "lock": false,
+            "onCreate": "",
+            "borderRadius": "auto",
+            "decoupled": false
           },
           {
             "type": "button",
@@ -2355,14 +2549,18 @@
             "padding": "auto",
             "colorTextOn": "auto",
             "default": "",
-            "script": "",
             "typeTags": "",
             "ignoreDefaults": false,
             "lineWidth": "auto",
             "vertical": false,
             "wrap": false,
             "comments": "",
-            "html": ""
+            "html": "",
+            "onValue": "",
+            "lock": false,
+            "onCreate": "",
+            "borderRadius": "auto",
+            "decoupled": false
           },
           {
             "type": "button",
@@ -2387,7 +2585,6 @@
             "alphaFillOff": "#{OSC{@{this.address}, 0}?0.5:0.15}",
             "alphaFillOn": 0.25,
             "padding": "auto",
-            "script": "",
             "typeTags": "",
             "target": "",
             "ignoreDefaults": false,
@@ -2404,7 +2601,12 @@
             "vertical": false,
             "wrap": false,
             "comments": "",
-            "html": ""
+            "html": "",
+            "onValue": "",
+            "lock": false,
+            "onCreate": "",
+            "borderRadius": "auto",
+            "decoupled": false
           },
           {
             "type": "text",
@@ -2430,14 +2632,17 @@
             "alphaFillOn": "auto",
             "padding": "auto",
             "default": "",
-            "script": "",
             "vertical": false,
             "wrap": false,
             "align": "",
             "lineWidth": "auto",
             "comments": "",
             "html": "",
-            "decimals": 2
+            "decimals": 2,
+            "onValue": "",
+            "lock": false,
+            "onCreate": "",
+            "borderRadius": "auto"
           },
           {
             "type": "button",
@@ -2466,7 +2671,6 @@
             "alphaFillOff": "#{OSC{@{this.address}, 0}?0.5:0.15}",
             "alphaFillOn": 0.25,
             "padding": "auto",
-            "script": "",
             "typeTags": "",
             "ignoreDefaults": false,
             "doubleTap": false,
@@ -2479,7 +2683,12 @@
             "vertical": false,
             "wrap": false,
             "comments": "",
-            "html": ""
+            "html": "",
+            "onValue": "",
+            "lock": false,
+            "onCreate": "",
+            "borderRadius": "auto",
+            "decoupled": false
           },
           {
             "type": "button",
@@ -2514,14 +2723,18 @@
             "padding": "auto",
             "colorTextOn": "auto",
             "default": "",
-            "script": "",
             "typeTags": "",
             "ignoreDefaults": false,
             "lineWidth": "auto",
             "vertical": false,
             "wrap": false,
             "comments": "",
-            "html": ""
+            "html": "",
+            "onValue": "",
+            "lock": false,
+            "onCreate": "",
+            "borderRadius": "auto",
+            "decoupled": false
           }
         ],
         "tabs": [],
@@ -2530,7 +2743,11 @@
         "contain": false,
         "lineWidth": "auto",
         "comments": "",
-        "html": ""
+        "html": "",
+        "onValue": "",
+        "lock": false,
+        "onCreate": "",
+        "borderRadius": "auto"
       },
       {
         "type": "panel",
@@ -2563,7 +2780,6 @@
             "value": "",
             "default": "",
             "linkId": "plugin_modal",
-            "script": "",
             "address": "/plugin_modal",
             "preArgs": "",
             "typeTags": "",
@@ -2573,7 +2789,7 @@
             "bypass": false,
             "widgets": [],
             "doubleTap": false,
-            "popupLabel": "OHs ^chevron-right Calf Equalizer 5 Band",
+            "popupLabel": "Audio  2 ^chevron-right Gate",
             "popupWidth": "80%",
             "popupHeight": "80%",
             "popupLeft": "auto",
@@ -2587,7 +2803,11 @@
             "tabs": [],
             "comments": "",
             "relative": false,
-            "ignoreTabs": false
+            "ignoreTabs": false,
+            "onValue": "",
+            "lock": false,
+            "onCreate": "",
+            "borderRadius": "auto"
           },
           {
             "type": "panel",
@@ -2627,12 +2847,15 @@
                     "alphaFillOff": "auto",
                     "alphaFillOn": "auto",
                     "padding": -1,
-                    "script": "",
                     "target": "",
                     "lineWidth": "auto",
                     "comments": "",
                     "html": "",
-                    "decimals": 2
+                    "decimals": 2,
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "panel",
@@ -2668,7 +2891,6 @@
                         "alphaFillOn": "auto",
                         "padding": "auto",
                         "doubleTap": true,
-                        "script": "",
                         "typeTags": "",
                         "target": [],
                         "ignoreDefaults": false,
@@ -2689,7 +2911,12 @@
                         "design": "solid",
                         "lineWidth": "auto",
                         "comments": "",
-                        "html": ""
+                        "html": "",
+                        "onValue": "",
+                        "lock": false,
+                        "onCreate": "",
+                        "onTouch": "",
+                        "borderRadius": "auto"
                       },
                       {
                         "type": "input",
@@ -2718,7 +2945,6 @@
                         "alphaFillOff": "auto",
                         "alphaFillOn": "auto",
                         "padding": -1,
-                        "script": "",
                         "typeTags": "",
                         "ignoreDefaults": false,
                         "unit": "",
@@ -2728,7 +2954,11 @@
                         "comments": "",
                         "html": "",
                         "numeric": false,
-                        "validation": ""
+                        "validation": "",
+                        "onValue": "",
+                        "lock": false,
+                        "onCreate": "",
+                        "borderRadius": "auto"
                       },
                       {
                         "type": "text",
@@ -2754,14 +2984,17 @@
                         "value": "Trim",
                         "default": "",
                         "linkId": "",
-                        "script": "",
                         "address": "/text_1",
                         "preArgs": "",
                         "target": "",
                         "lineWidth": "auto",
                         "comments": "",
                         "html": "",
-                        "decimals": 2
+                        "decimals": 2,
+                        "onValue": "",
+                        "lock": false,
+                        "onCreate": "",
+                        "borderRadius": "auto"
                       }
                     ],
                     "height": 45,
@@ -2795,14 +3028,17 @@
                     "gridTemplate": "",
                     "verticalTabs": false,
                     "traversing": false,
-                    "script": "",
                     "ignoreDefaults": false,
                     "innerPadding": true,
                     "colorBg": "auto",
                     "contain": true,
                     "lineWidth": "auto",
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "panel",
@@ -2838,7 +3074,6 @@
                         "alphaFillOff": "auto",
                         "alphaFillOn": "auto",
                         "padding": -1,
-                        "script": "",
                         "typeTags": "",
                         "ignoreDefaults": false,
                         "align": "",
@@ -2848,7 +3083,11 @@
                         "comments": "",
                         "html": "",
                         "numeric": false,
-                        "validation": ""
+                        "validation": "",
+                        "onValue": "",
+                        "lock": false,
+                        "onCreate": "",
+                        "borderRadius": "auto"
                       },
                       {
                         "type": "knob",
@@ -2881,7 +3120,6 @@
                         "alphaFillOff": "auto",
                         "alphaFillOn": "auto",
                         "padding": "auto",
-                        "script": "",
                         "typeTags": "",
                         "ignoreDefaults": false,
                         "range": {
@@ -2899,7 +3137,12 @@
                         "design": "solid",
                         "lineWidth": "auto",
                         "comments": "",
-                        "html": ""
+                        "html": "",
+                        "onValue": "",
+                        "lock": false,
+                        "onCreate": "",
+                        "onTouch": "",
+                        "borderRadius": "auto"
                       },
                       {
                         "type": "button",
@@ -2930,7 +3173,6 @@
                         "alphaFillOn": "auto",
                         "padding": 1,
                         "doubleTap": false,
-                        "script": "",
                         "typeTags": "",
                         "target": [],
                         "ignoreDefaults": false,
@@ -2943,7 +3185,12 @@
                         "vertical": false,
                         "wrap": false,
                         "comments": "",
-                        "html": ""
+                        "html": "",
+                        "onValue": "",
+                        "lock": false,
+                        "onCreate": "",
+                        "borderRadius": "auto",
+                        "decoupled": false
                       },
                       {
                         "type": "text",
@@ -2969,14 +3216,17 @@
                         "value": "Pan",
                         "default": "",
                         "linkId": "",
-                        "script": "",
                         "address": "/text_1",
                         "preArgs": "",
                         "target": "",
                         "lineWidth": "auto",
                         "comments": "",
                         "html": "",
-                        "decimals": 2
+                        "decimals": 2,
+                        "onValue": "",
+                        "lock": false,
+                        "onCreate": "",
+                        "borderRadius": "auto"
                       }
                     ],
                     "scroll": false,
@@ -3009,14 +3259,17 @@
                     "gridTemplate": "",
                     "verticalTabs": false,
                     "traversing": false,
-                    "script": "",
                     "ignoreDefaults": false,
                     "innerPadding": true,
                     "colorBg": "auto",
                     "contain": true,
                     "lineWidth": "auto",
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "panel",
@@ -3040,7 +3293,6 @@
                     "value": "",
                     "default": "",
                     "linkId": "",
-                    "script": "set('plugins_modal', 1)",
                     "address": "/strip/plugin/list",
                     "preArgs": "@{parent.variables.n}",
                     "typeTags": "",
@@ -3062,14 +3314,18 @@
                     "contain": true,
                     "lineWidth": "auto",
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "set('plugins_modal', 1)",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "panel",
                     "id": "rec_buttons_@{parent.variables.n}",
                     "linkId": "",
                     "height": "JS{{\nvar h = 40\nif (@{display_large_mute}) h += 40\nif (@{display_recbar}) h += 40\nreturn h\n}}",
-                    "css": "margin-top: 5rem;",
+                    "css": "margin-top: 5rem;\nclass: flat-btns;",
                     "value": "",
                     "preArgs": [],
                     "target": [],
@@ -3083,7 +3339,7 @@
                     "visible": true,
                     "interaction": true,
                     "expand": "false",
-                    "colorText": "auto",
+                    "colorText": "rgba(94,112,140,1)",
                     "colorWidget": "auto",
                     "colorStroke": "auto",
                     "colorFill": "auto",
@@ -3091,7 +3347,6 @@
                     "alphaFillOff": "auto",
                     "alphaFillOn": "auto",
                     "padding": "auto",
-                    "script": "",
                     "typeTags": "i",
                     "ignoreDefaults": false,
                     "variables": "@{parent.variables}",
@@ -3125,7 +3380,6 @@
                         "alphaFillOn": "auto",
                         "padding": "auto",
                         "doubleTap": false,
-                        "script": "",
                         "typeTags": "",
                         "target": [],
                         "ignoreDefaults": false,
@@ -3138,7 +3392,12 @@
                         "vertical": false,
                         "wrap": false,
                         "comments": "",
-                        "html": ""
+                        "html": "",
+                        "onValue": "",
+                        "lock": false,
+                        "onCreate": "",
+                        "borderRadius": "auto",
+                        "decoupled": false
                       },
                       {
                         "type": "button",
@@ -3171,7 +3430,6 @@
                         "alphaFillOff": "auto",
                         "alphaFillOn": "auto",
                         "padding": "auto",
-                        "script": "",
                         "typeTags": "i",
                         "ignoreDefaults": false,
                         "off": 0,
@@ -3182,7 +3440,12 @@
                         "vertical": false,
                         "wrap": false,
                         "comments": "",
-                        "html": ""
+                        "html": "",
+                        "onValue": "",
+                        "lock": false,
+                        "onCreate": "",
+                        "borderRadius": "auto",
+                        "decoupled": false
                       },
                       {
                         "type": "button",
@@ -3220,13 +3483,17 @@
                         "alphaFillOn": "auto",
                         "padding": "auto",
                         "colorTextOn": "auto",
-                        "script": "",
                         "ignoreDefaults": false,
                         "lineWidth": "auto",
                         "vertical": false,
                         "wrap": false,
                         "comments": "",
-                        "html": ""
+                        "html": "",
+                        "onValue": "",
+                        "lock": false,
+                        "onCreate": "",
+                        "borderRadius": "auto",
+                        "decoupled": false
                       },
                       {
                         "type": "button",
@@ -3263,14 +3530,18 @@
                         "alphaFillOn": "auto",
                         "padding": "auto",
                         "colorTextOn": "auto",
-                        "script": "",
                         "typeTags": "",
                         "ignoreDefaults": false,
                         "lineWidth": "auto",
                         "vertical": false,
                         "wrap": false,
                         "comments": "",
-                        "html": ""
+                        "html": "",
+                        "onValue": "",
+                        "lock": false,
+                        "onCreate": "",
+                        "borderRadius": "auto",
+                        "decoupled": false
                       },
                       {
                         "type": "button",
@@ -3307,14 +3578,18 @@
                         "padding": "auto",
                         "colorTextOn": "auto",
                         "default": "",
-                        "script": "",
                         "typeTags": "",
                         "ignoreDefaults": false,
                         "lineWidth": "auto",
                         "vertical": false,
                         "wrap": false,
                         "comments": "",
-                        "html": ""
+                        "html": "",
+                        "onValue": "",
+                        "lock": false,
+                        "onCreate": "",
+                        "borderRadius": "auto",
+                        "decoupled": false
                       }
                     ],
                     "scroll": true,
@@ -3329,7 +3604,11 @@
                     "contain": true,
                     "lineWidth": "auto",
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "panel",
@@ -3359,7 +3638,6 @@
                     "alphaFillOff": "auto",
                     "alphaFillOn": "auto",
                     "padding": "auto",
-                    "script": "",
                     "ignoreDefaults": false,
                     "variables": "@{parent.variables}",
                     "widgets": [
@@ -3423,7 +3701,6 @@
                         "doubleTap": false,
                         "sensitivity": 1,
                         "steps": "",
-                        "script": "",
                         "typeTags": "",
                         "target": "",
                         "ignoreDefaults": false,
@@ -3431,7 +3708,12 @@
                         "knobSize": "auto",
                         "lineWidth": "auto",
                         "comments": "",
-                        "html": ""
+                        "html": "",
+                        "onValue": "",
+                        "lock": false,
+                        "onCreate": "",
+                        "onTouch": "",
+                        "borderRadius": "auto"
                       },
                       {
                         "type": "fader",
@@ -3487,13 +3769,17 @@
                         "padding": "#{\n@{display_compact_fader} ? 0 : 15\n}",
                         "gradient": [],
                         "sensitivity": 1,
-                        "script": "",
                         "typeTags": "",
                         "ignoreDefaults": false,
                         "knobSize": 30,
                         "lineWidth": "auto",
                         "comments": "",
-                        "html": ""
+                        "html": "",
+                        "onValue": "",
+                        "lock": false,
+                        "onCreate": "",
+                        "onTouch": "",
+                        "borderRadius": "auto"
                       }
                     ],
                     "scroll": false,
@@ -3508,7 +3794,11 @@
                     "contain": true,
                     "lineWidth": "auto",
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "input",
@@ -3538,7 +3828,6 @@
                     "alphaFillOff": "auto",
                     "alphaFillOn": "auto",
                     "padding": 4,
-                    "script": "",
                     "ignoreDefaults": false,
                     "unit": "dB",
                     "align": "",
@@ -3547,7 +3836,11 @@
                     "comments": "",
                     "html": "",
                     "numeric": false,
-                    "validation": ""
+                    "validation": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto"
                   }
                 ],
                 "scroll": true,
@@ -3584,14 +3877,17 @@
                 "gridTemplate": "",
                 "verticalTabs": false,
                 "traversing": false,
-                "script": "",
                 "ignoreDefaults": false,
                 "innerPadding": false,
                 "colorBg": "auto",
                 "contain": true,
                 "lineWidth": "auto",
                 "comments": "",
-                "html": ""
+                "html": "",
+                "onValue": "",
+                "lock": false,
+                "onCreate": "",
+                "borderRadius": "auto"
               },
               {
                 "type": "matrix",
@@ -3605,7 +3901,6 @@
                 "expand": "false",
                 "css": "> inner {\ndisplay:block!important;\nwidth:100%!important;\nheight: 100%!important;\n}\n> inner > .widget {\ndisplay:inline-flex!important;\nheight:100%!important;\nwidth:120rem!important;\nmargin-right: 1rem\n}\n",
                 "props": "{\n  \"widgetId\": \"channel_strip\",\n  \"props\": {\"variables\": {\"n\": #{$+1}}, \"visible\": true}\n}",
-                "script": "",
                 "ignoreDefaults": false,
                 "colorText": "auto",
                 "colorWidget": "auto",
@@ -3639,7 +3934,11 @@
                 "widgets": [],
                 "tabs": [],
                 "comments": "",
-                "html": ""
+                "html": "",
+                "onValue": "",
+                "lock": false,
+                "onCreate": "",
+                "borderRadius": "auto"
               },
               {
                 "type": "button",
@@ -3674,14 +3973,18 @@
                 "padding": "auto",
                 "colorTextOn": "auto",
                 "default": "",
-                "script": "",
                 "typeTags": "",
                 "ignoreDefaults": false,
                 "lineWidth": "auto",
                 "vertical": false,
                 "wrap": false,
                 "comments": "",
-                "html": ""
+                "html": "",
+                "onValue": "",
+                "lock": false,
+                "onCreate": "",
+                "borderRadius": "auto",
+                "decoupled": false
               },
               {
                 "type": "button",
@@ -3716,14 +4019,18 @@
                 "padding": "auto",
                 "colorTextOn": "auto",
                 "default": "",
-                "script": "",
                 "typeTags": "",
                 "ignoreDefaults": false,
                 "lineWidth": "auto",
                 "vertical": false,
                 "wrap": false,
                 "comments": "",
-                "html": ""
+                "html": "",
+                "onValue": "",
+                "lock": false,
+                "onCreate": "",
+                "borderRadius": "auto",
+                "decoupled": false
               }
             ],
             "css": "",
@@ -3758,14 +4065,17 @@
             "gridTemplate": "",
             "verticalTabs": false,
             "traversing": false,
-            "script": "",
             "ignoreDefaults": false,
             "innerPadding": false,
             "colorBg": "auto",
             "contain": true,
             "lineWidth": "auto",
             "comments": "",
-            "html": ""
+            "html": "",
+            "onValue": "",
+            "lock": false,
+            "onCreate": "",
+            "borderRadius": "auto"
           },
           {
             "type": "panel",
@@ -3798,7 +4108,6 @@
             "value": "",
             "default": "",
             "linkId": "",
-            "script": "",
             "address": "/panel_2",
             "preArgs": "",
             "typeTags": "",
@@ -3833,12 +4142,15 @@
                 "alphaFillOff": 0.1,
                 "alphaFillOn": "auto",
                 "padding": -1,
-                "script": "",
                 "target": "",
                 "lineWidth": "auto",
                 "comments": "",
                 "html": "",
-                "decimals": 2
+                "decimals": 2,
+                "onValue": "",
+                "lock": false,
+                "onCreate": "",
+                "borderRadius": "auto"
               },
               {
                 "type": "panel",
@@ -3872,7 +4184,6 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "doubleTap": true,
-                    "script": "",
                     "typeTags": "",
                     "target": [],
                     "ignoreDefaults": false,
@@ -3893,7 +4204,12 @@
                     "design": "solid",
                     "lineWidth": "auto",
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "onTouch": "",
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "input",
@@ -3922,7 +4238,6 @@
                     "alphaFillOff": "auto",
                     "alphaFillOn": "auto",
                     "padding": -1,
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
                     "unit": "",
@@ -3932,7 +4247,11 @@
                     "comments": "",
                     "html": "",
                     "numeric": false,
-                    "validation": ""
+                    "validation": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "text",
@@ -3958,14 +4277,17 @@
                     "value": "Trim",
                     "default": "",
                     "linkId": "",
-                    "script": "",
                     "address": "/text_1",
                     "preArgs": "",
                     "target": "",
                     "lineWidth": "auto",
                     "comments": "",
                     "html": "",
-                    "decimals": 2
+                    "decimals": 2,
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto"
                   }
                 ],
                 "height": 45,
@@ -3999,14 +4321,17 @@
                 "gridTemplate": "",
                 "verticalTabs": false,
                 "traversing": false,
-                "script": "",
                 "ignoreDefaults": false,
                 "innerPadding": true,
                 "colorBg": "auto",
                 "contain": true,
                 "lineWidth": "auto",
                 "comments": "",
-                "html": ""
+                "html": "",
+                "onValue": "",
+                "lock": false,
+                "onCreate": "",
+                "borderRadius": "auto"
               },
               {
                 "type": "panel",
@@ -4042,7 +4367,6 @@
                     "alphaFillOff": "auto",
                     "alphaFillOn": "auto",
                     "padding": -1,
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
                     "align": "",
@@ -4052,7 +4376,11 @@
                     "comments": "",
                     "html": "",
                     "numeric": false,
-                    "validation": ""
+                    "validation": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "knob",
@@ -4083,7 +4411,6 @@
                     "alphaFillOff": "auto",
                     "alphaFillOn": "auto",
                     "padding": "auto",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
                     "range": {
@@ -4101,7 +4428,12 @@
                     "design": "solid",
                     "lineWidth": "auto",
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "onTouch": "",
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "text",
@@ -4127,14 +4459,17 @@
                     "value": "Pan",
                     "default": "",
                     "linkId": "",
-                    "script": "",
                     "address": "/text_1",
                     "preArgs": "",
                     "target": "",
                     "lineWidth": "auto",
                     "comments": "",
                     "html": "",
-                    "decimals": 2
+                    "decimals": 2,
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto"
                   }
                 ],
                 "scroll": false,
@@ -4167,20 +4502,23 @@
                 "gridTemplate": "",
                 "verticalTabs": false,
                 "traversing": false,
-                "script": "",
                 "ignoreDefaults": false,
                 "innerPadding": true,
                 "colorBg": "auto",
                 "contain": true,
                 "lineWidth": "auto",
                 "comments": "",
-                "html": ""
+                "html": "",
+                "onValue": "",
+                "lock": false,
+                "onCreate": "",
+                "borderRadius": "auto"
               },
               {
                 "type": "panel",
                 "id": "rec_buttons_@{parent.variables.n}",
                 "linkId": "",
-                "css": "margin-top: 5rem;",
+                "css": "margin-top: 5rem;\nclass: flat-btns;",
                 "target": [],
                 "preArgs": [],
                 "value": "",
@@ -4196,14 +4534,13 @@
                 "visible": "@{display_recbar}",
                 "interaction": true,
                 "expand": "false",
-                "colorText": "auto",
+                "colorText": "rgba(94,112,140,1)",
                 "colorStroke": "auto",
                 "colorFill": "auto",
                 "alphaStroke": 0,
                 "alphaFillOff": "auto",
                 "alphaFillOn": "auto",
                 "padding": "auto",
-                "script": "",
                 "typeTags": "i",
                 "ignoreDefaults": false,
                 "layout": "grid",
@@ -4241,7 +4578,6 @@
                     "alphaFillOn": "auto",
                     "padding": "auto",
                     "doubleTap": "@{mastermute_doubletap}",
-                    "script": "",
                     "typeTags": "",
                     "target": [],
                     "ignoreDefaults": false,
@@ -4254,7 +4590,12 @@
                     "vertical": false,
                     "wrap": false,
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "borderRadius": "auto",
+                    "decoupled": false
                   }
                 ],
                 "tabs": [],
@@ -4263,7 +4604,11 @@
                 "contain": true,
                 "lineWidth": "auto",
                 "comments": "",
-                "html": ""
+                "html": "",
+                "onValue": "",
+                "lock": false,
+                "onCreate": "",
+                "borderRadius": "auto"
               },
               {
                 "type": "panel",
@@ -4293,7 +4638,6 @@
                 "alphaFillOff": "auto",
                 "alphaFillOn": "auto",
                 "padding": "auto",
-                "script": "",
                 "ignoreDefaults": false,
                 "variables": "@{parent.variables}",
                 "widgets": [
@@ -4323,7 +4667,6 @@
                     "alphaFillOn": 0.75,
                     "padding": -1,
                     "doubleTap": false,
-                    "script": "",
                     "typeTags": "",
                     "target": "",
                     "ignoreDefaults": false,
@@ -4363,7 +4706,12 @@
                     "knobSize": "auto",
                     "lineWidth": "auto",
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "onTouch": "",
+                    "borderRadius": "auto"
                   },
                   {
                     "type": "fader",
@@ -4393,7 +4741,6 @@
                     "alphaFillOff": "#{\n@{display_compact_fader} ? 0.05 : \"auto\"\n}",
                     "alphaFillOn": "auto",
                     "padding": "#{\n@{display_compact_fader} ? 0 : 15\n}",
-                    "script": "",
                     "typeTags": "",
                     "ignoreDefaults": false,
                     "horizontal": false,
@@ -4423,7 +4770,12 @@
                     "knobSize": 30,
                     "lineWidth": "auto",
                     "comments": "",
-                    "html": ""
+                    "html": "",
+                    "onValue": "",
+                    "lock": false,
+                    "onCreate": "",
+                    "onTouch": "",
+                    "borderRadius": "auto"
                   }
                 ],
                 "scroll": false,
@@ -4438,7 +4790,11 @@
                 "contain": true,
                 "lineWidth": "auto",
                 "comments": "",
-                "html": ""
+                "html": "",
+                "onValue": "",
+                "lock": false,
+                "onCreate": "",
+                "borderRadius": "auto"
               },
               {
                 "type": "input",
@@ -4468,7 +4824,6 @@
                 "alphaFillOff": 0.05,
                 "alphaFillOn": "auto",
                 "padding": 4,
-                "script": "",
                 "ignoreDefaults": false,
                 "unit": "dB",
                 "align": "",
@@ -4477,7 +4832,11 @@
                 "comments": "",
                 "html": "",
                 "numeric": false,
-                "validation": ""
+                "validation": "",
+                "onValue": "",
+                "lock": false,
+                "onCreate": "",
+                "borderRadius": "auto"
               }
             ],
             "tabs": [],
@@ -4486,7 +4845,11 @@
             "contain": true,
             "lineWidth": "auto",
             "comments": "",
-            "html": ""
+            "html": "",
+            "onValue": "",
+            "lock": false,
+            "onCreate": "",
+            "borderRadius": "auto"
           }
         ],
         "id": "main_panel",
@@ -4523,14 +4886,17 @@
         "gridTemplate": "",
         "verticalTabs": false,
         "traversing": false,
-        "script": "",
         "ignoreDefaults": false,
         "innerPadding": false,
         "colorBg": "auto",
         "contain": true,
         "lineWidth": "auto",
         "comments": "",
-        "html": ""
+        "html": "",
+        "onValue": "",
+        "lock": false,
+        "onCreate": "",
+        "borderRadius": "auto"
       }
     ],
     "innerPadding": true,
@@ -4540,6 +4906,11 @@
     "height": "auto",
     "visible": true,
     "comments": "",
-    "html": ""
+    "html": "",
+    "onValue": "",
+    "lock": false,
+    "hideMenu": false,
+    "onCreate": "",
+    "borderRadius": "auto"
   }
 }
