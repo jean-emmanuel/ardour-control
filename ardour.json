@@ -1,5 +1,5 @@
 {
-  "version": "1.18.0",
+  "version": "1.18.3",
   "type": "session",
   "createdWith": "Open Stage Control",
   "content": {
@@ -10,7 +10,7 @@
     "preArgs": "",
     "target": "",
     "variables": {},
-    "css": ".knob-strip .knob-container {\nright: 0;\nleft: auto;\nborder-radius: 37rem / 45rem;\nbackground: var(--color-background);\n}\n.knob-strip .input-container {\n  z-index: 0;\n  --alpha-stroke: 0;\n}\n\n.text-container {\n  --widget-padding: -1rem;\n  --alpha-stroke: 0;\n  --alpha-fill-off: 0.1;\n}\n.modal-container,\n.button-container {\n  --alpha-stroke: 0;\n  --alpha-fill-off: 0.15;\n  --widget-padding: -1rem;\n}\n\n.input-container {\n  --alpha-stroke: 0; \n  --alpha-fill-off: 0.05;\n}\n.button-container.no-pulse inner:after {\n  animation: none\n}\n\n.flat-btns .button-container {\n--alpha-stroke:1;\n--alpha-fill-off: 0;\n--color-stroke: var(--color-text);\n}\n\n.flat-btns .button-container.on {\n--alpha-stroke:1;\n--alpha-fill-on: 0.2;\n--color-text-on: var(--color-widget);\n--color-stroke: var(--color-widget)\n}",
+    "css": ".knob-strip .knob-container {\nright: 0;\nleft: auto;\nborder-radius: 37rem / 45rem;\nbackground: var(--color-background);\n}\n.knob-strip .input-container {\n  z-index: 0;\n  --alpha-stroke: 0;\n}\n\n.text-container {\n  --widget-padding: -1rem;\n  --alpha-stroke: 0;\n  --alpha-fill-off: 0.1;\n}\n.modal-container,\n.button-container {\n  --alpha-stroke: 0;\n  --alpha-fill-off: 0.15;\n  --widget-padding: -1rem;\n}\n\n.input-container {\n  --alpha-stroke: 0; \n  --alpha-fill-off: 0.05;\n}\n.button-container.no-pulse inner:after {\n  animation: none\n}\n\n.flat-btns .button-container {\n--alpha-stroke:1;\n--alpha-fill-off: 0;\n--color-text: rgba(110,128,156,0.8);\n--color-stroke: var(--color-text);\n}\n\n.flat-btns .button-container.on {\n--alpha-stroke:1;\n--alpha-fill-on: 0.2;\n--color-text-on: var(--color-widget);\n--color-stroke: var(--color-widget)\n}",
     "id": "root",
     "linkId": "",
     "default": "",
@@ -2221,7 +2221,7 @@
         "alphaFillOff": "auto",
         "alphaFillOn": "auto",
         "padding": 4,
-        "css": "--scrollbar-size:4rem",
+        "css": "--scrollbar-size:4rem;\nclass: flat-btns;",
         "layout": "horizontal",
         "justify": "start",
         "gridTemplate": "",
@@ -2268,8 +2268,8 @@
             "colorStroke": "auto",
             "colorFill": "auto",
             "alphaStroke": "auto",
-            "alphaFillOff": "#{OSC{@{this.address}, 0}?0.5:0.15}",
-            "alphaFillOn": 0.25,
+            "alphaFillOff": "auto",
+            "alphaFillOn": "auto",
             "padding": "auto",
             "colorTextOn": "auto",
             "default": "",
@@ -2284,7 +2284,7 @@
             "lock": false,
             "onCreate": "",
             "borderRadius": "auto",
-            "decoupled": false
+            "decoupled": true
           },
           {
             "type": "button",
@@ -2406,8 +2406,8 @@
             "colorStroke": "auto",
             "colorFill": "auto",
             "alphaStroke": "auto",
-            "alphaFillOff": "#{OSC{@{this.address}, 0}?0.5:0.15}",
-            "alphaFillOn": 0.25,
+            "alphaFillOff": "auto",
+            "alphaFillOn": "auto",
             "padding": "auto",
             "colorTextOn": "auto",
             "default": "",
@@ -2422,7 +2422,7 @@
             "lock": false,
             "onCreate": "",
             "borderRadius": "auto",
-            "decoupled": false
+            "decoupled": true
           },
           {
             "type": "button",
@@ -2544,8 +2544,8 @@
             "colorStroke": "auto",
             "colorFill": "auto",
             "alphaStroke": "auto",
-            "alphaFillOff": "#{OSC{@{this.address}, 0}?0.5:0.15}",
-            "alphaFillOn": 0.25,
+            "alphaFillOff": "auto",
+            "alphaFillOn": "auto",
             "padding": "auto",
             "colorTextOn": "auto",
             "default": "",
@@ -2560,7 +2560,7 @@
             "lock": false,
             "onCreate": "",
             "borderRadius": "auto",
-            "decoupled": false
+            "decoupled": true
           },
           {
             "type": "button",
@@ -2582,8 +2582,8 @@
             "colorStroke": "auto",
             "colorFill": "auto",
             "alphaStroke": "auto",
-            "alphaFillOff": "#{OSC{@{this.address}, 0}?0.5:0.15}",
-            "alphaFillOn": 0.25,
+            "alphaFillOff": "auto",
+            "alphaFillOn": "auto",
             "padding": "auto",
             "typeTags": "",
             "target": "",
@@ -2606,7 +2606,7 @@
             "lock": false,
             "onCreate": "",
             "borderRadius": "auto",
-            "decoupled": false
+            "decoupled": true
           },
           {
             "type": "text",
@@ -2627,8 +2627,8 @@
             "colorText": "auto",
             "colorStroke": "auto",
             "colorFill": "auto",
-            "alphaStroke": 0,
-            "alphaFillOff": 0.1,
+            "alphaStroke": "auto",
+            "alphaFillOff": "auto",
             "alphaFillOn": "auto",
             "padding": "auto",
             "default": "",
@@ -2664,12 +2664,12 @@
             "interaction": true,
             "expand": "false",
             "colorText": "auto",
-            "colorWidget": "#{OSC{@{this.address}, 0}?'red':'auto'}",
+            "colorWidget": "red",
             "colorStroke": "auto",
             "colorFill": "auto",
             "alphaStroke": "auto",
-            "alphaFillOff": "#{OSC{@{this.address}, 0}?0.5:0.15}",
-            "alphaFillOn": 0.25,
+            "alphaFillOff": "auto",
+            "alphaFillOn": "auto",
             "padding": "auto",
             "typeTags": "",
             "ignoreDefaults": false,
@@ -2688,7 +2688,7 @@
             "lock": false,
             "onCreate": "",
             "borderRadius": "auto",
-            "decoupled": false
+            "decoupled": true
           },
           {
             "type": "button",
@@ -2718,8 +2718,8 @@
             "colorStroke": "auto",
             "colorFill": "auto",
             "alphaStroke": "auto",
-            "alphaFillOff": "#{OSC{@{this.address}, 0}?0.5:0.15}",
-            "alphaFillOn": 0.25,
+            "alphaFillOff": "auto",
+            "alphaFillOn": "auto",
             "padding": "auto",
             "colorTextOn": "auto",
             "default": "",
@@ -2734,7 +2734,7 @@
             "lock": false,
             "onCreate": "",
             "borderRadius": "auto",
-            "decoupled": false
+            "decoupled": true
           }
         ],
         "tabs": [],
@@ -3339,7 +3339,7 @@
                     "visible": true,
                     "interaction": true,
                     "expand": "false",
-                    "colorText": "rgba(94,112,140,1)",
+                    "colorText": "auto",
                     "colorWidget": "auto",
                     "colorStroke": "auto",
                     "colorFill": "auto",
@@ -4534,7 +4534,7 @@
                 "visible": "@{display_recbar}",
                 "interaction": true,
                 "expand": "false",
-                "colorText": "rgba(94,112,140,1)",
+                "colorText": "auto",
                 "colorStroke": "auto",
                 "colorFill": "auto",
                 "alphaStroke": 0,
