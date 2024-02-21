@@ -12,6 +12,7 @@ OSC Control Surface for Ardour.
 - all tracks (using banking)
 - transport
 - plugins (generic ui)
+- foldback busses (in a separate config file for individual monitoring. Command: `open-stage-control -l path/to/ardour-foldback-strip.json -s 127.0.0.1:3819`)
 
 ## Getting started
 
