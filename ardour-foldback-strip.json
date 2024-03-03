@@ -531,7 +531,7 @@
                 "innerPadding": false,
                 "tabsPosition": "top",
                 "variables": {
-                  "n": 1
+                  "n": 0
                 },
                 "traversing": false,
                 "value": "",
@@ -645,24 +645,24 @@
                     "lock": false,
                     "id": "cue/send/enable/@{parent.variables.n}",
                     "visible": true,
-                    "interaction": true,
+                    "interaction": "#{@{solo_on}? 0:1;}",
                     "comments": "",
-                    "width": "100%",
+                    "width": "50%",
                     "height": "10%",
                     "expand": "false",
                     "colorText": "auto",
-                    "colorWidget": "auto",
+                    "colorWidget": "#faff56",
                     "colorStroke": "auto",
                     "colorFill": "auto",
-                    "alphaStroke": "auto",
-                    "alphaFillOff": "auto",
-                    "alphaFillOn": "auto",
-                    "lineWidth": "auto",
+                    "alphaStroke": "#{@{solo_on} && !@{this} ? 0.75:0.5;}",
+                    "alphaFillOff": 0.05,
+                    "alphaFillOn": "#{@{solo_on}? 0.05:0.75;}",
+                    "lineWidth": "#{@{solo_on} && !@{this}? 3:1;}",
                     "borderRadius": "auto",
                     "padding": "auto",
                     "html": "",
                     "css": "",
-                    "colorTextOn": "auto",
+                    "colorTextOn": "#{@{solo_on}? \"white\":\"#21262beb\";}",
                     "label": "Mute",
                     "vertical": false,
                     "wrap": false,
@@ -671,7 +671,7 @@
                     "mode": "toggle",
                     "doubleTap": false,
                     "decoupled": false,
-                    "value": 0,
+                    "value": 1,
                     "default": "",
                     "linkId": "",
                     "address": "auto",
@@ -701,9 +701,73 @@
                     "bypass": true,
                     "onCreate": "",
                     "onValue": ""
+                  },
+                  {
+                    "type": "button",
+                    "top": "90%",
+                    "left": "50%",
+                    "lock": false,
+                    "id": "send_solo/@{parent.variables.n}",
+                    "visible": true,
+                    "interaction": true,
+                    "comments": "",
+                    "width": "50%",
+                    "height": "10%",
+                    "expand": "false",
+                    "colorText": "auto",
+                    "colorWidget": "#46fb5f",
+                    "colorStroke": "auto",
+                    "colorFill": "auto",
+                    "alphaStroke": "auto",
+                    "alphaFillOff": 0.05,
+                    "alphaFillOn": "auto",
+                    "lineWidth": "auto",
+                    "borderRadius": "auto",
+                    "padding": "auto",
+                    "html": "",
+                    "css": "",
+                    "doubleTap": false,
+                    "value": 0,
+                    "default": "",
+                    "linkId": "",
+                    "address": "auto",
+                    "preArgs": "",
+                    "typeTags": "",
+                    "decimals": 2,
+                    "target": "",
+                    "ignoreDefaults": false,
+                    "bypass": false,
+                    "onCreate": "",
+                    "onValue": "\nfunction SoloCount(){ //find out the amount of pressed solo button\n  var n = 0\n  for (var i = 1; i <= 16; i++){\n    if(get(\"visible/\"+i))\n      if(get(\"send_solo/\"+i))\n        n++;\n  }\n  return n;\n}\n\nvar soloCount = SoloCount();\nset(\"solo_on\", soloCount >0);\nconsole.log(id);\nconsole.log(\"Solo Count: \" + soloCount);\n\nif((soloCount == 1) && (value == 1)){\n  for (var i = 1; i <= 16; i++){\n    setVar(\"cue/send/enable/\"+i, \"valueBeforeMute\", get(\"cue/send/enable/\"+i));\n  }\n}\n\nif (soloCount == 0){\n  //restore values\n  for (var i = 1; i <= 16; i++){\n    set(\"cue/send/enable/\"+i, getVar(\"cue/send/enable/\"+i, \"valueBeforeMute\"));\n  }\n}\nelse{\n  for (var i = 0; i <= 16; i++){\n    set(\"cue/send/enable/\"+i, get(\"send_solo/\"+i));\n  } \n}",
+                    "colorTextOn": "auto",
+                    "label": "Solo",
+                    "vertical": false,
+                    "wrap": false,
+                    "on": 1,
+                    "off": 0,
+                    "mode": "toggle",
+                    "decoupled": false
                   }
                 ],
                 "tabs": []
+              },
+              {
+                "type": "variable",
+                "lock": false,
+                "id": "solo_on",
+                "comments": "",
+                "value": 0,
+                "default": "",
+                "linkId": "",
+                "address": "auto",
+                "preArgs": "",
+                "typeTags": "",
+                "decimals": 2,
+                "target": "",
+                "ignoreDefaults": false,
+                "bypass": false,
+                "onCreate": "",
+                "onValue": ""
               }
             ],
             "tabs": []
@@ -879,6 +943,182 @@
             "props": {
               "variables": {
                 "n": 8
+              }
+            },
+            "address": "auto",
+            "variables": "@{parent.variables}"
+          },
+          {
+            "type": "clone",
+            "top": 0,
+            "left": 0,
+            "lock": false,
+            "id": "send_clone_9",
+            "visible": "@{visible/9}",
+            "interaction": true,
+            "comments": "",
+            "width": "auto",
+            "height": 330,
+            "expand": "false",
+            "css": "",
+            "widgetId": "send_panel",
+            "props": {
+              "variables": {
+                "n": 9
+              }
+            },
+            "address": "auto",
+            "variables": "@{parent.variables}"
+          },
+          {
+            "type": "clone",
+            "top": 0,
+            "left": 0,
+            "lock": false,
+            "id": "send_clone_10",
+            "visible": "@{visible/10}",
+            "interaction": true,
+            "comments": "",
+            "width": "auto",
+            "height": 330,
+            "expand": "false",
+            "css": "",
+            "widgetId": "send_panel",
+            "props": {
+              "variables": {
+                "n": 10
+              }
+            },
+            "address": "auto",
+            "variables": "@{parent.variables}"
+          },
+          {
+            "type": "clone",
+            "top": 0,
+            "left": 0,
+            "lock": false,
+            "id": "send_clone_11",
+            "visible": "@{visible/11}",
+            "interaction": true,
+            "comments": "",
+            "width": "auto",
+            "height": 330,
+            "expand": "false",
+            "css": "",
+            "widgetId": "send_panel",
+            "props": {
+              "variables": {
+                "n": 11
+              }
+            },
+            "address": "auto",
+            "variables": "@{parent.variables}"
+          },
+          {
+            "type": "clone",
+            "top": 0,
+            "left": 0,
+            "lock": false,
+            "id": "send_clone_12",
+            "visible": "@{visible/12}",
+            "interaction": true,
+            "comments": "",
+            "width": "auto",
+            "height": 330,
+            "expand": "false",
+            "css": "",
+            "widgetId": "send_panel",
+            "props": {
+              "variables": {
+                "n": 12
+              }
+            },
+            "address": "auto",
+            "variables": "@{parent.variables}"
+          },
+          {
+            "type": "clone",
+            "top": 0,
+            "left": 0,
+            "lock": false,
+            "id": "send_clone_13",
+            "visible": "@{visible/13}",
+            "interaction": true,
+            "comments": "",
+            "width": "auto",
+            "height": 330,
+            "expand": "false",
+            "css": "",
+            "widgetId": "send_panel",
+            "props": {
+              "variables": {
+                "n": 13
+              }
+            },
+            "address": "auto",
+            "variables": "@{parent.variables}"
+          },
+          {
+            "type": "clone",
+            "top": 0,
+            "left": 0,
+            "lock": false,
+            "id": "send_clone_14",
+            "visible": "@{visible/14}",
+            "interaction": true,
+            "comments": "",
+            "width": "auto",
+            "height": 330,
+            "expand": "false",
+            "css": "",
+            "widgetId": "send_panel",
+            "props": {
+              "variables": {
+                "n": 14
+              }
+            },
+            "address": "auto",
+            "variables": "@{parent.variables}"
+          },
+          {
+            "type": "clone",
+            "top": 0,
+            "left": 0,
+            "lock": false,
+            "id": "send_clone_15",
+            "visible": "@{visible/15}",
+            "interaction": true,
+            "comments": "",
+            "width": "auto",
+            "height": 330,
+            "expand": "false",
+            "css": "",
+            "widgetId": "send_panel",
+            "props": {
+              "variables": {
+                "n": 15
+              }
+            },
+            "address": "auto",
+            "variables": "@{parent.variables}"
+          },
+          {
+            "type": "clone",
+            "top": 0,
+            "left": 0,
+            "lock": false,
+            "id": "send_clone_16",
+            "visible": "@{visible/16}",
+            "interaction": true,
+            "comments": "",
+            "width": "auto",
+            "height": 330,
+            "expand": "false",
+            "css": "",
+            "widgetId": "send_panel",
+            "props": {
+              "variables": {
+                "n": 16
               }
             },
             "address": "auto",
